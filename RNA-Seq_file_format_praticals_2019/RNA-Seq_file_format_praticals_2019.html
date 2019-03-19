@@ -9,7 +9,6 @@
 <meta name="generator" content="pandoc" />
 
 
-<meta name="author" content="Sungsam Gong" />
 
 <meta name="date" content="2019-03-26" />
 
@@ -332,38 +331,59 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">RNA-Seq File Format Practicals</h1>
-<h4 class="author">Sungsam Gong</h4>
+<h3 class="subtitle">A primer to the different types of RNA-Seq data files</h3>
+<h4 class="author"><div style="white-space: pre-line;"><a href="https://www.obgyn.cam.ac.uk/staff/research-staff/sung-gong/" target="_blank">Sungsam Gong</a>
+Senior Research Associate
+Department of Obstetrics &amp; Gynaecology
+University of Cambridge</div></h4>
 <h4 class="date">26 March 2019</h4>
 
 </div>
 
 
+<blockquote>
+<p>“check the <a href="https://github.com/sung/RNA-Seq_file_format_praticals_2019">github page</a> for this document”</p>
+</blockquote>
+<hr />
+<div id="aims" class="section level2">
+<h2>Aims</h2>
+<ol style="list-style-type: decimal">
+<li>To prepare other classes ahead</li>
+<li>To gain confidence</li>
+</ol>
+<ul>
+<li>of processing RNA-Seq data files</li>
+<li>or linux (or unix) command lines</li>
+</ul>
+</div>
 <div id="you-will-learn" class="section level2">
 <h2>You will learn</h2>
 <ol style="list-style-type: decimal">
 <li>Various file formats</li>
 </ol>
 <ul>
-<li>FASTA and FASTQ</li>
-<li>GTF (GFF)</li>
-<li>SAM and BAM</li>
-<li>BED</li>
+<li><a href="https://en.wikipedia.org/wiki/FASTA_format" target="_blank">FASTA</a> and <a href="https://en.wikipedia.org/wiki/FASTQ_format" target="_blank">FASTQ</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Gene_transfer_format" target="_blank">GTF</a> and or <a href="https://en.wikipedia.org/wiki/General_feature_format" target="_blank">GFF</a></li>
+<li><a href="https://en.wikipedia.org/wiki/SAM_(file_format)" target="_blank">SAM</a> and <a href="https://en.wikipedia.org/wiki/Binary_Alignment_Map" target="_blank">BAM</a></li>
+<li><a href="https://genome.ucsc.edu/FAQ/FAQformat.html#format1" target="_blank">BED</a></li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
-<li>Accessing public data relevant to RNA-Seq</li>
+<li>Accessing public or published data</li>
 </ol>
 <ul>
-<li>Ensembl</li>
-<li>NCBI SRA</li>
+<li><a href="http://www.ensembl.org" target="_blank">Ensembl</a></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/sra" target="_blank">NCBI SRA</a></li>
 </ul>
 <ol start="3" style="list-style-type: decimal">
 <li>And related linux commands and software tools</li>
 </ol>
 <ul>
-<li>awk</li>
-<li>samtools</li>
-<li>zcat or zless</li>
-<li>sra toolkits and etc</li>
+<li><a href="https://en.wikipedia.org/wiki/AWK" target="_blank">awk</a></li>
+<li><a href="http://man7.org/linux/man-pages/man1/sort.1.html" target="_blank">sort</a></li>
+<li><a href="https://linux.die.net/man/1/zcat" target="_blank">zcat</a> or <a href="https://linux.die.net/man/1/zless" target="_blank">zless</a></li>
+<li><a href="http://www.htslib.org/" target="_blank">samtools</a></li>
+<li><a href="https://bedtools.readthedocs.io/" target="_blank">bedtools</a></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/sra/docs/toolkitsoft/" target="_blank">sra toolkits</a></li>
 </ul>
 </div>
 <div id="you-will-not-learn-from-me" class="section level2">
@@ -372,23 +392,23 @@ div.tocify {
 <li>Various RNA-Seq data processing and analysis, such as</li>
 </ol>
 <ul>
-<li>Quality controls</li>
+<li>Quality controls of sequenced reads</li>
 <li>Adaptor (and/or poor quality read) trimming</li>
 <li>Alignment (mapping) of reads</li>
 <li>Quantification of transcript-level (or gene-level) abundance</li>
 <li>Differentially expressed gene/transcript/exon analysis</li>
-<li>Transcriptome reconstruction</li>
+<li>Transcriptome reconstruction (or assembly)</li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
 <li>Detailed use of software tools related with above</li>
 </ol>
 <ul>
-<li>fastqc</li>
-<li>cutadapt</li>
-<li>TopHat2 and HiSat2</li>
-<li>featureCounts and Salmon</li>
-<li>DESeq2, DEXSeq, or edgeR</li>
-<li>StringTie and TACO</li>
+<li><a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank">fastqc</a></li>
+<li><a href="https://cutadapt.readthedocs.io/en/stable/index.html" target="_blank">cutadapt</a></li>
+<li><a href="https://ccb.jhu.edu/software/tophat/index.shtml" target="_blank">TopHat2</a> and <a href="https://ccb.jhu.edu/software/hisat2/" target="_blank">HiSat2</a></li>
+<li><a href="http://subread.sourceforge.net/" target="_blank">featureCounts</a>, <a href="https://combine-lab.github.io/salmon/" target="_blank">Salmon</a> <a href="https://pachterlab.github.io/kallisto/" target="_blank">Kallisto</a></li>
+<li><a href="https://bioconductor.org/packages/release/bioc/html/DESeq2.html" target="_blank">DESeq2</a>, <a href="https://bioconductor.org/packages/release/bioc/html/DEXSeq.html" target="_blank">DEXSeq</a>, and <a href="https://bioconductor.org/packages/release/bioc/html/edgeR.html" target="_blank">edgeR</a></li>
+<li><a href="https://ccb.jhu.edu/software/stringtie/" target="_blank">StringTie</a> and <a href="https://tacorna.github.io/" target="_blank">TACO</a></li>
 </ul>
 </div>
 <div id="file-formats" class="section level2 tabset">
@@ -398,8 +418,8 @@ div.tocify {
 <h3>FASTA</h3>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/FASTA_format" class="uri">https://en.wikipedia.org/wiki/FASTA_format</a></li>
-<li><a href="https://zhanglab.ccmb.med.umich.edu/FASTA/" class="uri">https://zhanglab.ccmb.med.umich.edu/FASTA/</a></li>
-<li>Download the FASTA file of human chr22 (from <a href="https://www.ensembl.org/info/data/ftp/index.html">here</a>) and calculate the size of the chromosome</li>
+<li>The letters should follow the <a href="https://en.wikipedia.org/wiki/FASTA_format#Sequence_representation" target="_blank">IUPAC codes</a></li>
+<li>Task 1: download the FASTA file of human chr22 (from <a href="https://www.ensembl.org/info/data/ftp/index.html" target="_blank">here</a>) and calculate the size (i.e. length) of the chromosome</li>
 </ul>
 <!--```{r, engine='bash', results=F}-->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">wget</span> ftp://ftp.ensembl.org/pub/release-95/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.chromosome.22.fa.gz</code></pre></div>
@@ -411,12 +431,72 @@ div.tocify {
 ## NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</code></pre>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">zcat</span> Homo_sapiens.GRCh38.dna.chromosome.22.fa.gz <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'!/^&gt;/{LEN+=length($0)}END{print LEN}'</span> </code></pre></div>
 <pre><code>## 50818468</code></pre>
+<ul>
+<li>Task 2: get the sequence from <a href="http://www.ensembl.org/Homo_sapiens/Location/View?r=22%3A40000001-40000300" target="_blank">40000001 to 40000300 of chr22</a></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">zcat</span> Homo_sapiens.GRCh38.dna.chromosome.22.fa.gz <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'BEGIN{min=50818468;max=0;start=40000001;end=40000300}!/^&gt;/{LEN+=length($0); if(LEN&gt;=start &amp;&amp; LEN-length($0)+1&lt;=end){min=(min&gt;LEN-length($0)+1)?LEN-length($0)+1:min; max=(max&gt;LEN)?max:LEN; SEQ=SEQ$0; print LEN-length($0)+1,LEN,$0,length($0)} }END{print substr(SEQ,start-min+1,end-start+1)}'</span></code></pre></div>
+<pre><code>## 39999961 40000020 TTGGGAGAGTGCATTTGACCCTCCTGGATTGGGAACTTTGGAAAAGAGAGACTGGCTTAC 60
+## 40000021 40000080 TCTCTCAGTTTCCTTTCCGGTACCCGAACAGTGCTCTGACTGTCACAGGTGATCAATTAT 60
+## 40000081 40000140 CTGTTTATAGAATTGAAAACTGTCTTCTATTGGCCGCCTGTCCCTCTGGGGAAGCAAGTG 60
+## 40000141 40000200 TCTGGAGATGTCCCCATGGAATTGCACATTCCCTGGGGAACTCCTTTAATCTACATCGTA 60
+## 40000201 40000260 ACAAGCTGGCTGGCAGCAGAGAGAAGAATGCTCTAAATTGGGGATATGGGGTGCAGGGAG 60
+## 40000261 40000320 GGAGGTGCATCAGGGGATTTAGGGAAAGGCTCCAGAGCAGGAGGCATGGCTGGCTGAGGT 60
+## GAAAAGAGAGACTGGCTTACTCTCTCAGTTTCCTTTCCGGTACCCGAACAGTGCTCTGACTGTCACAGGTGATCAATTATCTGTTTATAGAATTGAAAACTGTCTTCTATTGGCCGCCTGTCCCTCTGGGGAAGCAAGTGTCTGGAGATGTCCCCATGGAATTGCACATTCCCTGGGGAACTCCTTTAATCTACATCGTAACAAGCTGGCTGGCAGCAGAGAGAAGAATGCTCTAAATTGGGGATATGGGGTGCAGGGAGGGAGGTGCATCAGGGGATTTAGGGAAAGGCTCCAGAGCAG</code></pre>
+<ul>
+<li>Compare the result above and the following method (using <a href="https://rest.ensembl.org/documentation/info/sequence_region">the ensembl rest api</a>){target=“_blank“}</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">curl</span> https://rest.ensembl.org/sequence/region/human/22:40000001..40000300:1?content-type=text/plain</code></pre></div>
+<pre><code>##   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+##                                  Dload  Upload   Total   Spent    Left  Speed
+## 
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   300  100   300    0     0   4762      0 --:--:-- --:--:-- --:--:--  4761
+## GAAAAGAGAGACTGGCTTACTCTCTCAGTTTCCTTTCCGGTACCCGAACAGTGCTCTGACTGTCACAGGTGATCAATTATCTGTTTATAGAATTGAAAACTGTCTTCTATTGGCCGCCTGTCCCTCTGGGGAAGCAAGTGTCTGGAGATGTCCCCATGGAATTGCACATTCCCTGGGGAACTCCTTTAATCTACATCGTAACAAGCTGGCTGGCAGCAGAGAGAAGAATGCTCTAAATTGGGGATATGGGGTGCAGGGAGGGAGGTGCATCAGGGGATTTAGGGAAAGGCTCCAGAGCAG</code></pre>
+<ul>
+<li>Task 3: what is the sequence of 40000001 to 40000100 of <strong>chr21</strong> (using both awk and curl)?</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">curl</span> https://rest.ensembl.org/sequence/region/human/21:40000001..40000100:1?content-type=text/plain</code></pre></div>
+<pre><code>##   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+##                                  Dload  Upload   Total   Spent    Left  Speed
+## 
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   100  100   100    0     0   1529      0 --:--:-- --:--:-- --:--:--  1538
+## GTCTTCCTGACTTCCAAGGTTGCCATGAATCCTTGGTGTTCCTTGGCTTGCAGATGCATTGCCATCTTCCCTGCTTGTCAGTCTGTGTTTCCTTCTTCTT</code></pre>
 </div>
 <div id="fastq" class="section level3">
 <h3>FASTQ</h3>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/FASTQ_format" class="uri">https://en.wikipedia.org/wiki/FASTQ_format</a></li>
-<li>Downlaod the first 1K spots from the smallest RNA-Seq fastq files from the <a href="http://science.sciencemag.org/content/360/6393/1133">Ngo <em>et al.</em> Science 2018</a> (<a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRP130149">SPR130149</a>)</li>
+<li>Examples from <a href="https://insight.jci.org/articles/view/120723" target="_blank">Gong <em>et al.</em> JCI-I 2018</a></li>
+<li>Download one of down-sampled (to 1K) FASTQ available from below</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">wget</span> https://www.dropbox.com/s/h2lzzn94o9zpv26/SLX-9168.D701_D501_1K.C6H3UANXX.s_1.r_1.fq.gz</code></pre></div>
+<ul>
+<li>Question: how many entries (it’s abvious)</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">zcat</span>  SLX-9168.D701_D501_1K.C6H3UANXX.s_1.r_1.fq.gz <span class="kw">|</span> <span class="bu">echo</span> <span class="va">$((</span><span class="kw">`</span><span class="fu">wc</span> -l<span class="kw">`</span>/4<span class="va">))</span></code></pre></div>
+<pre><code>## 1000</code></pre>
+<ul>
+<li>Let’s look at the first entry (i.e. the first 4 lines) and check the meta information</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">zcat</span> SLX-9168.D701_D501_1K.C6H3UANXX.s_1.r_1.fq.gz <span class="kw">|</span> <span class="fu">head</span> -n4</code></pre></div>
+<pre><code>## @HISEQ:249:C6H3UANXX:1:1101:1452:2086 1:N:0:NTTACTCGNATAGCCT
+## NTTTCCAAAAAAATGAAACACACATTAGATATAAACCATCCAAAACTTTAACGATTGAAAACTGTATTCAAAATTAAATGACCCAGAGTAGGTCTCTTTCTGAAAAGTTCCCTTCATATCGGCAA
+## +
+## #==AAFGFFEGFDGFCF1&lt;:CF&gt;FGGCEGGGG&gt;G&gt;FBFGGEG@F@FGG1&lt;1FEFGGGG1EGGGGGGGGGGGGCGGFDEGGEE&gt;FD:0FFF::FFGGGGGGGEGGG0ECGGGGDGGG&gt;FGF&lt;8CAG</code></pre>
+<ul>
+<li>Question: sequencing lenth?</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">zless</span> SLX-9168.D701_D501_1K.C6H3UANXX.s_1.r_1.fq.gz <span class="kw">|</span> <span class="fu">head</span> -n 4 <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'NR%4==2{print length($0)}'</span></code></pre></div>
+<pre><code>## 125</code></pre>
+<ul>
+<li>Check the base quality using <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank">fastqc</a></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">fastqc</span> SLX-9168.D701_D501_1K.C6H3UANXX.s_1.r_1.fq.gz</code></pre></div>
+<ul>
+<li><p>Another example <a href="http://science.sciencemag.org/content/360/6393/1133" target="_blank">Ngo <em>et al.</em> Science 2018</a> (<a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRP130149" target="_blank">SPR130149</a>)</p></li>
+<li><p>Downlaod the first 1K spots from the smallest RNA-Seq fastq files <a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR6481086" target="_blank">SRR6481086</a></p></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">fastq-dump</span> -X 1000 --split-files --read-filter pass --outdir ./ --gzip SRR6481086 </code></pre></div>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">zcat</span> SRR6481086_pass_1.fastq.gz <span class="kw">|</span> <span class="bu">echo</span> <span class="va">$((</span><span class="kw">`</span><span class="fu">wc</span> -l<span class="kw">`</span>/4<span class="va">))</span>
@@ -445,16 +525,7 @@ div.tocify {
 ## +SRR6481086.2 2 length=75
 ## AAAAAEEEEEEE#EEEEEEEE###EE#EEEEEEEEEEE###E#EEAEAEEEE##EEEEEEEEEEEEEAAAEEAAE</code></pre>
 <ul>
-<li>Another example from <a href="https://insight.jci.org/articles/view/120723">this study</a> – Download one of down-sampled (to 1K) FASTQ</li>
-</ul>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">wget</span> https://www.dropbox.com/s/h2lzzn94o9zpv26/SLX-9168.D701_D501_1K.C6H3UANXX.s_1.r_1.fq.gz</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">zcat</span> SLX-9168.D701_D501_1K.C6H3UANXX.s_1.r_1.fq.gz <span class="kw">|</span> <span class="fu">head</span> -n4</code></pre></div>
-<pre><code>## @HISEQ:249:C6H3UANXX:1:1101:1452:2086 1:N:0:NTTACTCGNATAGCCT
-## NTTTCCAAAAAAATGAAACACACATTAGATATAAACCATCCAAAACTTTAACGATTGAAAACTGTATTCAAAATTAAATGACCCAGAGTAGGTCTCTTTCTGAAAAGTTCCCTTCATATCGGCAA
-## +
-## #==AAFGFFEGFDGFCF1&lt;:CF&gt;FGGCEGGGG&gt;G&gt;FBFGGEG@F@FGG1&lt;1FEFGGGG1EGGGGGGGGGGGGCGGFDEGGEE&gt;FD:0FFF::FFGGGGGGGEGGG0ECGGGGDGGG&gt;FGF&lt;8CAG</code></pre>
-<ul>
-<li>Check the base quality using fastqc</li>
+<li>Check the base quality using <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank">fastqc</a></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">fastqc</span> SRR6481086_pass_1.fastq.gz SRR6481086_pass_2.fastq.gz</code></pre></div>
 </div>
@@ -463,7 +534,7 @@ div.tocify {
 <ul>
 <li><a href="https://genome.ucsc.edu/FAQ/FAQformat#format3" class="uri">https://genome.ucsc.edu/FAQ/FAQformat#format3</a></li>
 <li><a href="https://www.ensembl.org/info/website/upload/gff.html" class="uri">https://www.ensembl.org/info/website/upload/gff.html</a></li>
-<li>Let’s download Ensembl transcript annotation file</li>
+<li>Let’s download the Ensembl transcript annotation file</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">wget</span> ftp://ftp.ensembl.org/pub/release-95/gtf/homo_sapiens/Homo_sapiens.GRCh38.95.gtf.gz</code></pre></div>
 <ul>
@@ -472,68 +543,215 @@ div.tocify {
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">zcat</span> Homo_sapiens.GRCh38.95.gtf.gz <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'$3==&quot;gene&quot;{GENE++}$3==&quot;transcript&quot;{TRANS++}$3==&quot;exon&quot;{EXON++}END{print GENE,TRANS,EXON}'</span></code></pre></div>
 <pre><code>## 58735 206601 1262162</code></pre>
 <ul>
-<li>Read the first x lines in R</li>
+<li>What else in the file?</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rtracklayer<span class="op">::</span><span class="kw">import</span>(<span class="dt">format=</span><span class="st">&quot;gtf&quot;</span>, <span class="dt">text=</span><span class="kw">system</span>(<span class="st">&quot;zcat Homo_sapiens.GRCh38.95.gtf.gz | head -n 10&quot;</span>, <span class="dt">intern=</span>T))</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">zcat</span> Homo_sapiens.GRCh38.95.gtf.gz <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'!/^#/{print $3}'</span> <span class="kw">|</span> <span class="fu">sort</span> <span class="kw">|</span> <span class="fu">uniq</span> -c <span class="kw">|</span> <span class="fu">sort</span> -k1,1n</code></pre></div>
+<pre><code>##     120 Selenocysteine
+##   58735 gene
+##   78562 stop_codon
+##   86454 start_codon
+##  148491 three_prime_utr
+##  149930 five_prime_utr
+##  206601 transcript
+##  746504 CDS
+## 1262162 exon</code></pre>
+<ul>
+<li>Read the first 10 lines using Bioconductor <a href="http://bioconductor.org/packages/release/bioc/html/rtracklayer.html" target="_blank">rtracklayer package</a></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># start your R session using 'R' command</span>
+rtracklayer<span class="op">::</span><span class="kw">import</span>(<span class="dt">format=</span><span class="st">&quot;gtf&quot;</span>, <span class="dt">text=</span><span class="kw">system</span>(<span class="st">&quot;zcat Homo_sapiens.GRCh38.95.gtf.gz | grep -v ^# | head -n 10&quot;</span>, <span class="dt">intern=</span>T))</code></pre></div>
 <pre><code>## Warning in readGFF(filepath, version = version, filter = filter): connection is not positioned at the start of the file, rewinding
 ##   it</code></pre>
-<pre><code>## GRanges object with 5 ranges and 19 metadata columns:
-##       seqnames         ranges strand |   source       type     score
-##          &lt;Rle&gt;      &lt;IRanges&gt;  &lt;Rle&gt; | &lt;factor&gt;   &lt;factor&gt; &lt;numeric&gt;
-##   [1]        1 [11869, 14409]      + |   havana       gene      &lt;NA&gt;
-##   [2]        1 [11869, 14409]      + |   havana transcript      &lt;NA&gt;
-##   [3]        1 [11869, 12227]      + |   havana       exon      &lt;NA&gt;
-##   [4]        1 [12613, 12721]      + |   havana       exon      &lt;NA&gt;
-##   [5]        1 [13221, 14409]      + |   havana       exon      &lt;NA&gt;
-##           phase         gene_id gene_version   gene_name gene_source
-##       &lt;integer&gt;     &lt;character&gt;  &lt;character&gt; &lt;character&gt; &lt;character&gt;
-##   [1]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
-##   [2]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
-##   [3]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
-##   [4]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
-##   [5]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
-##                             gene_biotype   transcript_id
-##                              &lt;character&gt;     &lt;character&gt;
-##   [1] transcribed_unprocessed_pseudogene            &lt;NA&gt;
-##   [2] transcribed_unprocessed_pseudogene ENST00000456328
-##   [3] transcribed_unprocessed_pseudogene ENST00000456328
-##   [4] transcribed_unprocessed_pseudogene ENST00000456328
-##   [5] transcribed_unprocessed_pseudogene ENST00000456328
-##       transcript_version transcript_name transcript_source
-##              &lt;character&gt;     &lt;character&gt;       &lt;character&gt;
-##   [1]               &lt;NA&gt;            &lt;NA&gt;              &lt;NA&gt;
-##   [2]                  2     DDX11L1-202            havana
-##   [3]                  2     DDX11L1-202            havana
-##   [4]                  2     DDX11L1-202            havana
-##   [5]                  2     DDX11L1-202            havana
-##         transcript_biotype         tag transcript_support_level
-##                &lt;character&gt; &lt;character&gt;              &lt;character&gt;
-##   [1]                 &lt;NA&gt;        &lt;NA&gt;                     &lt;NA&gt;
-##   [2] processed_transcript       basic                        1
-##   [3] processed_transcript       basic                        1
-##   [4] processed_transcript       basic                        1
-##   [5] processed_transcript       basic                        1
-##       exon_number         exon_id exon_version
-##       &lt;character&gt;     &lt;character&gt;  &lt;character&gt;
-##   [1]        &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;
-##   [2]        &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;
-##   [3]           1 ENSE00002234944            1
-##   [4]           2 ENSE00003582793            1
-##   [5]           3 ENSE00002312635            1
+<pre><code>## GRanges object with 10 ranges and 19 metadata columns:
+##        seqnames         ranges strand |   source       type     score
+##           &lt;Rle&gt;      &lt;IRanges&gt;  &lt;Rle&gt; | &lt;factor&gt;   &lt;factor&gt; &lt;numeric&gt;
+##    [1]        1 [11869, 14409]      + |   havana       gene      &lt;NA&gt;
+##    [2]        1 [11869, 14409]      + |   havana transcript      &lt;NA&gt;
+##    [3]        1 [11869, 12227]      + |   havana       exon      &lt;NA&gt;
+##    [4]        1 [12613, 12721]      + |   havana       exon      &lt;NA&gt;
+##    [5]        1 [13221, 14409]      + |   havana       exon      &lt;NA&gt;
+##    [6]        1 [12010, 13670]      + |   havana transcript      &lt;NA&gt;
+##    [7]        1 [12010, 12057]      + |   havana       exon      &lt;NA&gt;
+##    [8]        1 [12179, 12227]      + |   havana       exon      &lt;NA&gt;
+##    [9]        1 [12613, 12697]      + |   havana       exon      &lt;NA&gt;
+##   [10]        1 [12975, 13052]      + |   havana       exon      &lt;NA&gt;
+##            phase         gene_id gene_version   gene_name gene_source
+##        &lt;integer&gt;     &lt;character&gt;  &lt;character&gt; &lt;character&gt; &lt;character&gt;
+##    [1]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
+##    [2]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
+##    [3]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
+##    [4]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
+##    [5]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
+##    [6]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
+##    [7]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
+##    [8]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
+##    [9]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
+##   [10]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
+##                              gene_biotype   transcript_id
+##                               &lt;character&gt;     &lt;character&gt;
+##    [1] transcribed_unprocessed_pseudogene            &lt;NA&gt;
+##    [2] transcribed_unprocessed_pseudogene ENST00000456328
+##    [3] transcribed_unprocessed_pseudogene ENST00000456328
+##    [4] transcribed_unprocessed_pseudogene ENST00000456328
+##    [5] transcribed_unprocessed_pseudogene ENST00000456328
+##    [6] transcribed_unprocessed_pseudogene ENST00000450305
+##    [7] transcribed_unprocessed_pseudogene ENST00000450305
+##    [8] transcribed_unprocessed_pseudogene ENST00000450305
+##    [9] transcribed_unprocessed_pseudogene ENST00000450305
+##   [10] transcribed_unprocessed_pseudogene ENST00000450305
+##        transcript_version transcript_name transcript_source
+##               &lt;character&gt;     &lt;character&gt;       &lt;character&gt;
+##    [1]               &lt;NA&gt;            &lt;NA&gt;              &lt;NA&gt;
+##    [2]                  2     DDX11L1-202            havana
+##    [3]                  2     DDX11L1-202            havana
+##    [4]                  2     DDX11L1-202            havana
+##    [5]                  2     DDX11L1-202            havana
+##    [6]                  2     DDX11L1-201            havana
+##    [7]                  2     DDX11L1-201            havana
+##    [8]                  2     DDX11L1-201            havana
+##    [9]                  2     DDX11L1-201            havana
+##   [10]                  2     DDX11L1-201            havana
+##                        transcript_biotype         tag
+##                               &lt;character&gt; &lt;character&gt;
+##    [1]                               &lt;NA&gt;        &lt;NA&gt;
+##    [2]               processed_transcript       basic
+##    [3]               processed_transcript       basic
+##    [4]               processed_transcript       basic
+##    [5]               processed_transcript       basic
+##    [6] transcribed_unprocessed_pseudogene       basic
+##    [7] transcribed_unprocessed_pseudogene       basic
+##    [8] transcribed_unprocessed_pseudogene       basic
+##    [9] transcribed_unprocessed_pseudogene       basic
+##   [10] transcribed_unprocessed_pseudogene       basic
+##        transcript_support_level exon_number         exon_id exon_version
+##                     &lt;character&gt; &lt;character&gt;     &lt;character&gt;  &lt;character&gt;
+##    [1]                     &lt;NA&gt;        &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;
+##    [2]                        1        &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;
+##    [3]                        1           1 ENSE00002234944            1
+##    [4]                        1           2 ENSE00003582793            1
+##    [5]                        1           3 ENSE00002312635            1
+##    [6]                       NA        &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;
+##    [7]                       NA           1 ENSE00001948541            1
+##    [8]                       NA           2 ENSE00001671638            2
+##    [9]                       NA           3 ENSE00001758273            2
+##   [10]                       NA           4 ENSE00001799933            2
 ##   -------
 ##   seqinfo: 1 sequence from an unspecified genome; no seqlengths</code></pre>
 <ul>
-<li>Read them all in R</li>
+<li>Another task: read the LEP (<a href="https://www.ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=ENSG00000174697;r=7:128241284-128257628;t=ENST00000308868" target="_blank">Leptin</a>) transcript</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rtracklayer<span class="op">::</span><span class="kw">import</span>(<span class="st">&quot;zcat Homo_sapiens.GRCh38.95.gtf.gz&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># start your R session using 'R' command</span>
+rtracklayer<span class="op">::</span><span class="kw">import</span>(<span class="dt">format=</span><span class="st">&quot;gtf&quot;</span>, <span class="dt">text=</span><span class="kw">system</span>(<span class="st">&quot;zcat Homo_sapiens.GRCh38.95.gtf.gz | grep -P 'gene_name </span><span class="ch">\&quot;</span><span class="st">LEP</span><span class="ch">\&quot;</span><span class="st">' &quot;</span>, <span class="dt">intern=</span>T))</code></pre></div>
+<pre><code>## Warning in readGFF(filepath, version = version, filter = filter): connection is not positioned at the start of the file, rewinding
+##   it</code></pre>
+<pre><code>## GRanges object with 12 ranges and 22 metadata columns:
+##        seqnames                 ranges strand |         source
+##           &lt;Rle&gt;              &lt;IRanges&gt;  &lt;Rle&gt; |       &lt;factor&gt;
+##    [1]        7 [128241284, 128257628]      + | ensembl_havana
+##    [2]        7 [128241284, 128257628]      + | ensembl_havana
+##    [3]        7 [128241284, 128241306]      + | ensembl_havana
+##    [4]        7 [128251991, 128252162]      + | ensembl_havana
+##    [5]        7 [128252019, 128252162]      + | ensembl_havana
+##    ...      ...                    ...    ... .            ...
+##    [8]        7 [128254404, 128254760]      + | ensembl_havana
+##    [9]        7 [128254761, 128254763]      + | ensembl_havana
+##   [10]        7 [128241284, 128241306]      + | ensembl_havana
+##   [11]        7 [128251991, 128252018]      + | ensembl_havana
+##   [12]        7 [128254764, 128257628]      + | ensembl_havana
+##                   type     score     phase         gene_id gene_version
+##               &lt;factor&gt; &lt;numeric&gt; &lt;integer&gt;     &lt;character&gt;  &lt;character&gt;
+##    [1]            gene      &lt;NA&gt;      &lt;NA&gt; ENSG00000174697            4
+##    [2]      transcript      &lt;NA&gt;      &lt;NA&gt; ENSG00000174697            4
+##    [3]            exon      &lt;NA&gt;      &lt;NA&gt; ENSG00000174697            4
+##    [4]            exon      &lt;NA&gt;      &lt;NA&gt; ENSG00000174697            4
+##    [5]             CDS      &lt;NA&gt;         0 ENSG00000174697            4
+##    ...             ...       ...       ...             ...          ...
+##    [8]             CDS      &lt;NA&gt;         0 ENSG00000174697            4
+##    [9]      stop_codon      &lt;NA&gt;         0 ENSG00000174697            4
+##   [10]  five_prime_utr      &lt;NA&gt;      &lt;NA&gt; ENSG00000174697            4
+##   [11]  five_prime_utr      &lt;NA&gt;      &lt;NA&gt; ENSG00000174697            4
+##   [12] three_prime_utr      &lt;NA&gt;      &lt;NA&gt; ENSG00000174697            4
+##          gene_name    gene_source   gene_biotype   transcript_id
+##        &lt;character&gt;    &lt;character&gt;    &lt;character&gt;     &lt;character&gt;
+##    [1]         LEP ensembl_havana protein_coding            &lt;NA&gt;
+##    [2]         LEP ensembl_havana protein_coding ENST00000308868
+##    [3]         LEP ensembl_havana protein_coding ENST00000308868
+##    [4]         LEP ensembl_havana protein_coding ENST00000308868
+##    [5]         LEP ensembl_havana protein_coding ENST00000308868
+##    ...         ...            ...            ...             ...
+##    [8]         LEP ensembl_havana protein_coding ENST00000308868
+##    [9]         LEP ensembl_havana protein_coding ENST00000308868
+##   [10]         LEP ensembl_havana protein_coding ENST00000308868
+##   [11]         LEP ensembl_havana protein_coding ENST00000308868
+##   [12]         LEP ensembl_havana protein_coding ENST00000308868
+##        transcript_version transcript_name transcript_source
+##               &lt;character&gt;     &lt;character&gt;       &lt;character&gt;
+##    [1]               &lt;NA&gt;            &lt;NA&gt;              &lt;NA&gt;
+##    [2]                  4         LEP-201    ensembl_havana
+##    [3]                  4         LEP-201    ensembl_havana
+##    [4]                  4         LEP-201    ensembl_havana
+##    [5]                  4         LEP-201    ensembl_havana
+##    ...                ...             ...               ...
+##    [8]                  4         LEP-201    ensembl_havana
+##    [9]                  4         LEP-201    ensembl_havana
+##   [10]                  4         LEP-201    ensembl_havana
+##   [11]                  4         LEP-201    ensembl_havana
+##   [12]                  4         LEP-201    ensembl_havana
+##        transcript_biotype         tag     ccds_id transcript_support_level
+##               &lt;character&gt; &lt;character&gt; &lt;character&gt;              &lt;character&gt;
+##    [1]               &lt;NA&gt;        &lt;NA&gt;        &lt;NA&gt;                     &lt;NA&gt;
+##    [2]     protein_coding       basic    CCDS5800                        1
+##    [3]     protein_coding       basic    CCDS5800                        1
+##    [4]     protein_coding       basic    CCDS5800                        1
+##    [5]     protein_coding       basic    CCDS5800                        1
+##    ...                ...         ...         ...                      ...
+##    [8]     protein_coding       basic    CCDS5800                        1
+##    [9]     protein_coding       basic    CCDS5800                        1
+##   [10]     protein_coding       basic    CCDS5800                        1
+##   [11]     protein_coding       basic    CCDS5800                        1
+##   [12]     protein_coding       basic    CCDS5800                        1
+##        exon_number         exon_id exon_version      protein_id
+##        &lt;character&gt;     &lt;character&gt;  &lt;character&gt;     &lt;character&gt;
+##    [1]        &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;            &lt;NA&gt;
+##    [2]        &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;            &lt;NA&gt;
+##    [3]           1 ENSE00001422382            2            &lt;NA&gt;
+##    [4]           2 ENSE00001303768            3            &lt;NA&gt;
+##    [5]           2            &lt;NA&gt;         &lt;NA&gt; ENSP00000312652
+##    ...         ...             ...          ...             ...
+##    [8]           3            &lt;NA&gt;         &lt;NA&gt; ENSP00000312652
+##    [9]           3            &lt;NA&gt;         &lt;NA&gt;            &lt;NA&gt;
+##   [10]        &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;            &lt;NA&gt;
+##   [11]        &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;            &lt;NA&gt;
+##   [12]        &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;            &lt;NA&gt;
+##        protein_version
+##            &lt;character&gt;
+##    [1]            &lt;NA&gt;
+##    [2]            &lt;NA&gt;
+##    [3]            &lt;NA&gt;
+##    [4]            &lt;NA&gt;
+##    [5]               4
+##    ...             ...
+##    [8]               4
+##    [9]            &lt;NA&gt;
+##   [10]            &lt;NA&gt;
+##   [11]            &lt;NA&gt;
+##   [12]            &lt;NA&gt;
+##   -------
+##   seqinfo: 1 sequence from an unspecified genome; no seqlengths</code></pre>
+<ul>
+<li>You can, of course, read all of them them</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># IT WILL TAKE LONG</span>
+foo&lt;-rtracklayer<span class="op">::</span><span class="kw">import</span>(<span class="st">&quot;Homo_sapiens.GRCh38.95.gtf.gz&quot;</span>)</code></pre></div>
 </div>
 <div id="sam-bam" class="section level3">
 <h3>SAM (BAM)</h3>
 <ul>
 <li><a href="http://samtools.github.io/hts-specs/SAMv1.pdf" class="uri">http://samtools.github.io/hts-specs/SAMv1.pdf</a></li>
 <li><a href="http://www.htslib.org/doc/samtools.html" class="uri">http://www.htslib.org/doc/samtools.html</a></li>
-<li><p><a href="http://www.htslib.org/doc/sam.html" class="uri">http://www.htslib.org/doc/sam.html</a></p></li>
-<li><p>Let’s get the BAM file for SRR6481086</p></li>
+<li><a href="http://www.htslib.org/doc/sam.html" class="uri">http://www.htslib.org/doc/sam.html</a></li>
+<li><p>You can check your bitwise FLAG interactively from <a href="https://broadinstitute.github.io/picard/explain-flags.html" target="_blank">here</a></p></li>
+<li><p>Let’s get the BAM file for <a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR6481086" target="_blank">SRR6481086</a></p></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">sam-dump</span> SRR6481086 <span class="kw">|</span> <span class="fu">head</span> -n 10</code></pre></div>
 <pre><code>## 1    77  *   0   0   *   *   0   0   GGCCATGCAAGATTCCCATTCTTGCGACCCGGGTTCGTTTCCCGGGCGGCGCACCAGATCGGAAGAGCACACGNC AAAAAEEEA/EAEEEEE6EEEEEEEEAEEEEEEEEEEEEEEEEEEEEEEEEE/EEEE6EEEE6AE6EEEEEEE#E RG:Z:TAATGCGC
@@ -547,10 +765,18 @@ div.tocify {
 ## 5    77  *   0   0   *   *   0   0   GAAGAGCACACGTCTGAACTCCAGTCACTAATGCGCATCTCGTATGCCGTCTTCTGCTTGAAAAAAAAAAGGGGG AAAA/EE/E6EEEEEE//EEEEAEEE6EEAAEEEEE6EEEEEEEEEEEEEEEEEEE6EEEEEEEEEEEE6EEEEE RG:Z:TAATGCGC
 ## 5    141 *   0   0   *   *   0   0   GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG AAAAAEEEEEEEEAAEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE6EEEEEEEE RG:Z:TAATGCGC</code></pre>
 <ul>
-<li>However, they are un-aligned</li>
-<li>So, 1K reads of SRR6481086 were aligned to GRCh38 using HiSat2</li>
+<li>However, they truned out to be unaligned</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># DO NOT RUN (takes a while)</span>
+<span class="ex">sam-dump</span> SRR6481086 <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'{print $3}'</span> <span class="kw">|</span> <span class="fu">sort</span> <span class="kw">|</span> <span class="fu">uniq</span> -c</code></pre></div>
+<ul>
+<li>So, 1K reads of SRR6481086 were aligned to GRCh38 using <a href="https://ccb.jhu.edu/software/hisat2/" target="_blank">HiSat2</a></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">hisat2</span> -x /home/ssg29/data/genome/Homo_sapiens/Ensembl/GRCh38/Sequence/HiSat2Index/genome --add-chrname --rg-id SRR6481086 --rg SRR6481086 -1 SRR6481086_pass_1.fastq.gz -2 SRR6481086_pass_2.fastq.gz <span class="kw">|</span> <span class="ex">samtools</span> view -bS - <span class="op">&gt;</span> SRR6481086.bam</code></pre></div>
+<ul>
+<li>The BAM file is avaiable:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">wget</span> https://www.dropbox.com/s/6ouvliibmwhnbet/SRR6481086.bam</code></pre></div>
 <ul>
 <li>Let’s see the header of the BAM file</li>
 </ul>
@@ -584,7 +810,7 @@ div.tocify {
 ## @RG  ID:SRR6481086   SRR6481086
 ## @PG  ID:hisat2   PN:hisat2   VN:2.0.4    CL:&quot;/usr/local/Cluster-Apps/hisat2/2.0.4/hisat2-align-s --wrapper basic-0 -x /home/ssg29/data/genome/Homo_sapiens/Ensembl/GRCh38/Sequence/HiSat2Index/genome --add-chrname --rg-id SRR6481086 --rg SRR6481086 -1 /tmp/89318.inpipe1 -2 /tmp/89318.inpipe2&quot;</code></pre>
 <ul>
-<li>and the ‘flagstat’</li>
+<li>Run samtools with ‘flagstat’</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> flagstat SRR6481086.bam</code></pre></div>
 <pre><code>## 2243 + 0 in total (QC-passed reads + QC-failed reads)
@@ -599,12 +825,23 @@ div.tocify {
 ## 0 + 0 with mate mapped to a different chr
 ## 0 + 0 with mate mapped to a different chr (mapQ&gt;=5)</code></pre>
 <ul>
-<li>Why &gt;1000*2 reads? (input was 2K)</li>
+<li>2243 <strong>QC-passed reads</strong>?</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -F 0x200 -c SRR6481086.bam</code></pre></div>
+<pre><code>## 2243</code></pre>
+<ul>
+<li>0 <strong>QC-failed reads</strong>?</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -f 0x200 -c SRR6481086.bam</code></pre></div>
+<pre><code>## 0</code></pre>
+<ul>
+<li>Why <strong>&gt;1000*2 reads</strong>? (input was 2K)</li>
+<li>Hint: secondary alignment</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -f 256 -c SRR6481086.bam</code></pre></div>
 <pre><code>## 243</code></pre>
 <ul>
-<li>for example,</li>
+<li>For example:</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view SRR6481086.bam  <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'$1==&quot;SRR6481086.10&quot;{print $0}'</span></code></pre></div>
 <pre><code>## SRR6481086.10    73  chr21   8259166 0   3S72M   =   8259166 0   GGCCTCCTCGTGGGGGGGCCGGGCCCCCCCTCCCCCGGCGCGACCGCTCTCCCACCCCTCCTCCCCGCGCCCCCG AAAAAEEEEEEEEE66//EEAE/EE6EEEE&lt;EEE6E66EEE6/EE6E6E6EEE6EEEEAEEAEEEE/E6EEEEE/ AS:i:-11    ZS:i:-11    XN:i:0  XM:i:2  XO:i:0  XG:i:0  NM:i:2  MD:Z:22A8A40    YT:Z:UP RG:Z:SRR6481086 NH:i:3
@@ -612,12 +849,37 @@ div.tocify {
 ## SRR6481086.10    329 chr21   8214937 0   3S72M   =   8214937 0   GGCCTCCTCGTGGGGGGGCCGGGCCCCCCCTCCCCCGGCGCGACCGCTCTCCCACCCCTCCTCCCCGCGCCCCCG AAAAAEEEEEEEEE66//EEAE/EE6EEEE&lt;EEE6E66EEE6/EE6E6E6EEE6EEEEAEEAEEEE/E6EEEEE/ AS:i:-11    ZS:i:-11    XN:i:0  XM:i:2  XO:i:0  XG:i:0  NM:i:2  MD:Z:22A8A40    YT:Z:UP RG:Z:SRR6481086 NH:i:3
 ## SRR6481086.10    133 chr21   8259166 0   *   =   8259166 0   GGGGCGGGAGGGACGCCGCCGTCGCCGCCGCCCCCGAGCGCACGCTCCGCCGTCCCCCACAACGGGGGCCGCGCG AAA/AEEE/EAAA/EEEAEEAEEAEEEEAE/EEAAEAEEE///EAEAEAAEEAAAAAA/A//AA/A/AAAA/AEA YT:Z:UP RG:Z:SRR6481086</code></pre>
 <ul>
-<li><p><a href="https://broadinstitute.github.io/picard/explain-flags.html" class="uri">https://broadinstitute.github.io/picard/explain-flags.html</a></p></li>
-<li><p>Identify which reads were <strong>properly paired</strong></p></li>
+<li>Non-secondary alignment</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -f 1 -F 12 SRR6481086.bam </code></pre></div>
-<pre><code>## SRR6481086.124   65  chr4    1707226 60  3S72M   =   1707226 0   TTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AA66/EEEE/EEEE6EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE AS:i:-3 ZS:i:-11    XN:i:0  XM:i:0  XO:i:0  XG:i:0  NM:i:0  MD:Z:72 YT:Z:UP RG:Z:SRR6481086 NH:i:1
-## SRR6481086.124   129 chr4    1707226 60  3S72M   =   1707226 0   TTTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA /A/AAAEE//E/EE////////6/6666A666A6EEEEE66E66EEE6EAEEEEE/EEEEEEEEAEEEAE6//// AS:i:-3 XN:i:0  XM:i:0  XO:i:0  XG:i:0  NM:i:0  MD:Z:72 YT:Z:UP RG:Z:SRR6481086 NH:i:1</code></pre>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -F 256 -c SRR6481086.bam</code></pre></div>
+<pre><code>## 2000</code></pre>
+<ul>
+<li>443 <strong>mapped reads</strong>?</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -f1 -F 0x4 -c SRR6481086.bam </code></pre></div>
+<pre><code>## 433</code></pre>
+<ul>
+<li>1242 <strong>read1</strong> (from the 2243 paired in sequencing)?</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -f 0x41 -c SRR6481086.bam </code></pre></div>
+<pre><code>## 1242</code></pre>
+<ul>
+<li>1001 <strong>read2</strong> (from the 2243 paired in sequencing)?</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -f 0x81 -c SRR6481086.bam </code></pre></div>
+<pre><code>## 1001</code></pre>
+<ul>
+<li>0 <strong>properly paired</strong>?</li>
+<li>Hint: both 0x1 and 0x2 bits set and 0x4 bit not set</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -f 3 -F 0x4 -c SRR6481086.bam </code></pre></div>
+<pre><code>## 0</code></pre>
+<ul>
+<li>2 <strong>with itself and mate mapped</strong></li>
+<li>Hint: exclude segment unmapped (0x4) <strong>AND</strong> next segment in the template unmapped (0x8)</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -f 1 -F 12 -c SRR6481086.bam </code></pre></div>
+<pre><code>## 2</code></pre>
 </div>
 <div id="bed" class="section level3">
 <h3>BED</h3>
@@ -625,8 +887,20 @@ div.tocify {
 <li><a href="https://genome.ucsc.edu/FAQ/FAQformat#format1" class="uri">https://genome.ucsc.edu/FAQ/FAQformat#format1</a></li>
 <li>BAM to BED (using bedtools)</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">bamToBed</span> -i SRR6481086.bam <span class="kw">|</span> <span class="fu">head</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">bedtools</span> bamtobed -i SRR6481086.bam <span class="kw">|</span> <span class="fu">head</span>
+<span class="co"># this is equivalent with the follwoing</span>
+<span class="ex">bamToBed</span> -i SRR6481086.bam <span class="kw">|</span> <span class="fu">head</span></code></pre></div>
 <pre><code>## chr21    8259165 8259237 SRR6481086.10/1 0   +
+## chr21    8442200 8442272 SRR6481086.10/1 0   +
+## chr21    8214936 8215008 SRR6481086.10/1 0   +
+## chr11    61967559    61967631    SRR6481086.11/1 60  -
+## chr2 32916247    32916322    SRR6481086.18/2 60  +
+## chrMT    2824    2896    SRR6481086.24/1 60  +
+## chr21    8442555 8442623 SRR6481086.27/1 0   +
+## chr21    8215292 8215360 SRR6481086.27/1 0   +
+## chr21    8398326 8398394 SRR6481086.27/1 0   +
+## chr21    8259521 8259589 SRR6481086.27/1 0   +
+## chr21    8259165 8259237 SRR6481086.10/1 0   +
 ## chr21    8442200 8442272 SRR6481086.10/1 0   +
 ## chr21    8214936 8215008 SRR6481086.10/1 0   +
 ## chr11    61967559    61967631    SRR6481086.11/1 60  -
@@ -644,7 +918,7 @@ div.tocify {
 <pre><code>## 433
 ## 433</code></pre>
 <ul>
-<li>Compare 0-based (e.g. BED) and 1-based (e.g. BED) coordiates</li>
+<li>Compare the 0-based (e.g. BED) and 1-based (e.g. SAM) coordiates</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -f 1 -F 4 SRR6481086.bam  <span class="kw">|</span> <span class="fu">head</span> <span class="kw">|</span> <span class="fu">cut</span> -f1-4 </code></pre></div>
 <pre><code>## SRR6481086.10    73  chr21   8259166
@@ -658,7 +932,7 @@ div.tocify {
 ## SRR6481086.27    329 chr21   8398327
 ## SRR6481086.27    329 chr21   8259522</code></pre>
 <ul>
-<li>In theory, the aligned region can not go beyond &gt; 75 for SRR6481086 (PE75)</li>
+<li>In theory, the aligned region can not go beyond &gt; 75 for SRR6481086 (PE75), but there are:</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">bamToBed</span> -i SRR6481086.bam <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'$3-$2&gt;75{print $0}'</span></code></pre></div>
 <pre><code>## chr7 32489330    32490374    SRR6481086.72/1 60  -
@@ -680,8 +954,12 @@ div.tocify {
 <ul>
 <li>You may see ‘N’ in CIGAR line, which mean ‘skipped region from the reference’</li>
 <li>This mean ‘intron-spanning’ reads in RNA-Seq (i.e. reads containing exon-intron junctions)</li>
-<li><p><a href="https://gatkforums.broadinstitute.org/gatk/discussion/3892/the-gatk-best-practices-for-variant-calling-on-rnaseq-in-full-detail" class="uri">https://gatkforums.broadinstitute.org/gatk/discussion/3892/the-gatk-best-practices-for-variant-calling-on-rnaseq-in-full-detail</a></p></li>
-<li><p>From SRR6481086.bam, identify reads</p></li>
+<li>See <a href="https://gatkforums.broadinstitute.org/gatk/discussion/3892/the-gatk-best-practices-for-variant-calling-on-rnaseq-in-full-detail" target="_blank">the GATK best practice</a> with regard to this issue</li>
+<li>You can ‘split’ those N-containing CIGAR lines using bedtools</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">bamToBed</span> -split -i SRR6481086.bam <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'$3-$2&gt;75{print $0}'</span></code></pre></div>
+<ul>
+<li>Check out how the use of ‘-split’ option affects reporting <a href="https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html#split-reporting-overlaps-with-spliced-alignments-or-blocked-bed-features" target="_blank">overlap with the genome</a></li>
 </ul>
 </div>
 </div>
