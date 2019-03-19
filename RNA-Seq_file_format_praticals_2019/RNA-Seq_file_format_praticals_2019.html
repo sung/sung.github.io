@@ -341,10 +341,14 @@ University of Cambridge</div></h4>
 </div>
 
 
-<blockquote>
-<p>“check the <a href="https://github.com/sung/RNA-Seq_file_format_praticals_2019">github page</a> for this document”</p>
-</blockquote>
-<hr />
+<div id="before-you-start" class="section level2">
+<h2>Before you start</h2>
+<ol style="list-style-type: decimal">
+<li>Check the <a href="https://github.com/sung/RNA-Seq_file_format_praticals_2019">github page</a> for this document.</li>
+<li>If you would like to follow this practical from your own machine, you may need to install some of the software tools (follow relevant links) or linux commands.</li>
+<li>If 2 is true, you may also need to set up your <a href="https://www.cyberciti.biz/faq/unix-linux-adding-path/" target="_blank">$PATH environment variable</a></li>
+</ol>
+</div>
 <div id="aims" class="section level2">
 <h2>Aims</h2>
 <ol style="list-style-type: decimal">
@@ -443,14 +447,14 @@ University of Cambridge</div></h4>
 ## 40000261 40000320 GGAGGTGCATCAGGGGATTTAGGGAAAGGCTCCAGAGCAGGAGGCATGGCTGGCTGAGGT 60
 ## GAAAAGAGAGACTGGCTTACTCTCTCAGTTTCCTTTCCGGTACCCGAACAGTGCTCTGACTGTCACAGGTGATCAATTATCTGTTTATAGAATTGAAAACTGTCTTCTATTGGCCGCCTGTCCCTCTGGGGAAGCAAGTGTCTGGAGATGTCCCCATGGAATTGCACATTCCCTGGGGAACTCCTTTAATCTACATCGTAACAAGCTGGCTGGCAGCAGAGAGAAGAATGCTCTAAATTGGGGATATGGGGTGCAGGGAGGGAGGTGCATCAGGGGATTTAGGGAAAGGCTCCAGAGCAG</code></pre>
 <ul>
-<li>Compare the result above and the following method (using <a href="https://rest.ensembl.org/documentation/info/sequence_region">the ensembl rest api</a>){target=“_blank“}</li>
+<li>Compare the result above and the following method (using <a href="https://rest.ensembl.org/documentation/info/sequence_region" target="_blank">the ensembl rest api</a>)</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">curl</span> https://rest.ensembl.org/sequence/region/human/22:40000001..40000300:1?content-type=text/plain</code></pre></div>
 <pre><code>##   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
 ##                                  Dload  Upload   Total   Spent    Left  Speed
 ## 
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100   300  100   300    0     0   3705      0 --:--:-- --:--:-- --:--:--  3750
+100   300  100   300    0     0   3059      0 --:--:-- --:--:-- --:--:--  3092
 ## GAAAAGAGAGACTGGCTTACTCTCTCAGTTTCCTTTCCGGTACCCGAACAGTGCTCTGACTGTCACAGGTGATCAATTATCTGTTTATAGAATTGAAAACTGTCTTCTATTGGCCGCCTGTCCCTCTGGGGAAGCAAGTGTCTGGAGATGTCCCCATGGAATTGCACATTCCCTGGGGAACTCCTTTAATCTACATCGTAACAAGCTGGCTGGCAGCAGAGAGAAGAATGCTCTAAATTGGGGATATGGGGTGCAGGGAGGGAGGTGCATCAGGGGATTTAGGGAAAGGCTCCAGAGCAG</code></pre>
 <ul>
 <li>Task 3: what is the sequence of 40000001 to 40000100 of <strong>chr21</strong> (using both awk and curl)?</li>
@@ -460,7 +464,7 @@ University of Cambridge</div></h4>
 ##                                  Dload  Upload   Total   Spent    Left  Speed
 ## 
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100   100  100   100    0     0   1351      0 --:--:-- --:--:-- --:--:--  1369
+100   100  100   100    0     0   1681      0 --:--:-- --:--:-- --:--:--  1694
 ## GTCTTCCTGACTTCCAAGGTTGCCATGAATCCTTGGTGTTCCTTGGCTTGCAGATGCATTGCCATCTTCCCTGCTTGTCAGTCTGTGTTTCCTTCTTCTT</code></pre>
 </div>
 <div id="fastq" class="section level3">
@@ -495,7 +499,7 @@ University of Cambridge</div></h4>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">fastqc</span> SLX-9168.D701_D501_1K.C6H3UANXX.s_1.r_1.fq.gz</code></pre></div>
 <ul>
 <li><p>Another example <a href="http://science.sciencemag.org/content/360/6393/1133" target="_blank">Ngo <em>et al.</em> Science 2018</a> (<a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRP130149" target="_blank">SPR130149</a>)</p></li>
-<li><p>Downlaod the first 1K spots from the smallest RNA-Seq fastq files <a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR6481086" target="_blank">SRR6481086</a></p></li>
+<li><p>Downlaod the first 1K spots from the smallest RNA-Seq fastq files from <a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR6481086" target="_blank">SRR6481086</a> (you may need to install the <a href="https://www.ncbi.nlm.nih.gov/sra/docs/toolkitsoft/" target="_blank">sra toolkit</a>)</p></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">fastq-dump</span> -X 1000 --split-files --read-filter pass --outdir ./ --gzip SRR6481086 </code></pre></div>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">zcat</span> SRR6481086_pass_1.fastq.gz <span class="kw">|</span> <span class="bu">echo</span> <span class="va">$((</span><span class="kw">`</span><span class="fu">wc</span> -l<span class="kw">`</span>/4<span class="va">))</span>
@@ -555,9 +559,9 @@ University of Cambridge</div></h4>
 ##  746504 CDS
 ## 1262162 exon</code></pre>
 <ul>
-<li>Read the first 10 lines using Bioconductor <a href="http://bioconductor.org/packages/release/bioc/html/rtracklayer.html" target="_blank">rtracklayer package</a></li>
+<li>Read the first 10 lines (excluding comments (i.e. ‘#’)) using Bioconductor <a href="http://bioconductor.org/packages/release/bioc/html/rtracklayer.html" target="_blank">rtracklayer package</a></li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># start your R session using 'R' command</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># start your R session using 'R' command from the terminal</span>
 rtracklayer<span class="op">::</span><span class="kw">import</span>(<span class="dt">format=</span><span class="st">&quot;gtf&quot;</span>, <span class="dt">text=</span><span class="kw">system</span>(<span class="st">&quot;zcat Homo_sapiens.GRCh38.95.gtf.gz | grep -v ^# | head -n 10&quot;</span>, <span class="dt">intern=</span>T))</code></pre></div>
 <pre><code>## Warning in readGFF(filepath, version = version, filter = filter): connection is not positioned at the start of the file, rewinding
 ##   it</code></pre>
@@ -639,7 +643,8 @@ rtracklayer<span class="op">::</span><span class="kw">import</span>(<span class=
 <ul>
 <li>Another task: read the LEP (<a href="https://www.ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=ENSG00000174697;r=7:128241284-128257628;t=ENST00000308868" target="_blank">Leptin</a>) transcript</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># start your R session using 'R' command</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># start your R session using 'R' command from the terminal</span>
+<span class="co"># </span>
 rtracklayer<span class="op">::</span><span class="kw">import</span>(<span class="dt">format=</span><span class="st">&quot;gtf&quot;</span>, <span class="dt">text=</span><span class="kw">system</span>(<span class="st">&quot;zcat Homo_sapiens.GRCh38.95.gtf.gz | grep -P 'gene_name </span><span class="ch">\&quot;</span><span class="st">LEP</span><span class="ch">\&quot;</span><span class="st">' &quot;</span>, <span class="dt">intern=</span>T))</code></pre></div>
 <pre><code>## Warning in readGFF(filepath, version = version, filter = filter): connection is not positioned at the start of the file, rewinding
 ##   it</code></pre>
@@ -752,7 +757,8 @@ foo&lt;-rtracklayer<span class="op">::</span><span class="kw">import</span>(<spa
 <li><p>You can check your bitwise FLAG interactively from <a href="https://broadinstitute.github.io/picard/explain-flags.html" target="_blank">here</a></p></li>
 <li><p>Let’s get the BAM file for <a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR6481086" target="_blank">SRR6481086</a></p></li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">sam-dump</span> SRR6481086 <span class="kw">|</span> <span class="fu">head</span> -n 10</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># you may need to install the [sra toolkit](https://www.ncbi.nlm.nih.gov/sra/docs/toolkitsoft/){target=&quot;_blank&quot;}</span>
+<span class="ex">sam-dump</span> SRR6481086 <span class="kw">|</span> <span class="fu">head</span> -n 10</code></pre></div>
 <pre><code>## 1    77  *   0   0   *   *   0   0   GGCCATGCAAGATTCCCATTCTTGCGACCCGGGTTCGTTTCCCGGGCGGCGCACCAGATCGGAAGAGCACACGNC AAAAAEEEA/EAEEEEE6EEEEEEEEAEEEEEEEEEEEEEEEEEEEEEEEEE/EEEE6EEEE6AE6EEEEEEE#E RG:Z:TAATGCGC
 ## 1    141 *   0   0   *   *   0   0   GGTGCGCCGCCCNGGCCCCGCNNNCGNGTCGCCCGCCTNNNCNTCTTGCCTGNNCCGCTCGGCCGCGCGTCGTGT AAAAAEEEEEEE#EEA//EEE###EE#EEEE/EEEE/E###/#EAEEE//EE##AAEAE/EEA/EEE/EE/E/EA RG:Z:TAATGCGC
 ## 2    77  *   0   0   *   *   0   0   GAAGAGCACACGTCTGAACTCCAGTCACTAATGCGCATCTCGTATGCCGTCTTCTGCTTGAAAAAAAAAAGGGNG AAAA/EE/E6EEEEEE66EEEE/EEE/EEE6EEEAE/A6EEEE6EEEEEE6EEAEE/EEEEEE6EEEEE//AE#E RG:Z:TAATGCGC
@@ -769,17 +775,21 @@ foo&lt;-rtracklayer<span class="op">::</span><span class="kw">import</span>(<spa
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># DO NOT RUN (takes a while)</span>
 <span class="ex">sam-dump</span> SRR6481086 <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'{print $3}'</span> <span class="kw">|</span> <span class="fu">sort</span> <span class="kw">|</span> <span class="fu">uniq</span> -c</code></pre></div>
 <ul>
-<li>So, 1K reads of SRR6481086 were aligned to GRCh38 using <a href="https://ccb.jhu.edu/software/hisat2/" target="_blank">HiSat2</a></li>
+<li>So, 1K reads of SRR6481086 were aligned to GRCh38 using <a href="https://ccb.jhu.edu/software/hisat2/" target="_blank">HiSat2</a> (you are <strong>NOT</strong> expected to run this command)</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">hisat2</span> -x /home/ssg29/data/genome/Homo_sapiens/Ensembl/GRCh38/Sequence/HiSat2Index/genome --add-chrname --rg-id SRR6481086 --rg SRR6481086 -1 SRR6481086_pass_1.fastq.gz -2 SRR6481086_pass_2.fastq.gz <span class="kw">|</span> <span class="ex">samtools</span> view -bS - <span class="op">&gt;</span> SRR6481086.bam</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># this is for your information only</span>
+<span class="co"># the path to the index should be changed (but I am not covering this)</span>
+<span class="ex">hisat2</span> -x /home/ssg29/data/genome/Homo_sapiens/Ensembl/GRCh38/Sequence/HiSat2Index/genome --add-chrname --rg-id SRR6481086 --rg SRR6481086 -1 SRR6481086_pass_1.fastq.gz -2 SRR6481086_pass_2.fastq.gz <span class="kw">|</span> <span class="ex">samtools</span> view -bS - <span class="op">&gt;</span> SRR6481086.bam</code></pre></div>
 <ul>
 <li>The BAM file is avaiable:</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">wget</span> https://www.dropbox.com/s/6ouvliibmwhnbet/SRR6481086.bam</code></pre></div>
 <ul>
-<li>Let’s see the header of the BAM file</li>
+<li>Let’s see the header of the BAM file using <a href="http://www.htslib.org/" target="_blank">samtools</a></li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -H SRR6481086.bam</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># I assume samtools already installed </span>
+<span class="co"># and the binary is avaialble from your $PATH environment</span>
+<span class="ex">samtools</span> view -H SRR6481086.bam</code></pre></div>
 <pre><code>## @HD  VN:1.0  SO:unsorted
 ## @SQ  SN:chr1 LN:248956422
 ## @SQ  SN:chr2 LN:242193529
@@ -884,10 +894,11 @@ foo&lt;-rtracklayer<span class="op">::</span><span class="kw">import</span>(<spa
 <h3>BED</h3>
 <ul>
 <li><a href="https://genome.ucsc.edu/FAQ/FAQformat#format1" class="uri">https://genome.ucsc.edu/FAQ/FAQformat#format1</a></li>
-<li>BAM to BED (using bedtools)</li>
+<li>Convert BAM format to BED format (using <a href="https://bedtools.readthedocs.io/" target="_blank">bedtools</a>)</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">bedtools</span> bamtobed -i SRR6481086.bam <span class="kw">|</span> <span class="fu">head</span>
-<span class="co"># this is equivalent with the follwoing</span>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># I assume bedtools is exported to your $PATH</span>
+<span class="ex">bedtools</span> bamtobed -i SRR6481086.bam <span class="kw">|</span> <span class="fu">head</span>
+<span class="co"># this is equivalent with the follwoing command</span>
 <span class="ex">bamToBed</span> -i SRR6481086.bam <span class="kw">|</span> <span class="fu">head</span></code></pre></div>
 <pre><code>## chr21    8259165 8259237 SRR6481086.10/1 0   +
 ## chr21    8442200 8442272 SRR6481086.10/1 0   +
