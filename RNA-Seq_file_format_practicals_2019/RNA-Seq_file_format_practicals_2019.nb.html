@@ -484,8 +484,8 @@ University of Cambridge</div></h4>
 <h3>FASTA</h3>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/FASTA_format" class="uri">https://en.wikipedia.org/wiki/FASTA_format</a></li>
-<li>The letters should follow the <a href="https://en.wikipedia.org/wiki/FASTA_format#Sequence_representation" target="_blank">IUPAC codes</a></li>
-<li>Task 1: download the FASTA file of human chr22 (from <a href="https://www.ensembl.org/info/data/ftp/index.html" target="_blank">here</a>) and calculate the size (i.e. length) of the chromosome</li>
+<li><p>The letters should follow the <a href="https://en.wikipedia.org/wiki/FASTA_format#Sequence_representation" target="_blank">IUPAC codes</a></p></li>
+<li><p>Task 1: download the FASTA file of human chr22 (from <a href="https://www.ensembl.org/info/data/ftp/index.html" target="_blank">here</a>) and calculate the size (i.e. length) of the chromosome</p></li>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
@@ -495,22 +495,32 @@ University of Cambridge</div></h4>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoid2dldCBmdHA6Ly9mdHAuZW5zZW1ibC5vcmcvcHViL3JlbGVhc2UtOTUvZmFzdGEvaG9tb19zYXBpZW5zL2RuYS9Ib21vX3NhcGllbnMuR1JDaDM4LmRuYS5jaHJvbW9zb21lLjIyLmZhLmd6In0= -->
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">wget ftp<span class="op">:</span><span class="er">//</span>ftp.ensembl.org<span class="op">/</span>pub<span class="op">/</span>release<span class="op">-</span><span class="dv">95</span><span class="op">/</span>fasta<span class="op">/</span>homo_sapiens<span class="op">/</span>dna<span class="op">/</span>Homo_sapiens.GRCh38.dna.chromosome.<span class="fl">22.</span>fa.gz</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">wget</span> ftp://ftp.ensembl.org/pub/release-95/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.chromosome.22.fa.gz</code></pre></div>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuemxlc3MgSG9tb19zYXBpZW5zLkdSQ2gzOC5kbmEuY2hyb21vc29tZS4yMi5mYS5neiB8IGhlYWQgLW41XG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiemxlc3MgSG9tb19zYXBpZW5zLkdSQ2gzOC5kbmEuY2hyb21vc29tZS4yMi5mYS5neiB8IGhlYWQgLW41In0= -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">zless</span> Homo_sapiens.GRCh38.dna.chromosome.22.fa.gz <span class="kw">|</span> <span class="fu">head</span> -n5</code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiPjIyIGRuYTpjaHJvbW9zb21lIGNocm9tb3NvbWU6R1JDaDM4OjIyOjE6NTA4MTg0Njg6MSBSRUZcbk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTlxuTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OXG5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5cbk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTlxuIn0= -->
+<pre><code>&gt;22 dna:chromosome chromosome:GRCh38:22:1:50818468:1 REF
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuemNhdCBIb21vX3NhcGllbnMuR1JDaDM4LmRuYS5jaHJvbW9zb21lLjIyLmZhLmd6IHwgYXdrICchL14+L3tMRU4rPWxlbmd0aCgkMCl9RU5Ee3ByaW50IExFTn0nIFxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiemNhdCBIb21vX3NhcGllbnMuR1JDaDM4LmRuYS5jaHJvbW9zb21lLjIyLmZhLmd6IHwgYXdrICchL14+L3tMRU4rPWxlbmd0aCgkMCl9RU5Ee3ByaW50IExFTn0nICJ9 -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">zcat</span> Homo_sapiens.GRCh38.dna.chromosome.22.fa.gz <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'!/^&gt;/{LEN+=length($0)}END{print LEN}'</span> </code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiNTA4MTg0NjhcbiJ9 -->
+<pre><code>50818468</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -518,9 +528,18 @@ University of Cambridge</div></h4>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuemNhdCBIb21vX3NhcGllbnMuR1JDaDM4LmRuYS5jaHJvbW9zb21lLjIyLmZhLmd6IHwgYXdrICdCRUdJTnttaW49NTA4MTg0Njg7bWF4PTA7c3RhcnQ9NDAwMDAwMDE7ZW5kPTQwMDAwMzAwfSEvXj4ve0xFTis9bGVuZ3RoKCQwKTsgaWYoTEVOPj1zdGFydCAmJiBMRU4tbGVuZ3RoKCQwKSsxPD1lbmQpe21pbj0obWluPkxFTi1sZW5ndGgoJDApKzEpP0xFTi1sZW5ndGgoJDApKzE6bWluOyBtYXg9KG1heD5MRU4pP21heDpMRU47IFNFUT1TRVEkMDsgcHJpbnQgTEVOLWxlbmd0aCgkMCkrMSxMRU4sJDAsbGVuZ3RoKCQwKX0gfUVORHtwcmludCBzdWJzdHIoU0VRLHN0YXJ0LW1pbisxLGVuZC1zdGFydCsxKX0nXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiemNhdCBIb21vX3NhcGllbnMuR1JDaDM4LmRuYS5jaHJvbW9zb21lLjIyLmZhLmd6IHwgYXdrICdCRUdJTnttaW49NTA4MTg0Njg7bWF4PTA7c3RhcnQ9NDAwMDAwMDE7ZW5kPTQwMDAwMzAwfSEvXj4ve0xFTis9bGVuZ3RoKCQwKTsgaWYoTEVOPj1zdGFydCAmJiBMRU4tbGVuZ3RoKCQwKSsxPD1lbmQpe21pbj0obWluPkxFTi1sZW5ndGgoJDApKzEpP0xFTi1sZW5ndGgoJDApKzE6bWluOyBtYXg9KG1heD5MRU4pP21heDpMRU47IFNFUT1TRVEkMDsgcHJpbnQgTEVOLWxlbmd0aCgkMCkrMSxMRU4sJDAsbGVuZ3RoKCQwKX0gfUVORHtwcmludCBzdWJzdHIoU0VRLHN0YXJ0LW1pbisxLGVuZC1zdGFydCsxKX0nIn0= -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">zcat</span> Homo_sapiens.GRCh38.dna.chromosome.22.fa.gz <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'BEGIN{min=50818468;max=0;start=40000001;end=40000300}!/^&gt;/{LEN+=length($0); if(LEN&gt;=start &amp;&amp; LEN-length($0)+1&lt;=end){min=(min&gt;LEN-length($0)+1)?LEN-length($0)+1:min; max=(max&gt;LEN)?max:LEN; SEQ=SEQ$0; print LEN-length($0)+1,LEN,$0,length($0)} }END{print substr(SEQ,start-min+1,end-start+1)}'</span></code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiMzk5OTk5NjEgNDAwMDAwMjAgVFRHR0dBR0FHVEdDQVRUVEdBQ0NDVENDVEdHQVRUR0dHQUFDVFRUR0dBQUFBR0FHQUdBQ1RHR0NUVEFDIDYwXG40MDAwMDAyMSA0MDAwMDA4MCBUQ1RDVENBR1RUVENDVFRUQ0NHR1RBQ0NDR0FBQ0FHVEdDVENUR0FDVEdUQ0FDQUdHVEdBVENBQVRUQVQgNjBcbjQwMDAwMDgxIDQwMDAwMTQwIENUR1RUVEFUQUdBQVRUR0FBQUFDVEdUQ1RUQ1RBVFRHR0NDR0NDVEdUQ0NDVENUR0dHR0FBR0NBQUdURyA2MFxuNDAwMDAxNDEgNDAwMDAyMDAgVENUR0dBR0FUR1RDQ0NDQVRHR0FBVFRHQ0FDQVRUQ0NDVEdHR0dBQUNUQ0NUVFRBQVRDVEFDQVRDR1RBIDYwXG40MDAwMDIwMSA0MDAwMDI2MCBBQ0FBR0NUR0dDVEdHQ0FHQ0FHQUdBR0FBR0FBVEdDVENUQUFBVFRHR0dHQVRBVEdHR0dUR0NBR0dHQUcgNjBcbjQwMDAwMjYxIDQwMDAwMzIwIEdHQUdHVEdDQVRDQUdHR0dBVFRUQUdHR0FBQUdHQ1RDQ0FHQUdDQUdHQUdHQ0FUR0dDVEdHQ1RHQUdHVCA2MFxuR0FBQUFHQUdBR0FDVEdHQ1RUQUNUQ1RDVENBR1RUVENDVFRUQ0NHR1RBQ0NDR0FBQ0FHVEdDVENUR0FDVEdUQ0FDQUdHVEdBVENBQVRUQVRDVEdUVFRBVEFHQUFUVEdBQUFBQ1RHVENUVENUQVRUR0dDQ0dDQ1RHVENDQ1RDVEdHR0dBQUdDQUFHVEdUQ1RHR0FHQVRHVENDQ0NBVEdHQUFUVEdDQUNBVFRDQ0NUR0dHR0FBQ1RDQ1RUVEFBVENUQUNBVENHVEFBQ0FBR0NUR0dDVEdHQ0FHQ0FHQUdBR0FBR0FBVEdDVENUQUFBVFRHR0dHQVRBVEdHR0dUR0NBR0dHQUdHR0FHR1RHQ0FUQ0FHR0dHQVRUVEFHR0dBQUFHR0NUQ0NBR0FHQ0FHXG4ifQ== -->
+<pre><code>39999961 40000020 TTGGGAGAGTGCATTTGACCCTCCTGGATTGGGAACTTTGGAAAAGAGAGACTGGCTTAC 60
+40000021 40000080 TCTCTCAGTTTCCTTTCCGGTACCCGAACAGTGCTCTGACTGTCACAGGTGATCAATTAT 60
+40000081 40000140 CTGTTTATAGAATTGAAAACTGTCTTCTATTGGCCGCCTGTCCCTCTGGGGAAGCAAGTG 60
+40000141 40000200 TCTGGAGATGTCCCCATGGAATTGCACATTCCCTGGGGAACTCCTTTAATCTACATCGTA 60
+40000201 40000260 ACAAGCTGGCTGGCAGCAGAGAGAAGAATGCTCTAAATTGGGGATATGGGGTGCAGGGAG 60
+40000261 40000320 GGAGGTGCATCAGGGGATTTAGGGAAAGGCTCCAGAGCAGGAGGCATGGCTGGCTGAGGT 60
+GAAAAGAGAGACTGGCTTACTCTCTCAGTTTCCTTTCCGGTACCCGAACAGTGCTCTGACTGTCACAGGTGATCAATTATCTGTTTATAGAATTGAAAACTGTCTTCTATTGGCCGCCTGTCCCTCTGGGGAAGCAAGTGTCTGGAGATGTCCCCATGGAATTGCACATTCCCTGGGGAACTCCTTTAATCTACATCGTAACAAGCTGGCTGGCAGCAGAGAGAAGAATGCTCTAAATTGGGGATATGGGGTGCAGGGAGGGAGGTGCATCAGGGGATTTAGGGAAAGGCTCCAGAGCAG</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -528,9 +547,17 @@ University of Cambridge</div></h4>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuY3VybCBodHRwczovL3Jlc3QuZW5zZW1ibC5vcmcvc2VxdWVuY2UvcmVnaW9uL2h1bWFuLzIyOjQwMDAwMDAxLi40MDAwMDMwMDoxP2NvbnRlbnQtdHlwZT10ZXh0L3BsYWluXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiY3VybCBodHRwczovL3Jlc3QuZW5zZW1ibC5vcmcvc2VxdWVuY2UvcmVnaW9uL2h1bWFuLzIyOjQwMDAwMDAxLi40MDAwMDMwMDoxP2NvbnRlbnQtdHlwZT10ZXh0L3BsYWluIn0= -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">curl</span> https://rest.ensembl.org/sequence/region/human/22:40000001..40000300:1?content-type=text/plain</code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAlIFRvdGFsICAgICUgUmVjZWl2ZWQgJSBYZmVyZCAgQXZlcmFnZSBTcGVlZCAgIFRpbWUgICAgVGltZSAgICAgVGltZSAgQ3VycmVudFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgRGxvYWQgIFVwbG9hZCAgIFRvdGFsICAgU3BlbnQgICAgTGVmdCAgU3BlZWRcblxyICAwICAgICAwICAgIDAgICAgIDAgICAgMCAgICAgMCAgICAgIDAgICAgICAwIC0tOi0tOi0tIC0tOi0tOi0tIC0tOi0tOi0tICAgICAwXHIxMDAgICAzMDAgIDEwMCAgIDMwMCAgICAwICAgICAwICAgMTkxOSAgICAgIDAgLS06LS06LS0gLS06LS06LS0gLS06LS06LS0gIDE5MjNcbkdBQUFBR0FHQUdBQ1RHR0NUVEFDVENUQ1RDQUdUVFRDQ1RUVENDR0dUQUNDQ0dBQUNBR1RHQ1RDVEdBQ1RHVENBQ0FHR1RHQVRDQUFUVEFUQ1RHVFRUQVRBR0FBVFRHQUFBQUNUR1RDVFRDVEFUVEdHQ0NHQ0NUR1RDQ0NUQ1RHR0dHQUFHQ0FBR1RHVENUR0dBR0FUR1RDQ0NDQVRHR0FBVFRHQ0FDQVRUQ0NDVEdHR0dBQUNUQ0NUVFRBQVRDVEFDQVRDR1RBQUNBQUdDVEdHQ1RHR0NBR0NBR0FHQUdBQUdBQVRHQ1RDVEFBQVRUR0dHR0FUQVRHR0dHVEdDQUdHR0FHR0dBR0dUR0NBVENBR0dHR0FUVFRBR0dHQUFBR0dDVENDQUdBR0NBR1xuIn0= -->
+<pre><code>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   300  100   300    0     0   1919      0 --:--:-- --:--:-- --:--:--  1923
+GAAAAGAGAGACTGGCTTACTCTCTCAGTTTCCTTTCCGGTACCCGAACAGTGCTCTGACTGTCACAGGTGATCAATTATCTGTTTATAGAATTGAAAACTGTCTTCTATTGGCCGCCTGTCCCTCTGGGGAAGCAAGTGTCTGGAGATGTCCCCATGGAATTGCACATTCCCTGGGGAACTCCTTTAATCTACATCGTAACAAGCTGGCTGGCAGCAGAGAGAAGAATGCTCTAAATTGGGGATATGGGGTGCAGGGAGGGAGGTGCATCAGGGGATTTAGGGAAAGGCTCCAGAGCAG</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -538,23 +565,31 @@ University of Cambridge</div></h4>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuY3VybCBodHRwczovL3Jlc3QuZW5zZW1ibC5vcmcvc2VxdWVuY2UvcmVnaW9uL2h1bWFuLzIxOjQwMDAwMDAxLi40MDAwMDEwMDoxP2NvbnRlbnQtdHlwZT10ZXh0L3BsYWluXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiY3VybCBodHRwczovL3Jlc3QuZW5zZW1ibC5vcmcvc2VxdWVuY2UvcmVnaW9uL2h1bWFuLzIxOjQwMDAwMDAxLi40MDAwMDEwMDoxP2NvbnRlbnQtdHlwZT10ZXh0L3BsYWluIn0= -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">curl</span> https://rest.ensembl.org/sequence/region/human/21:40000001..40000100:1?content-type=text/plain</code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAlIFRvdGFsICAgICUgUmVjZWl2ZWQgJSBYZmVyZCAgQXZlcmFnZSBTcGVlZCAgIFRpbWUgICAgVGltZSAgICAgVGltZSAgQ3VycmVudFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgRGxvYWQgIFVwbG9hZCAgIFRvdGFsICAgU3BlbnQgICAgTGVmdCAgU3BlZWRcblxyICAwICAgICAwICAgIDAgICAgIDAgICAgMCAgICAgMCAgICAgIDAgICAgICAwIC0tOi0tOi0tIC0tOi0tOi0tIC0tOi0tOi0tICAgICAwXHIxMDAgICAxMDAgIDEwMCAgIDEwMCAgICAwICAgICAwICAgIDk1MCAgICAgIDAgLS06LS06LS0gLS06LS06LS0gLS06LS06LS0gICA5NTJcbkdUQ1RUQ0NUR0FDVFRDQ0FBR0dUVEdDQ0FUR0FBVENDVFRHR1RHVFRDQ1RUR0dDVFRHQ0FHQVRHQ0FUVEdDQ0FUQ1RUQ0NDVEdDVFRHVENBR1RDVEdUR1RUVENDVFRDVFRDVFRcbiJ9 -->
+<pre><code>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   100  100   100    0     0    950      0 --:--:-- --:--:-- --:--:--   952
+GTCTTCCTGACTTCCAAGGTTGCCATGAATCCTTGGTGTTCCTTGGCTTGCAGATGCATTGCCATCTTCCCTGCTTGTCAGTCTGTGTTTCCTTCTTCTT</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
 <div id="fastq" class="section level3">
 <h3>FASTQ</h3>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/FASTQ_format" class="uri">https://en.wikipedia.org/wiki/FASTQ_format</a></li>
+<li><p><a href="https://en.wikipedia.org/wiki/FASTQ_format" class="uri">https://en.wikipedia.org/wiki/FASTQ_format</a></p></li>
 <li>Examples from <a href="https://insight.jci.org/articles/view/120723" target="_blank">Gong <em>et al.</em> JCI-I 2018</a></li>
-<li>Download one of down-sampled (to 1K) FASTQ available from below</li>
+<li><p>Download one of down-sampled (to 1K) FASTQ available from below</p></li>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoid2dldCBodHRwczovL3d3dy5kcm9wYm94LmNvbS9zL2gybHp6bjk0bzl6cHYyNi9TTFgtOTE2OC5ENzAxX0Q1MDFfMUsuQzZIM1VBTlhYLnNfMS5yXzEuZnEuZ3oifQ== -->
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">wget https<span class="op">:</span><span class="er">//</span>www.dropbox.com<span class="op">/</span>s<span class="op">/</span>h2lzzn94o9zpv26<span class="op">/</span>SLX<span class="op">-</span><span class="fl">9168.</span>D701_D501_1K.C6H3UANXX.s_<span class="fl">1.</span>r_<span class="fl">1.</span>fq.gz</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">wget</span> https://www.dropbox.com/s/h2lzzn94o9zpv26/SLX-9168.D701_D501_1K.C6H3UANXX.s_1.r_1.fq.gz</code></pre></div>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -563,9 +598,12 @@ University of Cambridge</div></h4>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuemNhdCAgU0xYLTkxNjguRDcwMV9ENTAxXzFLLkM2SDNVQU5YWC5zXzEucl8xLmZxLmd6IHwgZWNobyAkKChgd2MgLWxgLzQpKVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiemNhdCAgU0xYLTkxNjguRDcwMV9ENTAxXzFLLkM2SDNVQU5YWC5zXzEucl8xLmZxLmd6IHwgZWNobyAkKChgd2MgLWxgLzQpKSJ9 -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">zcat</span>  SLX-9168.D701_D501_1K.C6H3UANXX.s_1.r_1.fq.gz <span class="kw">|</span> <span class="bu">echo</span> <span class="va">$((</span><span class="kw">`</span><span class="fu">wc</span> -l<span class="kw">`</span>/4<span class="va">))</span></code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiMTAwMFxuIn0= -->
+<pre><code>1000</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -573,28 +611,38 @@ University of Cambridge</div></h4>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuemNhdCBTTFgtOTE2OC5ENzAxX0Q1MDFfMUsuQzZIM1VBTlhYLnNfMS5yXzEuZnEuZ3ogfCBoZWFkIC1uNFxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiemNhdCBTTFgtOTE2OC5ENzAxX0Q1MDFfMUsuQzZIM1VBTlhYLnNfMS5yXzEuZnEuZ3ogfCBoZWFkIC1uNCJ9 -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">zcat</span> SLX-9168.D701_D501_1K.C6H3UANXX.s_1.r_1.fq.gz <span class="kw">|</span> <span class="fu">head</span> -n4</code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiQEhJU0VROjI0OTpDNkgzVUFOWFg6MToxMTAxOjE0NTI6MjA4NiAxOk46MDpOVFRBQ1RDR05BVEFHQ0NUXG5OVFRUQ0NBQUFBQUFBVEdBQUFDQUNBQ0FUVEFHQVRBVEFBQUNDQVRDQ0FBQUFDVFRUQUFDR0FUVEdBQUFBQ1RHVEFUVENBQUFBVFRBQUFUR0FDQ0NBR0FHVEFHR1RDVENUVFRDVEdBQUFBR1RUQ0NDVFRDQVRBVENHR0NBQVxuK1xuIz09QUFGR0ZGRUdGREdGQ0YxPDpDRj5GR0dDRUdHR0c+Rz5GQkZHR0VHQEZARkdHMTwxRkVGR0dHRzFFR0dHR0dHR0dHR0dHQ0dHRkRFR0dFRT5GRDowRkZGOjpGRkdHR0dHR0dFR0dHMEVDR0dHR0RHR0c+RkdGPDhDQUdcbiJ9 -->
+<pre><code>@HISEQ:249:C6H3UANXX:1:1101:1452:2086 1:N:0:NTTACTCGNATAGCCT
+NTTTCCAAAAAAATGAAACACACATTAGATATAAACCATCCAAAACTTTAACGATTGAAAACTGTATTCAAAATTAAATGACCCAGAGTAGGTCTCTTTCTGAAAAGTTCCCTTCATATCGGCAA
++
+#==AAFGFFEGFDGFCF1&lt;:CF&gt;FGGCEGGGG&gt;G&gt;FBFGGEG@F@FGG1&lt;1FEFGGGG1EGGGGGGGGGGGGCGGFDEGGEE&gt;FD:0FFF::FFGGGGGGGEGGG0ECGGGGDGGG&gt;FGF&lt;8CAG</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
-<li>Question: sequencing length?</li>
+<li>Question: sequencing lenth?</li>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuemxlc3MgU0xYLTkxNjguRDcwMV9ENTAxXzFLLkM2SDNVQU5YWC5zXzEucl8xLmZxLmd6IHwgaGVhZCAtbiA0IHwgYXdrICdOUiU0PT0ye3ByaW50IGxlbmd0aCgkMCl9J1xuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiemxlc3MgU0xYLTkxNjguRDcwMV9ENTAxXzFLLkM2SDNVQU5YWC5zXzEucl8xLmZxLmd6IHwgaGVhZCAtbiA0IHwgYXdrICdOUiU0PT0ye3ByaW50IGxlbmd0aCgkMCl9JyJ9 -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">zless</span> SLX-9168.D701_D501_1K.C6H3UANXX.s_1.r_1.fq.gz <span class="kw">|</span> <span class="fu">head</span> -n 4 <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'NR%4==2{print length($0)}'</span></code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiMTI1XG4ifQ== -->
+<pre><code>125</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
-<li>Check the base quality using <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank">fastqc</a></li>
+<li><p>Check the base quality of the read above from the <a href="https://www.samformat.info/base-qualities">samformat.info</a></p></li>
+<li><p>Check the base quality using <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank">fastqc</a></p></li>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiZmFzdHFjIFNMWC05MTY4LkQ3MDFfRDUwMV8xSy5DNkgzVUFOWFguc18xLnJfMS5mcS5neiJ9 -->
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fastqc SLX<span class="op">-</span><span class="fl">9168.</span>D701_D501_1K.C6H3UANXX.s_<span class="fl">1.</span>r_<span class="fl">1.</span>fq.gz</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">fastqc</span> SLX-9168.D701_D501_1K.C6H3UANXX.s_1.r_1.fq.gz</code></pre></div>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -619,14 +667,18 @@ University of Cambridge</div></h4>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiZmFzdHEtZHVtcCAtWCAxMDAwIC0tc3BsaXQtZmlsZXMgLS1yZWFkLWZpbHRlciBwYXNzIC0tb3V0ZGlyIC4vIC0tZ3ppcCBTUlI2NDgxMDg2ICJ9 -->
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fastq<span class="op">-</span>dump <span class="op">-</span>X <span class="dv">1000</span> <span class="op">--</span>split<span class="op">-</span>files <span class="op">--</span>read<span class="op">-</span>filter pass <span class="op">--</span>outdir .<span class="op">/</span><span class="st"> </span><span class="op">--</span>gzip SRR6481086 </code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">fastq-dump</span> -X 1000 --split-files --read-filter pass --outdir ./ --gzip SRR6481086 </code></pre></div>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuemNhdCBTUlI2NDgxMDg2X3Bhc3NfMS5mYXN0cS5neiB8IGVjaG8gJCgoYHdjIC1sYC80KSlcbnpjYXQgU1JSNjQ4MTA4Nl9wYXNzXzIuZmFzdHEuZ3ogfCBlY2hvICQoKGB3YyAtbGAvNCkpXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiemNhdCBTUlI2NDgxMDg2X3Bhc3NfMS5mYXN0cS5neiB8IGVjaG8gJCgoYHdjIC1sYC80KSlcbnpjYXQgU1JSNjQ4MTA4Nl9wYXNzXzIuZmFzdHEuZ3ogfCBlY2hvICQoKGB3YyAtbGAvNCkpIn0= -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">zcat</span> SRR6481086_pass_1.fastq.gz <span class="kw">|</span> <span class="bu">echo</span> <span class="va">$((</span><span class="kw">`</span><span class="fu">wc</span> -l<span class="kw">`</span>/4<span class="va">))</span>
 <span class="fu">zcat</span> SRR6481086_pass_2.fastq.gz <span class="kw">|</span> <span class="bu">echo</span> <span class="va">$((</span><span class="kw">`</span><span class="fu">wc</span> -l<span class="kw">`</span>/4<span class="va">))</span></code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiMTAwMFxuMTAwMFxuIn0= -->
+<pre><code>1000
+1000</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -634,23 +686,44 @@ University of Cambridge</div></h4>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuemNhdCBTUlI2NDgxMDg2X3Bhc3NfMS5mYXN0cS5neiB8IGhlYWQgLW44XG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiemNhdCBTUlI2NDgxMDg2X3Bhc3NfMS5mYXN0cS5neiB8IGhlYWQgLW44In0= -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">zcat</span> SRR6481086_pass_1.fastq.gz <span class="kw">|</span> <span class="fu">head</span> -n8</code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiQFNSUjY0ODEwODYuMSAxIGxlbmd0aD03NVxuR0dDQ0FUR0NBQUdBVFRDQ0NBVFRDVFRHQ0dBQ0NDR0dHVFRDR1RUVENDQ0dHR0NHR0NHQ0FDQ0FHQVRDR0dBQUdBR0NBQ0FDR05DXG4rU1JSNjQ4MTA4Ni4xIDEgbGVuZ3RoPTc1XG5BQUFBQUVFRUEvRUFFRUVFRTZFRUVFRUVFRUFFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFL0VFRUU2RUVFRTZBRTZFRUVFRUVFI0VcbkBTUlI2NDgxMDg2LjIgMiBsZW5ndGg9NzVcbkdBQUdBR0NBQ0FDR1RDVEdBQUNUQ0NBR1RDQUNUQUFUR0NHQ0FUQ1RDR1RBVEdDQ0dUQ1RUQ1RHQ1RUR0FBQUFBQUFBQUFHR0dOR1xuK1NSUjY0ODEwODYuMiAyIGxlbmd0aD03NVxuQUFBQS9FRS9FNkVFRUVFRTY2RUVFRS9FRUUvRUVFNkVFRUFFL0E2RUVFRTZFRUVFRUU2RUVBRUUvRUVFRUVFNkVFRUVFLy9BRSNFXG4ifQ== -->
+<pre><code>@SRR6481086.1 1 length=75
+GGCCATGCAAGATTCCCATTCTTGCGACCCGGGTTCGTTTCCCGGGCGGCGCACCAGATCGGAAGAGCACACGNC
++SRR6481086.1 1 length=75
+AAAAAEEEA/EAEEEEE6EEEEEEEEAEEEEEEEEEEEEEEEEEEEEEEEEE/EEEE6EEEE6AE6EEEEEEE#E
+@SRR6481086.2 2 length=75
+GAAGAGCACACGTCTGAACTCCAGTCACTAATGCGCATCTCGTATGCCGTCTTCTGCTTGAAAAAAAAAAGGGNG
++SRR6481086.2 2 length=75
+AAAA/EE/E6EEEEEE66EEEE/EEE/EEE6EEEAE/A6EEEE6EEEEEE6EEAEE/EEEEEE6EEEEE//AE#E</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuemNhdCBTUlI2NDgxMDg2X3Bhc3NfMi5mYXN0cS5neiB8IGhlYWQgLW44XG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiemNhdCBTUlI2NDgxMDg2X3Bhc3NfMi5mYXN0cS5neiB8IGhlYWQgLW44In0= -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">zcat</span> SRR6481086_pass_2.fastq.gz <span class="kw">|</span> <span class="fu">head</span> -n8</code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiQFNSUjY0ODEwODYuMSAxIGxlbmd0aD03NVxuR0dUR0NHQ0NHQ0NDTkdHQ0NDQ0dDTk5OQ0dOR1RDR0NDQ0dDQ1ROTk5DTlRDVFRHQ0NUR05OQ0NHQ1RDR0dDQ0dDR0NHVENHVEdUXG4rU1JSNjQ4MTA4Ni4xIDEgbGVuZ3RoPTc1XG5BQUFBQUVFRUVFRUUjRUVBLy9FRUUjIyNFRSNFRUVFL0VFRUUvRSMjIy8jRUFFRUUvL0VFIyNBQUVBRS9FRUEvRUVFL0VFL0UvRUFcbkBTUlI2NDgxMDg2LjIgMiBsZW5ndGg9NzVcbkdHR0dHR0dHR0dHR05HR0dHR0dHR05OTkdHTkdHR0dHR0dHR0dHTk5OR05HR0dHR0dHR0dOTkdHR0dHR0dHR0dHR0dHR0dHR0dHR1xuK1NSUjY0ODEwODYuMiAyIGxlbmd0aD03NVxuQUFBQUFFRUVFRUVFI0VFRUVFRUVFIyMjRUUjRUVFRUVFRUVFRUUjIyNFI0VFQUVBRUVFRSMjRUVFRUVFRUVFRUVFRUFBQUVFQUFFXG4ifQ== -->
+<pre><code>@SRR6481086.1 1 length=75
+GGTGCGCCGCCCNGGCCCCGCNNNCGNGTCGCCCGCCTNNNCNTCTTGCCTGNNCCGCTCGGCCGCGCGTCGTGT
++SRR6481086.1 1 length=75
+AAAAAEEEEEEE#EEA//EEE###EE#EEEE/EEEE/E###/#EAEEE//EE##AAEAE/EEA/EEE/EE/E/EA
+@SRR6481086.2 2 length=75
+GGGGGGGGGGGGNGGGGGGGGNNNGGNGGGGGGGGGGGNNNGNGGGGGGGGGNNGGGGGGGGGGGGGGGGGGGGG
++SRR6481086.2 2 length=75
+AAAAAEEEEEEE#EEEEEEEE###EE#EEEEEEEEEEE###E#EEAEAEEEE##EEEEEEEEEEEEEAAAEEAAE</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
-<li>Check the base quality using <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank">fastqc</a></li>
+<li><p>Check the base quality from the <a href="https://www.samformat.info/base-qualities">samformat.info</a></p></li>
+<li><p>Check the base quality using <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank">fastqc</a></p></li>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiZmFzdHFjIFNSUjY0ODEwODZfcGFzc18xLmZhc3RxLmd6IFNSUjY0ODEwODZfcGFzc18yLmZhc3RxLmd6In0= -->
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fastqc SRR6481086_pass_<span class="fl">1.</span>fastq.gz SRR6481086_pass_<span class="fl">2.</span>fastq.gz</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">fastqc</span> SRR6481086_pass_1.fastq.gz SRR6481086_pass_2.fastq.gz</code></pre></div>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -667,13 +740,13 @@ University of Cambridge</div></h4>
 <h3>GTF (GFF)</h3>
 <ul>
 <li><a href="https://genome.ucsc.edu/FAQ/FAQformat#format3" class="uri">https://genome.ucsc.edu/FAQ/FAQformat#format3</a></li>
-<li><a href="https://www.ensembl.org/info/website/upload/gff.html" class="uri">https://www.ensembl.org/info/website/upload/gff.html</a></li>
-<li>Let’s download the Ensembl transcript annotation file</li>
+<li><p><a href="https://www.ensembl.org/info/website/upload/gff.html" class="uri">https://www.ensembl.org/info/website/upload/gff.html</a></p></li>
+<li><p>Let’s download the Ensembl transcript annotation file</p></li>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoid2dldCBmdHA6Ly9mdHAuZW5zZW1ibC5vcmcvcHViL3JlbGVhc2UtOTUvZ3RmL2hvbW9fc2FwaWVucy9Ib21vX3NhcGllbnMuR1JDaDM4Ljk1Lmd0Zi5neiJ9 -->
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">wget ftp<span class="op">:</span><span class="er">//</span>ftp.ensembl.org<span class="op">/</span>pub<span class="op">/</span>release<span class="op">-</span><span class="dv">95</span><span class="op">/</span>gtf<span class="op">/</span>homo_sapiens<span class="op">/</span>Homo_sapiens.GRCh38.<span class="fl">95.</span>gtf.gz</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">wget</span> ftp://ftp.ensembl.org/pub/release-95/gtf/homo_sapiens/Homo_sapiens.GRCh38.95.gtf.gz</code></pre></div>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -682,9 +755,12 @@ University of Cambridge</div></h4>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuemNhdCBIb21vX3NhcGllbnMuR1JDaDM4Ljk1Lmd0Zi5neiB8IGF3ayAnJDM9PVwiZ2VuZVwie0dFTkUrK30kMz09XCJ0cmFuc2NyaXB0XCJ7VFJBTlMrK30kMz09XCJleG9uXCJ7RVhPTisrfUVORHtwcmludCBHRU5FLFRSQU5TLEVYT059J1xuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiemNhdCBIb21vX3NhcGllbnMuR1JDaDM4Ljk1Lmd0Zi5neiB8IGF3ayAnJDM9PVwiZ2VuZVwie0dFTkUrK30kMz09XCJ0cmFuc2NyaXB0XCJ7VFJBTlMrK30kMz09XCJleG9uXCJ7RVhPTisrfUVORHtwcmludCBHRU5FLFRSQU5TLEVYT059JyJ9 -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">zcat</span> Homo_sapiens.GRCh38.95.gtf.gz <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'$3==&quot;gene&quot;{GENE++}$3==&quot;transcript&quot;{TRANS++}$3==&quot;exon&quot;{EXON++}END{print GENE,TRANS,EXON}'</span></code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiNTg3MzUgMjA2NjAxIDEyNjIxNjJcbiJ9 -->
+<pre><code>58735 206601 1262162</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -692,9 +768,20 @@ University of Cambridge</div></h4>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuemNhdCBIb21vX3NhcGllbnMuR1JDaDM4Ljk1Lmd0Zi5neiB8IGF3ayAnIS9eIy97cHJpbnQgJDN9JyB8IHNvcnQgfCB1bmlxIC1jIHwgc29ydCAtazEsMW5cbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiemNhdCBIb21vX3NhcGllbnMuR1JDaDM4Ljk1Lmd0Zi5neiB8IGF3ayAnIS9eIy97cHJpbnQgJDN9JyB8IHNvcnQgfCB1bmlxIC1jIHwgc29ydCAtazEsMW4ifQ== -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">zcat</span> Homo_sapiens.GRCh38.95.gtf.gz <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'!/^#/{print $3}'</span> <span class="kw">|</span> <span class="fu">sort</span> <span class="kw">|</span> <span class="fu">uniq</span> -c <span class="kw">|</span> <span class="fu">sort</span> -k1,1n</code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgIDEyMCBTZWxlbm9jeXN0ZWluZVxuICA1ODczNSBnZW5lXG4gIDc4NTYyIHN0b3BfY29kb25cbiAgODY0NTQgc3RhcnRfY29kb25cbiAxNDg0OTEgdGhyZWVfcHJpbWVfdXRyXG4gMTQ5OTMwIGZpdmVfcHJpbWVfdXRyXG4gMjA2NjAxIHRyYW5zY3JpcHRcbiA3NDY1MDQgQ0RTXG4xMjYyMTYyIGV4b25cbiJ9 -->
+<pre><code>    120 Selenocysteine
+  58735 gene
+  78562 stop_codon
+  86454 start_codon
+ 148491 three_prime_utr
+ 149930 five_prime_utr
+ 206601 transcript
+ 746504 CDS
+1262162 exon</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -702,10 +789,91 @@ University of Cambridge</div></h4>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBzdGFydCB5b3VyIFIgc2Vzc2lvbiB1c2luZyAnUicgY29tbWFuZCBmcm9tIHRoZSB0ZXJtaW5hbFxucnRyYWNrbGF5ZXI6OmltcG9ydChmb3JtYXQ9XCJndGZcIiwgdGV4dD1zeXN0ZW0oXCJ6Y2F0IEhvbW9fc2FwaWVucy5HUkNoMzguOTUuZ3RmLmd6IHwgZ3JlcCAtdiBeIyB8IGhlYWQgLW4gMTBcIiwgaW50ZXJuPVQpKVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjpbIiMgc3RhcnQgeW91ciBSIHNlc3Npb24gdXNpbmcgJ1InIGNvbW1hbmQgZnJvbSB0aGUgdGVybWluYWwiLCJydHJhY2tsYXllcjo6aW1wb3J0KGZvcm1hdD1cImd0ZlwiLCB0ZXh0PXN5c3RlbShcInpjYXQgSG9tb19zYXBpZW5zLkdSQ2gzOC45NS5ndGYuZ3ogfCBncmVwIC12IF4jIHwgaGVhZCAtbiAxMFwiLCBpbnRlcm49VCkpIl19 -->
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># start your R session using 'R' command from the terminal</span>
 rtracklayer<span class="op">::</span><span class="kw">import</span>(<span class="dt">format=</span><span class="st">&quot;gtf&quot;</span>, <span class="dt">text=</span><span class="kw">system</span>(<span class="st">&quot;zcat Homo_sapiens.GRCh38.95.gtf.gz | grep -v ^# | head -n 10&quot;</span>, <span class="dt">intern=</span>T))</code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-warning-begin eyJkYXRhIjoiV2FybmluZyBpbiByZWFkR0ZGKGZpbGVwYXRoLCB2ZXJzaW9uID0gdmVyc2lvbiwgZmlsdGVyID0gZmlsdGVyKTogY29ubmVjdGlvbiBpcyBub3QgcG9zaXRpb25lZCBhdCB0aGUgc3RhcnQgb2YgdGhlIGZpbGUsIHJld2luZGluZ1xuICBpdFxuIn0= -->
+<pre><code>Warning in readGFF(filepath, version = version, filter = filter): connection is not positioned at the start of the file, rewinding
+  it</code></pre>
+<!-- rnb-warning-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiR1JhbmdlcyBvYmplY3Qgd2l0aCAxMCByYW5nZXMgYW5kIDE5IG1ldGFkYXRhIGNvbHVtbnM6XG4gICAgICAgc2VxbmFtZXMgICAgICAgICByYW5nZXMgc3RyYW5kIHwgICBzb3VyY2UgICAgICAgdHlwZSAgICAgc2NvcmVcbiAgICAgICAgICA8UmxlPiAgICAgIDxJUmFuZ2VzPiAgPFJsZT4gfCA8ZmFjdG9yPiAgIDxmYWN0b3I+IDxudW1lcmljPlxuICAgWzFdICAgICAgICAxIFsxMTg2OSwgMTQ0MDldICAgICAgKyB8ICAgaGF2YW5hICAgICAgIGdlbmUgICAgICA8TkE+XG4gICBbMl0gICAgICAgIDEgWzExODY5LCAxNDQwOV0gICAgICArIHwgICBoYXZhbmEgdHJhbnNjcmlwdCAgICAgIDxOQT5cbiAgIFszXSAgICAgICAgMSBbMTE4NjksIDEyMjI3XSAgICAgICsgfCAgIGhhdmFuYSAgICAgICBleG9uICAgICAgPE5BPlxuICAgWzRdICAgICAgICAxIFsxMjYxMywgMTI3MjFdICAgICAgKyB8ICAgaGF2YW5hICAgICAgIGV4b24gICAgICA8TkE+XG4gICBbNV0gICAgICAgIDEgWzEzMjIxLCAxNDQwOV0gICAgICArIHwgICBoYXZhbmEgICAgICAgZXhvbiAgICAgIDxOQT5cbiAgIFs2XSAgICAgICAgMSBbMTIwMTAsIDEzNjcwXSAgICAgICsgfCAgIGhhdmFuYSB0cmFuc2NyaXB0ICAgICAgPE5BPlxuICAgWzddICAgICAgICAxIFsxMjAxMCwgMTIwNTddICAgICAgKyB8ICAgaGF2YW5hICAgICAgIGV4b24gICAgICA8TkE+XG4gICBbOF0gICAgICAgIDEgWzEyMTc5LCAxMjIyN10gICAgICArIHwgICBoYXZhbmEgICAgICAgZXhvbiAgICAgIDxOQT5cbiAgIFs5XSAgICAgICAgMSBbMTI2MTMsIDEyNjk3XSAgICAgICsgfCAgIGhhdmFuYSAgICAgICBleG9uICAgICAgPE5BPlxuICBbMTBdICAgICAgICAxIFsxMjk3NSwgMTMwNTJdICAgICAgKyB8ICAgaGF2YW5hICAgICAgIGV4b24gICAgICA8TkE+XG4gICAgICAgICAgIHBoYXNlICAgICAgICAgZ2VuZV9pZCBnZW5lX3ZlcnNpb24gICBnZW5lX25hbWUgZ2VuZV9zb3VyY2VcbiAgICAgICA8aW50ZWdlcj4gICAgIDxjaGFyYWN0ZXI+ICA8Y2hhcmFjdGVyPiA8Y2hhcmFjdGVyPiA8Y2hhcmFjdGVyPlxuICAgWzFdICAgICAgPE5BPiBFTlNHMDAwMDAyMjM5NzIgICAgICAgICAgICA1ICAgICBERFgxMUwxICAgICAgaGF2YW5hXG4gICBbMl0gICAgICA8TkE+IEVOU0cwMDAwMDIyMzk3MiAgICAgICAgICAgIDUgICAgIEREWDExTDEgICAgICBoYXZhbmFcbiAgIFszXSAgICAgIDxOQT4gRU5TRzAwMDAwMjIzOTcyICAgICAgICAgICAgNSAgICAgRERYMTFMMSAgICAgIGhhdmFuYVxuICAgWzRdICAgICAgPE5BPiBFTlNHMDAwMDAyMjM5NzIgICAgICAgICAgICA1ICAgICBERFgxMUwxICAgICAgaGF2YW5hXG4gICBbNV0gICAgICA8TkE+IEVOU0cwMDAwMDIyMzk3MiAgICAgICAgICAgIDUgICAgIEREWDExTDEgICAgICBoYXZhbmFcbiAgIFs2XSAgICAgIDxOQT4gRU5TRzAwMDAwMjIzOTcyICAgICAgICAgICAgNSAgICAgRERYMTFMMSAgICAgIGhhdmFuYVxuICAgWzddICAgICAgPE5BPiBFTlNHMDAwMDAyMjM5NzIgICAgICAgICAgICA1ICAgICBERFgxMUwxICAgICAgaGF2YW5hXG4gICBbOF0gICAgICA8TkE+IEVOU0cwMDAwMDIyMzk3MiAgICAgICAgICAgIDUgICAgIEREWDExTDEgICAgICBoYXZhbmFcbiAgIFs5XSAgICAgIDxOQT4gRU5TRzAwMDAwMjIzOTcyICAgICAgICAgICAgNSAgICAgRERYMTFMMSAgICAgIGhhdmFuYVxuICBbMTBdICAgICAgPE5BPiBFTlNHMDAwMDAyMjM5NzIgICAgICAgICAgICA1ICAgICBERFgxMUwxICAgICAgaGF2YW5hXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgIGdlbmVfYmlvdHlwZSAgIHRyYW5zY3JpcHRfaWRcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxjaGFyYWN0ZXI+ICAgICA8Y2hhcmFjdGVyPlxuICAgWzFdIHRyYW5zY3JpYmVkX3VucHJvY2Vzc2VkX3BzZXVkb2dlbmUgICAgICAgICAgICA8TkE+XG4gICBbMl0gdHJhbnNjcmliZWRfdW5wcm9jZXNzZWRfcHNldWRvZ2VuZSBFTlNUMDAwMDA0NTYzMjhcbiAgIFszXSB0cmFuc2NyaWJlZF91bnByb2Nlc3NlZF9wc2V1ZG9nZW5lIEVOU1QwMDAwMDQ1NjMyOFxuICAgWzRdIHRyYW5zY3JpYmVkX3VucHJvY2Vzc2VkX3BzZXVkb2dlbmUgRU5TVDAwMDAwNDU2MzI4XG4gICBbNV0gdHJhbnNjcmliZWRfdW5wcm9jZXNzZWRfcHNldWRvZ2VuZSBFTlNUMDAwMDA0NTYzMjhcbiAgIFs2XSB0cmFuc2NyaWJlZF91bnByb2Nlc3NlZF9wc2V1ZG9nZW5lIEVOU1QwMDAwMDQ1MDMwNVxuICAgWzddIHRyYW5zY3JpYmVkX3VucHJvY2Vzc2VkX3BzZXVkb2dlbmUgRU5TVDAwMDAwNDUwMzA1XG4gICBbOF0gdHJhbnNjcmliZWRfdW5wcm9jZXNzZWRfcHNldWRvZ2VuZSBFTlNUMDAwMDA0NTAzMDVcbiAgIFs5XSB0cmFuc2NyaWJlZF91bnByb2Nlc3NlZF9wc2V1ZG9nZW5lIEVOU1QwMDAwMDQ1MDMwNVxuICBbMTBdIHRyYW5zY3JpYmVkX3VucHJvY2Vzc2VkX3BzZXVkb2dlbmUgRU5TVDAwMDAwNDUwMzA1XG4gICAgICAgdHJhbnNjcmlwdF92ZXJzaW9uIHRyYW5zY3JpcHRfbmFtZSB0cmFuc2NyaXB0X3NvdXJjZVxuICAgICAgICAgICAgICA8Y2hhcmFjdGVyPiAgICAgPGNoYXJhY3Rlcj4gICAgICAgPGNoYXJhY3Rlcj5cbiAgIFsxXSAgICAgICAgICAgICAgIDxOQT4gICAgICAgICAgICA8TkE+ICAgICAgICAgICAgICA8TkE+XG4gICBbMl0gICAgICAgICAgICAgICAgICAyICAgICBERFgxMUwxLTIwMiAgICAgICAgICAgIGhhdmFuYVxuICAgWzNdICAgICAgICAgICAgICAgICAgMiAgICAgRERYMTFMMS0yMDIgICAgICAgICAgICBoYXZhbmFcbiAgIFs0XSAgICAgICAgICAgICAgICAgIDIgICAgIEREWDExTDEtMjAyICAgICAgICAgICAgaGF2YW5hXG4gICBbNV0gICAgICAgICAgICAgICAgICAyICAgICBERFgxMUwxLTIwMiAgICAgICAgICAgIGhhdmFuYVxuICAgWzZdICAgICAgICAgICAgICAgICAgMiAgICAgRERYMTFMMS0yMDEgICAgICAgICAgICBoYXZhbmFcbiAgIFs3XSAgICAgICAgICAgICAgICAgIDIgICAgIEREWDExTDEtMjAxICAgICAgICAgICAgaGF2YW5hXG4gICBbOF0gICAgICAgICAgICAgICAgICAyICAgICBERFgxMUwxLTIwMSAgICAgICAgICAgIGhhdmFuYVxuICAgWzldICAgICAgICAgICAgICAgICAgMiAgICAgRERYMTFMMS0yMDEgICAgICAgICAgICBoYXZhbmFcbiAgWzEwXSAgICAgICAgICAgICAgICAgIDIgICAgIEREWDExTDEtMjAxICAgICAgICAgICAgaGF2YW5hXG4gICAgICAgICAgICAgICAgICAgICAgIHRyYW5zY3JpcHRfYmlvdHlwZSAgICAgICAgIHRhZ1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGNoYXJhY3Rlcj4gPGNoYXJhY3Rlcj5cbiAgIFsxXSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TkE+ICAgICAgICA8TkE+XG4gICBbMl0gICAgICAgICAgICAgICBwcm9jZXNzZWRfdHJhbnNjcmlwdCAgICAgICBiYXNpY1xuICAgWzNdICAgICAgICAgICAgICAgcHJvY2Vzc2VkX3RyYW5zY3JpcHQgICAgICAgYmFzaWNcbiAgIFs0XSAgICAgICAgICAgICAgIHByb2Nlc3NlZF90cmFuc2NyaXB0ICAgICAgIGJhc2ljXG4gICBbNV0gICAgICAgICAgICAgICBwcm9jZXNzZWRfdHJhbnNjcmlwdCAgICAgICBiYXNpY1xuICAgWzZdIHRyYW5zY3JpYmVkX3VucHJvY2Vzc2VkX3BzZXVkb2dlbmUgICAgICAgYmFzaWNcbiAgIFs3XSB0cmFuc2NyaWJlZF91bnByb2Nlc3NlZF9wc2V1ZG9nZW5lICAgICAgIGJhc2ljXG4gICBbOF0gdHJhbnNjcmliZWRfdW5wcm9jZXNzZWRfcHNldWRvZ2VuZSAgICAgICBiYXNpY1xuICAgWzldIHRyYW5zY3JpYmVkX3VucHJvY2Vzc2VkX3BzZXVkb2dlbmUgICAgICAgYmFzaWNcbiAgWzEwXSB0cmFuc2NyaWJlZF91bnByb2Nlc3NlZF9wc2V1ZG9nZW5lICAgICAgIGJhc2ljXG4gICAgICAgdHJhbnNjcmlwdF9zdXBwb3J0X2xldmVsIGV4b25fbnVtYmVyICAgICAgICAgZXhvbl9pZCBleG9uX3ZlcnNpb25cbiAgICAgICAgICAgICAgICAgICAgPGNoYXJhY3Rlcj4gPGNoYXJhY3Rlcj4gICAgIDxjaGFyYWN0ZXI+ICA8Y2hhcmFjdGVyPlxuICAgWzFdICAgICAgICAgICAgICAgICAgICAgPE5BPiAgICAgICAgPE5BPiAgICAgICAgICAgIDxOQT4gICAgICAgICA8TkE+XG4gICBbMl0gICAgICAgICAgICAgICAgICAgICAgICAxICAgICAgICA8TkE+ICAgICAgICAgICAgPE5BPiAgICAgICAgIDxOQT5cbiAgIFszXSAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgIDEgRU5TRTAwMDAyMjM0OTQ0ICAgICAgICAgICAgMVxuICAgWzRdICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgMiBFTlNFMDAwMDM1ODI3OTMgICAgICAgICAgICAxXG4gICBbNV0gICAgICAgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAzIEVOU0UwMDAwMjMxMjYzNSAgICAgICAgICAgIDFcbiAgIFs2XSAgICAgICAgICAgICAgICAgICAgICAgTkEgICAgICAgIDxOQT4gICAgICAgICAgICA8TkE+ICAgICAgICAgPE5BPlxuICAgWzddICAgICAgICAgICAgICAgICAgICAgICBOQSAgICAgICAgICAgMSBFTlNFMDAwMDE5NDg1NDEgICAgICAgICAgICAxXG4gICBbOF0gICAgICAgICAgICAgICAgICAgICAgIE5BICAgICAgICAgICAyIEVOU0UwMDAwMTY3MTYzOCAgICAgICAgICAgIDJcbiAgIFs5XSAgICAgICAgICAgICAgICAgICAgICAgTkEgICAgICAgICAgIDMgRU5TRTAwMDAxNzU4MjczICAgICAgICAgICAgMlxuICBbMTBdICAgICAgICAgICAgICAgICAgICAgICBOQSAgICAgICAgICAgNCBFTlNFMDAwMDE3OTk5MzMgICAgICAgICAgICAyXG4gIC0tLS0tLS1cbiAgc2VxaW5mbzogMSBzZXF1ZW5jZSBmcm9tIGFuIHVuc3BlY2lmaWVkIGdlbm9tZTsgbm8gc2VxbGVuZ3Roc1xuIn0= -->
+<pre><code>GRanges object with 10 ranges and 19 metadata columns:
+       seqnames         ranges strand |   source       type     score
+          &lt;Rle&gt;      &lt;IRanges&gt;  &lt;Rle&gt; | &lt;factor&gt;   &lt;factor&gt; &lt;numeric&gt;
+   [1]        1 [11869, 14409]      + |   havana       gene      &lt;NA&gt;
+   [2]        1 [11869, 14409]      + |   havana transcript      &lt;NA&gt;
+   [3]        1 [11869, 12227]      + |   havana       exon      &lt;NA&gt;
+   [4]        1 [12613, 12721]      + |   havana       exon      &lt;NA&gt;
+   [5]        1 [13221, 14409]      + |   havana       exon      &lt;NA&gt;
+   [6]        1 [12010, 13670]      + |   havana transcript      &lt;NA&gt;
+   [7]        1 [12010, 12057]      + |   havana       exon      &lt;NA&gt;
+   [8]        1 [12179, 12227]      + |   havana       exon      &lt;NA&gt;
+   [9]        1 [12613, 12697]      + |   havana       exon      &lt;NA&gt;
+  [10]        1 [12975, 13052]      + |   havana       exon      &lt;NA&gt;
+           phase         gene_id gene_version   gene_name gene_source
+       &lt;integer&gt;     &lt;character&gt;  &lt;character&gt; &lt;character&gt; &lt;character&gt;
+   [1]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
+   [2]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
+   [3]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
+   [4]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
+   [5]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
+   [6]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
+   [7]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
+   [8]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
+   [9]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
+  [10]      &lt;NA&gt; ENSG00000223972            5     DDX11L1      havana
+                             gene_biotype   transcript_id
+                              &lt;character&gt;     &lt;character&gt;
+   [1] transcribed_unprocessed_pseudogene            &lt;NA&gt;
+   [2] transcribed_unprocessed_pseudogene ENST00000456328
+   [3] transcribed_unprocessed_pseudogene ENST00000456328
+   [4] transcribed_unprocessed_pseudogene ENST00000456328
+   [5] transcribed_unprocessed_pseudogene ENST00000456328
+   [6] transcribed_unprocessed_pseudogene ENST00000450305
+   [7] transcribed_unprocessed_pseudogene ENST00000450305
+   [8] transcribed_unprocessed_pseudogene ENST00000450305
+   [9] transcribed_unprocessed_pseudogene ENST00000450305
+  [10] transcribed_unprocessed_pseudogene ENST00000450305
+       transcript_version transcript_name transcript_source
+              &lt;character&gt;     &lt;character&gt;       &lt;character&gt;
+   [1]               &lt;NA&gt;            &lt;NA&gt;              &lt;NA&gt;
+   [2]                  2     DDX11L1-202            havana
+   [3]                  2     DDX11L1-202            havana
+   [4]                  2     DDX11L1-202            havana
+   [5]                  2     DDX11L1-202            havana
+   [6]                  2     DDX11L1-201            havana
+   [7]                  2     DDX11L1-201            havana
+   [8]                  2     DDX11L1-201            havana
+   [9]                  2     DDX11L1-201            havana
+  [10]                  2     DDX11L1-201            havana
+                       transcript_biotype         tag
+                              &lt;character&gt; &lt;character&gt;
+   [1]                               &lt;NA&gt;        &lt;NA&gt;
+   [2]               processed_transcript       basic
+   [3]               processed_transcript       basic
+   [4]               processed_transcript       basic
+   [5]               processed_transcript       basic
+   [6] transcribed_unprocessed_pseudogene       basic
+   [7] transcribed_unprocessed_pseudogene       basic
+   [8] transcribed_unprocessed_pseudogene       basic
+   [9] transcribed_unprocessed_pseudogene       basic
+  [10] transcribed_unprocessed_pseudogene       basic
+       transcript_support_level exon_number         exon_id exon_version
+                    &lt;character&gt; &lt;character&gt;     &lt;character&gt;  &lt;character&gt;
+   [1]                     &lt;NA&gt;        &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;
+   [2]                        1        &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;
+   [3]                        1           1 ENSE00002234944            1
+   [4]                        1           2 ENSE00003582793            1
+   [5]                        1           3 ENSE00002312635            1
+   [6]                       NA        &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;
+   [7]                       NA           1 ENSE00001948541            1
+   [8]                       NA           2 ENSE00001671638            2
+   [9]                       NA           3 ENSE00001758273            2
+  [10]                       NA           4 ENSE00001799933            2
+  -------
+  seqinfo: 1 sequence from an unspecified genome; no seqlengths</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -713,11 +881,111 @@ rtracklayer<span class="op">::</span><span class="kw">import</span>(<span class=
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBzdGFydCB5b3VyIFIgc2Vzc2lvbiB1c2luZyAnUicgY29tbWFuZCBmcm9tIHRoZSB0ZXJtaW5hbFxuIyBcbnJ0cmFja2xheWVyOjppbXBvcnQoZm9ybWF0PVwiZ3RmXCIsIHRleHQ9c3lzdGVtKFwiemNhdCBIb21vX3NhcGllbnMuR1JDaDM4Ljk1Lmd0Zi5neiB8IGdyZXAgLVAgJ2dlbmVfbmFtZSBcXFwiTEVQXFxcIicgXCIsIGludGVybj1UKSlcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjpbIiMgc3RhcnQgeW91ciBSIHNlc3Npb24gdXNpbmcgJ1InIGNvbW1hbmQgZnJvbSB0aGUgdGVybWluYWwiLCIjICIsInJ0cmFja2xheWVyOjppbXBvcnQoZm9ybWF0PVwiZ3RmXCIsIHRleHQ9c3lzdGVtKFwiemNhdCBIb21vX3NhcGllbnMuR1JDaDM4Ljk1Lmd0Zi5neiB8IGdyZXAgLVAgJ2dlbmVfbmFtZSBcXFwiTEVQXFxcIicgXCIsIGludGVybj1UKSkiXX0= -->
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># start your R session using 'R' command from the terminal</span>
 <span class="co"># </span>
 rtracklayer<span class="op">::</span><span class="kw">import</span>(<span class="dt">format=</span><span class="st">&quot;gtf&quot;</span>, <span class="dt">text=</span><span class="kw">system</span>(<span class="st">&quot;zcat Homo_sapiens.GRCh38.95.gtf.gz | grep -P 'gene_name </span><span class="ch">\&quot;</span><span class="st">LEP</span><span class="ch">\&quot;</span><span class="st">' &quot;</span>, <span class="dt">intern=</span>T))</code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-warning-begin eyJkYXRhIjoiV2FybmluZyBpbiByZWFkR0ZGKGZpbGVwYXRoLCB2ZXJzaW9uID0gdmVyc2lvbiwgZmlsdGVyID0gZmlsdGVyKTogY29ubmVjdGlvbiBpcyBub3QgcG9zaXRpb25lZCBhdCB0aGUgc3RhcnQgb2YgdGhlIGZpbGUsIHJld2luZGluZ1xuICBpdFxuIn0= -->
+<pre><code>Warning in readGFF(filepath, version = version, filter = filter): connection is not positioned at the start of the file, rewinding
+  it</code></pre>
+<!-- rnb-warning-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiR1JhbmdlcyBvYmplY3Qgd2l0aCAxMiByYW5nZXMgYW5kIDIyIG1ldGFkYXRhIGNvbHVtbnM6XG4gICAgICAgc2VxbmFtZXMgICAgICAgICAgICAgICAgIHJhbmdlcyBzdHJhbmQgfCAgICAgICAgIHNvdXJjZVxuICAgICAgICAgIDxSbGU+ICAgICAgICAgICAgICA8SVJhbmdlcz4gIDxSbGU+IHwgICAgICAgPGZhY3Rvcj5cbiAgIFsxXSAgICAgICAgNyBbMTI4MjQxMjg0LCAxMjgyNTc2MjhdICAgICAgKyB8IGVuc2VtYmxfaGF2YW5hXG4gICBbMl0gICAgICAgIDcgWzEyODI0MTI4NCwgMTI4MjU3NjI4XSAgICAgICsgfCBlbnNlbWJsX2hhdmFuYVxuICAgWzNdICAgICAgICA3IFsxMjgyNDEyODQsIDEyODI0MTMwNl0gICAgICArIHwgZW5zZW1ibF9oYXZhbmFcbiAgIFs0XSAgICAgICAgNyBbMTI4MjUxOTkxLCAxMjgyNTIxNjJdICAgICAgKyB8IGVuc2VtYmxfaGF2YW5hXG4gICBbNV0gICAgICAgIDcgWzEyODI1MjAxOSwgMTI4MjUyMTYyXSAgICAgICsgfCBlbnNlbWJsX2hhdmFuYVxuICAgLi4uICAgICAgLi4uICAgICAgICAgICAgICAgICAgICAuLi4gICAgLi4uIC4gICAgICAgICAgICAuLi5cbiAgIFs4XSAgICAgICAgNyBbMTI4MjU0NDA0LCAxMjgyNTQ3NjBdICAgICAgKyB8IGVuc2VtYmxfaGF2YW5hXG4gICBbOV0gICAgICAgIDcgWzEyODI1NDc2MSwgMTI4MjU0NzYzXSAgICAgICsgfCBlbnNlbWJsX2hhdmFuYVxuICBbMTBdICAgICAgICA3IFsxMjgyNDEyODQsIDEyODI0MTMwNl0gICAgICArIHwgZW5zZW1ibF9oYXZhbmFcbiAgWzExXSAgICAgICAgNyBbMTI4MjUxOTkxLCAxMjgyNTIwMThdICAgICAgKyB8IGVuc2VtYmxfaGF2YW5hXG4gIFsxMl0gICAgICAgIDcgWzEyODI1NDc2NCwgMTI4MjU3NjI4XSAgICAgICsgfCBlbnNlbWJsX2hhdmFuYVxuICAgICAgICAgICAgICAgICAgdHlwZSAgICAgc2NvcmUgICAgIHBoYXNlICAgICAgICAgZ2VuZV9pZCBnZW5lX3ZlcnNpb25cbiAgICAgICAgICAgICAgPGZhY3Rvcj4gPG51bWVyaWM+IDxpbnRlZ2VyPiAgICAgPGNoYXJhY3Rlcj4gIDxjaGFyYWN0ZXI+XG4gICBbMV0gICAgICAgICAgICBnZW5lICAgICAgPE5BPiAgICAgIDxOQT4gRU5TRzAwMDAwMTc0Njk3ICAgICAgICAgICAgNFxuICAgWzJdICAgICAgdHJhbnNjcmlwdCAgICAgIDxOQT4gICAgICA8TkE+IEVOU0cwMDAwMDE3NDY5NyAgICAgICAgICAgIDRcbiAgIFszXSAgICAgICAgICAgIGV4b24gICAgICA8TkE+ICAgICAgPE5BPiBFTlNHMDAwMDAxNzQ2OTcgICAgICAgICAgICA0XG4gICBbNF0gICAgICAgICAgICBleG9uICAgICAgPE5BPiAgICAgIDxOQT4gRU5TRzAwMDAwMTc0Njk3ICAgICAgICAgICAgNFxuICAgWzVdICAgICAgICAgICAgIENEUyAgICAgIDxOQT4gICAgICAgICAwIEVOU0cwMDAwMDE3NDY5NyAgICAgICAgICAgIDRcbiAgIC4uLiAgICAgICAgICAgICAuLi4gICAgICAgLi4uICAgICAgIC4uLiAgICAgICAgICAgICAuLi4gICAgICAgICAgLi4uXG4gICBbOF0gICAgICAgICAgICAgQ0RTICAgICAgPE5BPiAgICAgICAgIDAgRU5TRzAwMDAwMTc0Njk3ICAgICAgICAgICAgNFxuICAgWzldICAgICAgc3RvcF9jb2RvbiAgICAgIDxOQT4gICAgICAgICAwIEVOU0cwMDAwMDE3NDY5NyAgICAgICAgICAgIDRcbiAgWzEwXSAgZml2ZV9wcmltZV91dHIgICAgICA8TkE+ICAgICAgPE5BPiBFTlNHMDAwMDAxNzQ2OTcgICAgICAgICAgICA0XG4gIFsxMV0gIGZpdmVfcHJpbWVfdXRyICAgICAgPE5BPiAgICAgIDxOQT4gRU5TRzAwMDAwMTc0Njk3ICAgICAgICAgICAgNFxuICBbMTJdIHRocmVlX3ByaW1lX3V0ciAgICAgIDxOQT4gICAgICA8TkE+IEVOU0cwMDAwMDE3NDY5NyAgICAgICAgICAgIDRcbiAgICAgICAgIGdlbmVfbmFtZSAgICBnZW5lX3NvdXJjZSAgIGdlbmVfYmlvdHlwZSAgIHRyYW5zY3JpcHRfaWRcbiAgICAgICA8Y2hhcmFjdGVyPiAgICA8Y2hhcmFjdGVyPiAgICA8Y2hhcmFjdGVyPiAgICAgPGNoYXJhY3Rlcj5cbiAgIFsxXSAgICAgICAgIExFUCBlbnNlbWJsX2hhdmFuYSBwcm90ZWluX2NvZGluZyAgICAgICAgICAgIDxOQT5cbiAgIFsyXSAgICAgICAgIExFUCBlbnNlbWJsX2hhdmFuYSBwcm90ZWluX2NvZGluZyBFTlNUMDAwMDAzMDg4NjhcbiAgIFszXSAgICAgICAgIExFUCBlbnNlbWJsX2hhdmFuYSBwcm90ZWluX2NvZGluZyBFTlNUMDAwMDAzMDg4NjhcbiAgIFs0XSAgICAgICAgIExFUCBlbnNlbWJsX2hhdmFuYSBwcm90ZWluX2NvZGluZyBFTlNUMDAwMDAzMDg4NjhcbiAgIFs1XSAgICAgICAgIExFUCBlbnNlbWJsX2hhdmFuYSBwcm90ZWluX2NvZGluZyBFTlNUMDAwMDAzMDg4NjhcbiAgIC4uLiAgICAgICAgIC4uLiAgICAgICAgICAgIC4uLiAgICAgICAgICAgIC4uLiAgICAgICAgICAgICAuLi5cbiAgIFs4XSAgICAgICAgIExFUCBlbnNlbWJsX2hhdmFuYSBwcm90ZWluX2NvZGluZyBFTlNUMDAwMDAzMDg4NjhcbiAgIFs5XSAgICAgICAgIExFUCBlbnNlbWJsX2hhdmFuYSBwcm90ZWluX2NvZGluZyBFTlNUMDAwMDAzMDg4NjhcbiAgWzEwXSAgICAgICAgIExFUCBlbnNlbWJsX2hhdmFuYSBwcm90ZWluX2NvZGluZyBFTlNUMDAwMDAzMDg4NjhcbiAgWzExXSAgICAgICAgIExFUCBlbnNlbWJsX2hhdmFuYSBwcm90ZWluX2NvZGluZyBFTlNUMDAwMDAzMDg4NjhcbiAgWzEyXSAgICAgICAgIExFUCBlbnNlbWJsX2hhdmFuYSBwcm90ZWluX2NvZGluZyBFTlNUMDAwMDAzMDg4NjhcbiAgICAgICB0cmFuc2NyaXB0X3ZlcnNpb24gdHJhbnNjcmlwdF9uYW1lIHRyYW5zY3JpcHRfc291cmNlXG4gICAgICAgICAgICAgIDxjaGFyYWN0ZXI+ICAgICA8Y2hhcmFjdGVyPiAgICAgICA8Y2hhcmFjdGVyPlxuICAgWzFdICAgICAgICAgICAgICAgPE5BPiAgICAgICAgICAgIDxOQT4gICAgICAgICAgICAgIDxOQT5cbiAgIFsyXSAgICAgICAgICAgICAgICAgIDQgICAgICAgICBMRVAtMjAxICAgIGVuc2VtYmxfaGF2YW5hXG4gICBbM10gICAgICAgICAgICAgICAgICA0ICAgICAgICAgTEVQLTIwMSAgICBlbnNlbWJsX2hhdmFuYVxuICAgWzRdICAgICAgICAgICAgICAgICAgNCAgICAgICAgIExFUC0yMDEgICAgZW5zZW1ibF9oYXZhbmFcbiAgIFs1XSAgICAgICAgICAgICAgICAgIDQgICAgICAgICBMRVAtMjAxICAgIGVuc2VtYmxfaGF2YW5hXG4gICAuLi4gICAgICAgICAgICAgICAgLi4uICAgICAgICAgICAgIC4uLiAgICAgICAgICAgICAgIC4uLlxuICAgWzhdICAgICAgICAgICAgICAgICAgNCAgICAgICAgIExFUC0yMDEgICAgZW5zZW1ibF9oYXZhbmFcbiAgIFs5XSAgICAgICAgICAgICAgICAgIDQgICAgICAgICBMRVAtMjAxICAgIGVuc2VtYmxfaGF2YW5hXG4gIFsxMF0gICAgICAgICAgICAgICAgICA0ICAgICAgICAgTEVQLTIwMSAgICBlbnNlbWJsX2hhdmFuYVxuICBbMTFdICAgICAgICAgICAgICAgICAgNCAgICAgICAgIExFUC0yMDEgICAgZW5zZW1ibF9oYXZhbmFcbiAgWzEyXSAgICAgICAgICAgICAgICAgIDQgICAgICAgICBMRVAtMjAxICAgIGVuc2VtYmxfaGF2YW5hXG4gICAgICAgdHJhbnNjcmlwdF9iaW90eXBlICAgICAgICAgdGFnICAgICBjY2RzX2lkIHRyYW5zY3JpcHRfc3VwcG9ydF9sZXZlbFxuICAgICAgICAgICAgICA8Y2hhcmFjdGVyPiA8Y2hhcmFjdGVyPiA8Y2hhcmFjdGVyPiAgICAgICAgICAgICAgPGNoYXJhY3Rlcj5cbiAgIFsxXSAgICAgICAgICAgICAgIDxOQT4gICAgICAgIDxOQT4gICAgICAgIDxOQT4gICAgICAgICAgICAgICAgICAgICA8TkE+XG4gICBbMl0gICAgIHByb3RlaW5fY29kaW5nICAgICAgIGJhc2ljICAgIENDRFM1ODAwICAgICAgICAgICAgICAgICAgICAgICAgMVxuICAgWzNdICAgICBwcm90ZWluX2NvZGluZyAgICAgICBiYXNpYyAgICBDQ0RTNTgwMCAgICAgICAgICAgICAgICAgICAgICAgIDFcbiAgIFs0XSAgICAgcHJvdGVpbl9jb2RpbmcgICAgICAgYmFzaWMgICAgQ0NEUzU4MDAgICAgICAgICAgICAgICAgICAgICAgICAxXG4gICBbNV0gICAgIHByb3RlaW5fY29kaW5nICAgICAgIGJhc2ljICAgIENDRFM1ODAwICAgICAgICAgICAgICAgICAgICAgICAgMVxuICAgLi4uICAgICAgICAgICAgICAgIC4uLiAgICAgICAgIC4uLiAgICAgICAgIC4uLiAgICAgICAgICAgICAgICAgICAgICAuLi5cbiAgIFs4XSAgICAgcHJvdGVpbl9jb2RpbmcgICAgICAgYmFzaWMgICAgQ0NEUzU4MDAgICAgICAgICAgICAgICAgICAgICAgICAxXG4gICBbOV0gICAgIHByb3RlaW5fY29kaW5nICAgICAgIGJhc2ljICAgIENDRFM1ODAwICAgICAgICAgICAgICAgICAgICAgICAgMVxuICBbMTBdICAgICBwcm90ZWluX2NvZGluZyAgICAgICBiYXNpYyAgICBDQ0RTNTgwMCAgICAgICAgICAgICAgICAgICAgICAgIDFcbiAgWzExXSAgICAgcHJvdGVpbl9jb2RpbmcgICAgICAgYmFzaWMgICAgQ0NEUzU4MDAgICAgICAgICAgICAgICAgICAgICAgICAxXG4gIFsxMl0gICAgIHByb3RlaW5fY29kaW5nICAgICAgIGJhc2ljICAgIENDRFM1ODAwICAgICAgICAgICAgICAgICAgICAgICAgMVxuICAgICAgIGV4b25fbnVtYmVyICAgICAgICAgZXhvbl9pZCBleG9uX3ZlcnNpb24gICAgICBwcm90ZWluX2lkXG4gICAgICAgPGNoYXJhY3Rlcj4gICAgIDxjaGFyYWN0ZXI+ICA8Y2hhcmFjdGVyPiAgICAgPGNoYXJhY3Rlcj5cbiAgIFsxXSAgICAgICAgPE5BPiAgICAgICAgICAgIDxOQT4gICAgICAgICA8TkE+ICAgICAgICAgICAgPE5BPlxuICAgWzJdICAgICAgICA8TkE+ICAgICAgICAgICAgPE5BPiAgICAgICAgIDxOQT4gICAgICAgICAgICA8TkE+XG4gICBbM10gICAgICAgICAgIDEgRU5TRTAwMDAxNDIyMzgyICAgICAgICAgICAgMiAgICAgICAgICAgIDxOQT5cbiAgIFs0XSAgICAgICAgICAgMiBFTlNFMDAwMDEzMDM3NjggICAgICAgICAgICAzICAgICAgICAgICAgPE5BPlxuICAgWzVdICAgICAgICAgICAyICAgICAgICAgICAgPE5BPiAgICAgICAgIDxOQT4gRU5TUDAwMDAwMzEyNjUyXG4gICAuLi4gICAgICAgICAuLi4gICAgICAgICAgICAgLi4uICAgICAgICAgIC4uLiAgICAgICAgICAgICAuLi5cbiAgIFs4XSAgICAgICAgICAgMyAgICAgICAgICAgIDxOQT4gICAgICAgICA8TkE+IEVOU1AwMDAwMDMxMjY1MlxuICAgWzldICAgICAgICAgICAzICAgICAgICAgICAgPE5BPiAgICAgICAgIDxOQT4gICAgICAgICAgICA8TkE+XG4gIFsxMF0gICAgICAgIDxOQT4gICAgICAgICAgICA8TkE+ICAgICAgICAgPE5BPiAgICAgICAgICAgIDxOQT5cbiAgWzExXSAgICAgICAgPE5BPiAgICAgICAgICAgIDxOQT4gICAgICAgICA8TkE+ICAgICAgICAgICAgPE5BPlxuICBbMTJdICAgICAgICA8TkE+ICAgICAgICAgICAgPE5BPiAgICAgICAgIDxOQT4gICAgICAgICAgICA8TkE+XG4gICAgICAgcHJvdGVpbl92ZXJzaW9uXG4gICAgICAgICAgIDxjaGFyYWN0ZXI+XG4gICBbMV0gICAgICAgICAgICA8TkE+XG4gICBbMl0gICAgICAgICAgICA8TkE+XG4gICBbM10gICAgICAgICAgICA8TkE+XG4gICBbNF0gICAgICAgICAgICA8TkE+XG4gICBbNV0gICAgICAgICAgICAgICA0XG4gICAuLi4gICAgICAgICAgICAgLi4uXG4gICBbOF0gICAgICAgICAgICAgICA0XG4gICBbOV0gICAgICAgICAgICA8TkE+XG4gIFsxMF0gICAgICAgICAgICA8TkE+XG4gIFsxMV0gICAgICAgICAgICA8TkE+XG4gIFsxMl0gICAgICAgICAgICA8TkE+XG4gIC0tLS0tLS1cbiAgc2VxaW5mbzogMSBzZXF1ZW5jZSBmcm9tIGFuIHVuc3BlY2lmaWVkIGdlbm9tZTsgbm8gc2VxbGVuZ3Roc1xuIn0= -->
+<pre><code>GRanges object with 12 ranges and 22 metadata columns:
+       seqnames                 ranges strand |         source
+          &lt;Rle&gt;              &lt;IRanges&gt;  &lt;Rle&gt; |       &lt;factor&gt;
+   [1]        7 [128241284, 128257628]      + | ensembl_havana
+   [2]        7 [128241284, 128257628]      + | ensembl_havana
+   [3]        7 [128241284, 128241306]      + | ensembl_havana
+   [4]        7 [128251991, 128252162]      + | ensembl_havana
+   [5]        7 [128252019, 128252162]      + | ensembl_havana
+   ...      ...                    ...    ... .            ...
+   [8]        7 [128254404, 128254760]      + | ensembl_havana
+   [9]        7 [128254761, 128254763]      + | ensembl_havana
+  [10]        7 [128241284, 128241306]      + | ensembl_havana
+  [11]        7 [128251991, 128252018]      + | ensembl_havana
+  [12]        7 [128254764, 128257628]      + | ensembl_havana
+                  type     score     phase         gene_id gene_version
+              &lt;factor&gt; &lt;numeric&gt; &lt;integer&gt;     &lt;character&gt;  &lt;character&gt;
+   [1]            gene      &lt;NA&gt;      &lt;NA&gt; ENSG00000174697            4
+   [2]      transcript      &lt;NA&gt;      &lt;NA&gt; ENSG00000174697            4
+   [3]            exon      &lt;NA&gt;      &lt;NA&gt; ENSG00000174697            4
+   [4]            exon      &lt;NA&gt;      &lt;NA&gt; ENSG00000174697            4
+   [5]             CDS      &lt;NA&gt;         0 ENSG00000174697            4
+   ...             ...       ...       ...             ...          ...
+   [8]             CDS      &lt;NA&gt;         0 ENSG00000174697            4
+   [9]      stop_codon      &lt;NA&gt;         0 ENSG00000174697            4
+  [10]  five_prime_utr      &lt;NA&gt;      &lt;NA&gt; ENSG00000174697            4
+  [11]  five_prime_utr      &lt;NA&gt;      &lt;NA&gt; ENSG00000174697            4
+  [12] three_prime_utr      &lt;NA&gt;      &lt;NA&gt; ENSG00000174697            4
+         gene_name    gene_source   gene_biotype   transcript_id
+       &lt;character&gt;    &lt;character&gt;    &lt;character&gt;     &lt;character&gt;
+   [1]         LEP ensembl_havana protein_coding            &lt;NA&gt;
+   [2]         LEP ensembl_havana protein_coding ENST00000308868
+   [3]         LEP ensembl_havana protein_coding ENST00000308868
+   [4]         LEP ensembl_havana protein_coding ENST00000308868
+   [5]         LEP ensembl_havana protein_coding ENST00000308868
+   ...         ...            ...            ...             ...
+   [8]         LEP ensembl_havana protein_coding ENST00000308868
+   [9]         LEP ensembl_havana protein_coding ENST00000308868
+  [10]         LEP ensembl_havana protein_coding ENST00000308868
+  [11]         LEP ensembl_havana protein_coding ENST00000308868
+  [12]         LEP ensembl_havana protein_coding ENST00000308868
+       transcript_version transcript_name transcript_source
+              &lt;character&gt;     &lt;character&gt;       &lt;character&gt;
+   [1]               &lt;NA&gt;            &lt;NA&gt;              &lt;NA&gt;
+   [2]                  4         LEP-201    ensembl_havana
+   [3]                  4         LEP-201    ensembl_havana
+   [4]                  4         LEP-201    ensembl_havana
+   [5]                  4         LEP-201    ensembl_havana
+   ...                ...             ...               ...
+   [8]                  4         LEP-201    ensembl_havana
+   [9]                  4         LEP-201    ensembl_havana
+  [10]                  4         LEP-201    ensembl_havana
+  [11]                  4         LEP-201    ensembl_havana
+  [12]                  4         LEP-201    ensembl_havana
+       transcript_biotype         tag     ccds_id transcript_support_level
+              &lt;character&gt; &lt;character&gt; &lt;character&gt;              &lt;character&gt;
+   [1]               &lt;NA&gt;        &lt;NA&gt;        &lt;NA&gt;                     &lt;NA&gt;
+   [2]     protein_coding       basic    CCDS5800                        1
+   [3]     protein_coding       basic    CCDS5800                        1
+   [4]     protein_coding       basic    CCDS5800                        1
+   [5]     protein_coding       basic    CCDS5800                        1
+   ...                ...         ...         ...                      ...
+   [8]     protein_coding       basic    CCDS5800                        1
+   [9]     protein_coding       basic    CCDS5800                        1
+  [10]     protein_coding       basic    CCDS5800                        1
+  [11]     protein_coding       basic    CCDS5800                        1
+  [12]     protein_coding       basic    CCDS5800                        1
+       exon_number         exon_id exon_version      protein_id
+       &lt;character&gt;     &lt;character&gt;  &lt;character&gt;     &lt;character&gt;
+   [1]        &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;            &lt;NA&gt;
+   [2]        &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;            &lt;NA&gt;
+   [3]           1 ENSE00001422382            2            &lt;NA&gt;
+   [4]           2 ENSE00001303768            3            &lt;NA&gt;
+   [5]           2            &lt;NA&gt;         &lt;NA&gt; ENSP00000312652
+   ...         ...             ...          ...             ...
+   [8]           3            &lt;NA&gt;         &lt;NA&gt; ENSP00000312652
+   [9]           3            &lt;NA&gt;         &lt;NA&gt;            &lt;NA&gt;
+  [10]        &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;            &lt;NA&gt;
+  [11]        &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;            &lt;NA&gt;
+  [12]        &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;            &lt;NA&gt;
+       protein_version
+           &lt;character&gt;
+   [1]            &lt;NA&gt;
+   [2]            &lt;NA&gt;
+   [3]            &lt;NA&gt;
+   [4]            &lt;NA&gt;
+   [5]               4
+   ...             ...
+   [8]               4
+   [9]            &lt;NA&gt;
+  [10]            &lt;NA&gt;
+  [11]            &lt;NA&gt;
+  [12]            &lt;NA&gt;
+  -------
+  seqinfo: 1 sequence from an unspecified genome; no seqlengths</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -736,16 +1004,27 @@ foo&lt;-rtracklayer<span class="op">::</span><span class="kw">import</span>(<spa
 <h3>SAM (BAM)</h3>
 <ul>
 <li><a href="http://samtools.github.io/hts-specs/SAMv1.pdf" class="uri">http://samtools.github.io/hts-specs/SAMv1.pdf</a></li>
-<li><a href="http://www.htslib.org/doc/samtools.html" class="uri">http://www.htslib.org/doc/samtools.html</a></li>
 <li><a href="http://www.htslib.org/doc/sam.html" class="uri">http://www.htslib.org/doc/sam.html</a></li>
-<li><p>You can check your bitwise FLAG interactively from <a href="https://broadinstitute.github.io/picard/explain-flags.html" target="_blank">here</a></p></li>
+<li><p>You can check your bitwise FLAG interactively from <a href="https://broadinstitute.github.io/picard/explain-flags.html" target="_blank">here</a> or <a href="https://www.samformat.info/sam-format-flag-single" target="_blank">here</a></p></li>
 <li><p>Let’s get the BAM file for <a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR6481086" target="_blank">SRR6481086</a> (you may need to install the <a href="https://www.ncbi.nlm.nih.gov/sra/docs/toolkitsoft/" target="_blank">sra toolkit</a>)</p></li>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuc2FtLWR1bXAgU1JSNjQ4MTA4NiB8IGhlYWQgLW4gMTBcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoic2FtLWR1bXAgU1JSNjQ4MTA4NiB8IGhlYWQgLW4gMTAifQ== -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">sam-dump</span> SRR6481086 <span class="kw">|</span> <span class="fu">head</span> -n 10</code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiMVx0NzdcdCpcdDBcdDBcdCpcdCpcdDBcdDBcdEdHQ0NBVEdDQUFHQVRUQ0NDQVRUQ1RUR0NHQUNDQ0dHR1RUQ0dUVFRDQ0NHR0dDR0dDR0NBQ0NBR0FUQ0dHQUFHQUdDQUNBQ0dOQ1x0QUFBQUFFRUVBL0VBRUVFRUU2RUVFRUVFRUVBRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRS9FRUVFNkVFRUU2QUU2RUVFRUVFRSNFXHRSRzpaOlRBQVRHQ0dDXG4xXHQxNDFcdCpcdDBcdDBcdCpcdCpcdDBcdDBcdEdHVEdDR0NDR0NDQ05HR0NDQ0NHQ05OTkNHTkdUQ0dDQ0NHQ0NUTk5OQ05UQ1RUR0NDVEdOTkNDR0NUQ0dHQ0NHQ0dDR1RDR1RHVFx0QUFBQUFFRUVFRUVFI0VFQS8vRUVFIyMjRUUjRUVFRS9FRUVFL0UjIyMvI0VBRUVFLy9FRSMjQUFFQUUvRUVBL0VFRS9FRS9FL0VBXHRSRzpaOlRBQVRHQ0dDXG4yXHQ3N1x0Klx0MFx0MFx0Klx0Klx0MFx0MFx0R0FBR0FHQ0FDQUNHVENUR0FBQ1RDQ0FHVENBQ1RBQVRHQ0dDQVRDVENHVEFUR0NDR1RDVFRDVEdDVFRHQUFBQUFBQUFBQUdHR05HXHRBQUFBL0VFL0U2RUVFRUVFNjZFRUVFL0VFRS9FRUU2RUVFQUUvQTZFRUVFNkVFRUVFRTZFRUFFRS9FRUVFRUU2RUVFRUUvL0FFI0VcdFJHOlo6VEFBVEdDR0NcbjJcdDE0MVx0Klx0MFx0MFx0Klx0Klx0MFx0MFx0R0dHR0dHR0dHR0dHTkdHR0dHR0dHTk5OR0dOR0dHR0dHR0dHR0dOTk5HTkdHR0dHR0dHR05OR0dHR0dHR0dHR0dHR0dHR0dHR0dHXHRBQUFBQUVFRUVFRUUjRUVFRUVFRUUjIyNFRSNFRUVFRUVFRUVFRSMjI0UjRUVBRUFFRUVFIyNFRUVFRUVFRUVFRUVFQUFBRUVBQUVcdFJHOlo6VEFBVEdDR0NcbjNcdDc3XHQqXHQwXHQwXHQqXHQqXHQwXHQwXHRHQUFHQUdDQUNBQ0dUQ1RHQUFDVENDQUdUQ0FDVEFBVEdDR0NBVENUQ0dUQVRHQ0NHVENUVENUR0NUVEdBQUFBQUFBQUFBR0dHR0dcdEFBQUE2RUVBRTZFRUVFRUU2NkVFRUUvRUVFRUVFNjZFRUVFRS9FRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRVx0Ukc6WjpUQUFUR0NHQ1xuM1x0MTQxXHQqXHQwXHQwXHQqXHQqXHQwXHQwXHRHR0dHR0dHR0dHR0dHR0dHR0dHR0dOR05HR05HR0dHR0dHR0dHR0dHTkdHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dcdEFBQUFBRUVFRUVFRUVFRUVFRUVFRSNFI0VFI0VFRUVFRUVFRUVFRUUjRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRVx0Ukc6WjpUQUFUR0NHQ1xuNFx0NzdcdCpcdDBcdDBcdCpcdCpcdDBcdDBcdEdUQUdBR0NBQ0FDR1RDVEdBQUNUQ0NBR1RDQUNUQUFUR0NHQ0NUQ1RDR1RBVEdDQ0dUQ1RUQ1RHQ1RUR0FBQUFBQUFBQUFHR0dHR1x0QUFBQS9BQUVFRUVFRUVBRS8vRUVBRS9BRUU2RUVFL0VFRUVFL0VFRS9FRTZFRUVFRUVFRUVFQUUvNkVFRUVFPEVFRUVFPDZFNi9FXHRSRzpaOlRBQVRHQUdDXG40XHQxNDFcdCpcdDBcdDBcdCpcdCpcdDBcdDBcdEdHR0dHR0dHR0dHR0dHR0dHR0dHR0dHTkdHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR1x0QUFBQUFFRUVFQUVFRUFFRUVFRUVFRUUjRUVFRUVFRUFFQUFBRUVFRUVBQUFBRUVBQUFBRUFFQUVBQS8vRUFFQUFFLy9BQUVFRUVBXHRSRzpaOlRBQVRHQUdDXG41XHQ3N1x0Klx0MFx0MFx0Klx0Klx0MFx0MFx0R0FBR0FHQ0FDQUNHVENUR0FBQ1RDQ0FHVENBQ1RBQVRHQ0dDQVRDVENHVEFUR0NDR1RDVFRDVEdDVFRHQUFBQUFBQUFBQUdHR0dHXHRBQUFBL0VFL0U2RUVFRUVFLy9FRUVFQUVFRTZFRUFBRUVFRUU2RUVFRUVFRUVFRUVFRUVFRUVFRTZFRUVFRUVFRUVFRUU2RUVFRUVcdFJHOlo6VEFBVEdDR0NcbjVcdDE0MVx0Klx0MFx0MFx0Klx0Klx0MFx0MFx0R0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHXHRBQUFBQUVFRUVFRUVFQUFFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUU2RUVFRUVFRUVcdFJHOlo6VEFBVEdDR0NcbiJ9 -->
+<pre><code>1   77  *   0   0   *   *   0   0   GGCCATGCAAGATTCCCATTCTTGCGACCCGGGTTCGTTTCCCGGGCGGCGCACCAGATCGGAAGAGCACACGNC AAAAAEEEA/EAEEEEE6EEEEEEEEAEEEEEEEEEEEEEEEEEEEEEEEEE/EEEE6EEEE6AE6EEEEEEE#E RG:Z:TAATGCGC
+1   141 *   0   0   *   *   0   0   GGTGCGCCGCCCNGGCCCCGCNNNCGNGTCGCCCGCCTNNNCNTCTTGCCTGNNCCGCTCGGCCGCGCGTCGTGT AAAAAEEEEEEE#EEA//EEE###EE#EEEE/EEEE/E###/#EAEEE//EE##AAEAE/EEA/EEE/EE/E/EA RG:Z:TAATGCGC
+2   77  *   0   0   *   *   0   0   GAAGAGCACACGTCTGAACTCCAGTCACTAATGCGCATCTCGTATGCCGTCTTCTGCTTGAAAAAAAAAAGGGNG AAAA/EE/E6EEEEEE66EEEE/EEE/EEE6EEEAE/A6EEEE6EEEEEE6EEAEE/EEEEEE6EEEEE//AE#E RG:Z:TAATGCGC
+2   141 *   0   0   *   *   0   0   GGGGGGGGGGGGNGGGGGGGGNNNGGNGGGGGGGGGGGNNNGNGGGGGGGGGNNGGGGGGGGGGGGGGGGGGGGG AAAAAEEEEEEE#EEEEEEEE###EE#EEEEEEEEEEE###E#EEAEAEEEE##EEEEEEEEEEEEEAAAEEAAE RG:Z:TAATGCGC
+3   77  *   0   0   *   *   0   0   GAAGAGCACACGTCTGAACTCCAGTCACTAATGCGCATCTCGTATGCCGTCTTCTGCTTGAAAAAAAAAAGGGGG AAAA6EEAE6EEEEEE66EEEE/EEEEEE66EEEEE/EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE RG:Z:TAATGCGC
+3   141 *   0   0   *   *   0   0   GGGGGGGGGGGGGGGGGGGGGNGNGGNGGGGGGGGGGGGGNGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG AAAAAEEEEEEEEEEEEEEEE#E#EE#EEEEEEEEEEEEE#EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE RG:Z:TAATGCGC
+4   77  *   0   0   *   *   0   0   GTAGAGCACACGTCTGAACTCCAGTCACTAATGCGCCTCTCGTATGCCGTCTTCTGCTTGAAAAAAAAAAGGGGG AAAA/AAEEEEEEEAE//EEAE/AEE6EEE/EEEEE/EEE/EE6EEEEEEEEEEAE/6EEEEE&lt;EEEEE&lt;6E6/E RG:Z:TAATGAGC
+4   141 *   0   0   *   *   0   0   GGGGGGGGGGGGGGGGGGGGGGGNGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG AAAAAEEEEAEEEAEEEEEEEEE#EEEEEEEAEAAAEEEEEAAAAEEAAAAEAEAEAA//EAEAAE//AAEEEEA RG:Z:TAATGAGC
+5   77  *   0   0   *   *   0   0   GAAGAGCACACGTCTGAACTCCAGTCACTAATGCGCATCTCGTATGCCGTCTTCTGCTTGAAAAAAAAAAGGGGG AAAA/EE/E6EEEEEE//EEEEAEEE6EEAAEEEEE6EEEEEEEEEEEEEEEEEEE6EEEEEEEEEEEE6EEEEE RG:Z:TAATGCGC
+5   141 *   0   0   *   *   0   0   GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG AAAAAEEEEEEEEAAEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE6EEEEEEEE RG:Z:TAATGCGC</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -753,9 +1032,9 @@ foo&lt;-rtracklayer<span class="op">::</span><span class="kw">import</span>(<spa
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjpbIiMgRE8gTk9UIFJVTiAodGFrZXMgYSB3aGlsZSkiLCJzYW0tZHVtcCBTUlI2NDgxMDg2IHwgYXdrICd7cHJpbnQgJDN9JyB8IHNvcnQgfCB1bmlxIC1jIl19 -->
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># DO NOT RUN (takes a while)</span>
-sam<span class="op">-</span>dump SRR6481086 <span class="op">|</span><span class="st"> </span>awk <span class="st">'{print $3}'</span> <span class="op">|</span><span class="st"> </span>sort <span class="op">|</span><span class="st"> </span>uniq <span class="op">-</span>c</code></pre></div>
+<!-- rnb-source-begin eyJkYXRhIjoiIyBETyBOT1QgUlVOICh0YWtlcyBhIHdoaWxlKVxuc2FtLWR1bXAgU1JSNjQ4MTA4NiB8IGF3ayAne3ByaW50ICQzfScgfCBzb3J0IHwgdW5pcSAtYyJ9 -->
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># DO NOT RUN (takes a while)</span>
+<span class="ex">sam-dump</span> SRR6481086 <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'{print $3}'</span> <span class="kw">|</span> <span class="fu">sort</span> <span class="kw">|</span> <span class="fu">uniq</span> -c</code></pre></div>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -764,10 +1043,10 @@ sam<span class="op">-</span>dump SRR6481086 <span class="op">|</span><span class
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjpbIiMgdGhpcyBpcyBmb3IgeW91ciBpbmZvcm1hdGlvbiBvbmx5IiwiIyB0aGUgcGF0aCB0byB0aGUgaW5kZXggc2hvdWxkIGJlIGNoYW5nZWQgKGJ1dCBJIGFtIG5vdCBjb3ZlcmluZyB0aGlzKSIsImhpc2F0MiAteCAvaG9tZS9zc2cyOS9kYXRhL2dlbm9tZS9Ib21vX3NhcGllbnMvRW5zZW1ibC9HUkNoMzgvU2VxdWVuY2UvSGlTYXQySW5kZXgvZ2Vub21lIC0tYWRkLWNocm5hbWUgLS1yZy1pZCBTUlI2NDgxMDg2IC0tcmcgU1JSNjQ4MTA4NiAtMSBTUlI2NDgxMDg2X3Bhc3NfMS5mYXN0cS5neiAtMiBTUlI2NDgxMDg2X3Bhc3NfMi5mYXN0cS5neiB8IHNhbXRvb2xzIHZpZXcgLWJTIC0gPiBTUlI2NDgxMDg2LmJhbSJdfQ== -->
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># this is for your information only</span>
+<!-- rnb-source-begin eyJkYXRhIjoiIyB0aGlzIGlzIGZvciB5b3VyIGluZm9ybWF0aW9uIG9ubHlcbiMgdGhlIHBhdGggdG8gdGhlIGluZGV4IHNob3VsZCBiZSBjaGFuZ2VkIChidXQgSSBhbSBub3QgY292ZXJpbmcgdGhpcylcbmhpc2F0MiAteCAvaG9tZS9zc2cyOS9kYXRhL2dlbm9tZS9Ib21vX3NhcGllbnMvRW5zZW1ibC9HUkNoMzgvU2VxdWVuY2UvSGlTYXQySW5kZXgvZ2Vub21lIC0tYWRkLWNocm5hbWUgLS1yZy1pZCBTUlI2NDgxMDg2IC0tcmcgU1JSNjQ4MTA4NiAtMSBTUlI2NDgxMDg2X3Bhc3NfMS5mYXN0cS5neiAtMiBTUlI2NDgxMDg2X3Bhc3NfMi5mYXN0cS5neiB8IHNhbXRvb2xzIHZpZXcgLWJTIC0gPiBTUlI2NDgxMDg2LmJhbSJ9 -->
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># this is for your information only</span>
 <span class="co"># the path to the index should be changed (but I am not covering this)</span>
-hisat2 <span class="op">-</span>x <span class="op">/</span>home<span class="op">/</span>ssg29<span class="op">/</span>data<span class="op">/</span>genome<span class="op">/</span>Homo_sapiens<span class="op">/</span>Ensembl<span class="op">/</span>GRCh38<span class="op">/</span>Sequence<span class="op">/</span>HiSat2Index<span class="op">/</span>genome <span class="op">--</span>add<span class="op">-</span>chrname <span class="op">--</span>rg<span class="op">-</span>id SRR6481086 <span class="op">--</span>rg SRR6481086 <span class="op">-</span><span class="dv">1</span> SRR6481086_pass_<span class="fl">1.</span>fastq.gz <span class="op">-</span><span class="dv">2</span> SRR6481086_pass_<span class="fl">2.</span>fastq.gz <span class="op">|</span><span class="st"> </span>samtools view <span class="op">-</span>bS <span class="op">-</span><span class="st"> </span><span class="er">&gt;</span><span class="st"> </span>SRR6481086.bam</code></pre></div>
+<span class="ex">hisat2</span> -x /home/ssg29/data/genome/Homo_sapiens/Ensembl/GRCh38/Sequence/HiSat2Index/genome --add-chrname --rg-id SRR6481086 --rg SRR6481086 -1 SRR6481086_pass_1.fastq.gz -2 SRR6481086_pass_2.fastq.gz <span class="kw">|</span> <span class="ex">samtools</span> view -bS - <span class="op">&gt;</span> SRR6481086.bam</code></pre></div>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -777,7 +1056,7 @@ hisat2 <span class="op">-</span>x <span class="op">/</span>home<span class="op">
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoid2dldCBodHRwczovL3d3dy5kcm9wYm94LmNvbS9zLzZvdXZsaWlibXdobmJldC9TUlI2NDgxMDg2LmJhbSJ9 -->
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">wget https<span class="op">:</span><span class="er">//</span>www.dropbox.com<span class="op">/</span>s<span class="op">/</span>6ouvliibmwhnbet<span class="op">/</span>SRR6481086.bam</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">wget</span> https://www.dropbox.com/s/6ouvliibmwhnbet/SRR6481086.bam</code></pre></div>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -786,11 +1065,41 @@ hisat2 <span class="op">-</span>x <span class="op">/</span>home<span class="op">
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBJIGFzc3VtZSBzYW10b29scyBhbHJlYWR5IGluc3RhbGxlZCBcbiMgYW5kIHRoZSBiaW5hcnkgaXMgYXZhaWFsYmxlIGZyb20geW91ciAkUEFUSCBlbnZpcm9ubWVudFxuc2FtdG9vbHMgdmlldyAtSCBTUlI2NDgxMDg2LmJhbVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiIyBJIGFzc3VtZSBzYW10b29scyBhbHJlYWR5IGluc3RhbGxlZCBcbiMgYW5kIHRoZSBiaW5hcnkgaXMgYXZhaWFsYmxlIGZyb20geW91ciAkUEFUSCBlbnZpcm9ubWVudFxuc2FtdG9vbHMgdmlldyAtSCBTUlI2NDgxMDg2LmJhbSJ9 -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># I assume samtools already installed </span>
 <span class="co"># and the binary is avaialble from your $PATH environment</span>
 <span class="ex">samtools</span> view -H SRR6481086.bam</code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiQEhEXHRWTjoxLjBcdFNPOnVuc29ydGVkXG5AU1FcdFNOOmNocjFcdExOOjI0ODk1NjQyMlxuQFNRXHRTTjpjaHIyXHRMTjoyNDIxOTM1MjlcbkBTUVx0U046Y2hyM1x0TE46MTk4Mjk1NTU5XG5AU1FcdFNOOmNocjRcdExOOjE5MDIxNDU1NVxuQFNRXHRTTjpjaHI1XHRMTjoxODE1MzgyNTlcbkBTUVx0U046Y2hyNlx0TE46MTcwODA1OTc5XG5AU1FcdFNOOmNocjdcdExOOjE1OTM0NTk3M1xuQFNRXHRTTjpjaHI4XHRMTjoxNDUxMzg2MzZcbkBTUVx0U046Y2hyOVx0TE46MTM4Mzk0NzE3XG5AU1FcdFNOOmNocjEwXHRMTjoxMzM3OTc0MjJcbkBTUVx0U046Y2hyMTFcdExOOjEzNTA4NjYyMlxuQFNRXHRTTjpjaHIxMlx0TE46MTMzMjc1MzA5XG5AU1FcdFNOOmNocjEzXHRMTjoxMTQzNjQzMjhcbkBTUVx0U046Y2hyMTRcdExOOjEwNzA0MzcxOFxuQFNRXHRTTjpjaHIxNVx0TE46MTAxOTkxMTg5XG5AU1FcdFNOOmNocjE2XHRMTjo5MDMzODM0NVxuQFNRXHRTTjpjaHIxN1x0TE46ODMyNTc0NDFcbkBTUVx0U046Y2hyMThcdExOOjgwMzczMjg1XG5AU1FcdFNOOmNocjE5XHRMTjo1ODYxNzYxNlxuQFNRXHRTTjpjaHIyMFx0TE46NjQ0NDQxNjdcbkBTUVx0U046Y2hyMjFcdExOOjQ2NzA5OTgzXG5AU1FcdFNOOmNocjIyXHRMTjo1MDgxODQ2OFxuQFNRXHRTTjpjaHJYXHRMTjoxNTYwNDA4OTVcbkBTUVx0U046Y2hyWVx0TE46NTcyMjc0MTVcbkBTUVx0U046Y2hyTVRcdExOOjE2NTY5XG5AUkdcdElEOlNSUjY0ODEwODZcdFNSUjY0ODEwODZcbkBQR1x0SUQ6aGlzYXQyXHRQTjpoaXNhdDJcdFZOOjIuMC40XHRDTDpcIi91c3IvbG9jYWwvQ2x1c3Rlci1BcHBzL2hpc2F0Mi8yLjAuNC9oaXNhdDItYWxpZ24tcyAtLXdyYXBwZXIgYmFzaWMtMCAteCAvaG9tZS9zc2cyOS9kYXRhL2dlbm9tZS9Ib21vX3NhcGllbnMvRW5zZW1ibC9HUkNoMzgvU2VxdWVuY2UvSGlTYXQySW5kZXgvZ2Vub21lIC0tYWRkLWNocm5hbWUgLS1yZy1pZCBTUlI2NDgxMDg2IC0tcmcgU1JSNjQ4MTA4NiAtMSAvdG1wLzg5MzE4LmlucGlwZTEgLTIgL3RtcC84OTMxOC5pbnBpcGUyXCJcbiJ9 -->
+<pre><code>@HD VN:1.0  SO:unsorted
+@SQ SN:chr1 LN:248956422
+@SQ SN:chr2 LN:242193529
+@SQ SN:chr3 LN:198295559
+@SQ SN:chr4 LN:190214555
+@SQ SN:chr5 LN:181538259
+@SQ SN:chr6 LN:170805979
+@SQ SN:chr7 LN:159345973
+@SQ SN:chr8 LN:145138636
+@SQ SN:chr9 LN:138394717
+@SQ SN:chr10    LN:133797422
+@SQ SN:chr11    LN:135086622
+@SQ SN:chr12    LN:133275309
+@SQ SN:chr13    LN:114364328
+@SQ SN:chr14    LN:107043718
+@SQ SN:chr15    LN:101991189
+@SQ SN:chr16    LN:90338345
+@SQ SN:chr17    LN:83257441
+@SQ SN:chr18    LN:80373285
+@SQ SN:chr19    LN:58617616
+@SQ SN:chr20    LN:64444167
+@SQ SN:chr21    LN:46709983
+@SQ SN:chr22    LN:50818468
+@SQ SN:chrX LN:156040895
+@SQ SN:chrY LN:57227415
+@SQ SN:chrMT    LN:16569
+@RG ID:SRR6481086   SRR6481086
+@PG ID:hisat2   PN:hisat2   VN:2.0.4    CL:&quot;/usr/local/Cluster-Apps/hisat2/2.0.4/hisat2-align-s --wrapper basic-0 -x /home/ssg29/data/genome/Homo_sapiens/Ensembl/GRCh38/Sequence/HiSat2Index/genome --add-chrname --rg-id SRR6481086 --rg SRR6481086 -1 /tmp/89318.inpipe1 -2 /tmp/89318.inpipe2&quot;</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -798,9 +1107,22 @@ hisat2 <span class="op">-</span>x <span class="op">/</span>home<span class="op">
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuc2FtdG9vbHMgZmxhZ3N0YXQgU1JSNjQ4MTA4Ni5iYW1cbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoic2FtdG9vbHMgZmxhZ3N0YXQgU1JSNjQ4MTA4Ni5iYW0ifQ== -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> flagstat SRR6481086.bam</code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiMjI0MyArIDAgaW4gdG90YWwgKFFDLXBhc3NlZCByZWFkcyArIFFDLWZhaWxlZCByZWFkcylcbjAgKyAwIGR1cGxpY2F0ZXNcbjQzMyArIDAgbWFwcGVkICgxOS4zMCU6LW5hbiUpXG4yMjQzICsgMCBwYWlyZWQgaW4gc2VxdWVuY2luZ1xuMTI0MiArIDAgcmVhZDFcbjEwMDEgKyAwIHJlYWQyXG4wICsgMCBwcm9wZXJseSBwYWlyZWQgKDAuMDAlOi1uYW4lKVxuMiArIDAgd2l0aCBpdHNlbGYgYW5kIG1hdGUgbWFwcGVkXG40MzEgKyAwIHNpbmdsZXRvbnMgKDE5LjIyJTotbmFuJSlcbjAgKyAwIHdpdGggbWF0ZSBtYXBwZWQgdG8gYSBkaWZmZXJlbnQgY2hyXG4wICsgMCB3aXRoIG1hdGUgbWFwcGVkIHRvIGEgZGlmZmVyZW50IGNociAobWFwUT49NSlcbiJ9 -->
+<pre><code>2243 + 0 in total (QC-passed reads + QC-failed reads)
+0 + 0 duplicates
+433 + 0 mapped (19.30%:-nan%)
+2243 + 0 paired in sequencing
+1242 + 0 read1
+1001 + 0 read2
+0 + 0 properly paired (0.00%:-nan%)
+2 + 0 with itself and mate mapped
+431 + 0 singletons (19.22%:-nan%)
+0 + 0 with mate mapped to a different chr
+0 + 0 with mate mapped to a different chr (mapQ&gt;=5)</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -808,9 +1130,12 @@ hisat2 <span class="op">-</span>x <span class="op">/</span>home<span class="op">
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuc2FtdG9vbHMgdmlldyAtRiAweDIwMCAtYyBTUlI2NDgxMDg2LmJhbVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoic2FtdG9vbHMgdmlldyAtRiAweDIwMCAtYyBTUlI2NDgxMDg2LmJhbSJ9 -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -F 0x200 -c SRR6481086.bam</code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiMjI0M1xuIn0= -->
+<pre><code>2243</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -818,9 +1143,12 @@ hisat2 <span class="op">-</span>x <span class="op">/</span>home<span class="op">
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuc2FtdG9vbHMgdmlldyAtZiAweDIwMCAtYyBTUlI2NDgxMDg2LmJhbVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoic2FtdG9vbHMgdmlldyAtZiAweDIwMCAtYyBTUlI2NDgxMDg2LmJhbSJ9 -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -f 0x200 -c SRR6481086.bam</code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiMFxuIn0= -->
+<pre><code>0</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -829,9 +1157,12 @@ hisat2 <span class="op">-</span>x <span class="op">/</span>home<span class="op">
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuc2FtdG9vbHMgdmlldyAtZiAyNTYgLWMgU1JSNjQ4MTA4Ni5iYW1cbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoic2FtdG9vbHMgdmlldyAtZiAyNTYgLWMgU1JSNjQ4MTA4Ni5iYW0ifQ== -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -f 256 -c SRR6481086.bam</code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiMjQzXG4ifQ== -->
+<pre><code>243</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -839,9 +1170,15 @@ hisat2 <span class="op">-</span>x <span class="op">/</span>home<span class="op">
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuc2FtdG9vbHMgdmlldyBTUlI2NDgxMDg2LmJhbSAgfCBhd2sgJyQxPT1cIlNSUjY0ODEwODYuMTBcIntwcmludCAkMH0nXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoic2FtdG9vbHMgdmlldyBTUlI2NDgxMDg2LmJhbSAgfCBhd2sgJyQxPT1cIlNSUjY0ODEwODYuMTBcIntwcmludCAkMH0nIn0= -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view SRR6481086.bam  <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'$1==&quot;SRR6481086.10&quot;{print $0}'</span></code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiU1JSNjQ4MTA4Ni4xMFx0NzNcdGNocjIxXHQ4MjU5MTY2XHQwXHQzUzcyTVx0PVx0ODI1OTE2Nlx0MFx0R0dDQ1RDQ1RDR1RHR0dHR0dHQ0NHR0dDQ0NDQ0NDVENDQ0NDR0dDR0NHQUNDR0NUQ1RDQ0NBQ0NDQ1RDQ1RDQ0NDR0NHQ0NDQ0NHXHRBQUFBQUVFRUVFRUVFRTY2Ly9FRUFFL0VFNkVFRUU8RUVFNkU2NkVFRTYvRUU2RTZFNkVFRTZFRUVFQUVFQUVFRUUvRTZFRUVFRS9cdEFTOmk6LTExXHRaUzppOi0xMVx0WE46aTowXHRYTTppOjJcdFhPOmk6MFx0WEc6aTowXHROTTppOjJcdE1EOlo6MjJBOEE0MFx0WVQ6WjpVUFx0Ukc6WjpTUlI2NDgxMDg2XHROSDppOjNcblNSUjY0ODEwODYuMTBcdDMyOVx0Y2hyMjFcdDg0NDIyMDFcdDBcdDNTNzJNXHQ9XHQ4NDQyMjAxXHQwXHRHR0NDVENDVENHVEdHR0dHR0dDQ0dHR0NDQ0NDQ0NUQ0NDQ0NHR0NHQ0dBQ0NHQ1RDVENDQ0FDQ0NDVENDVENDQ0NHQ0dDQ0NDQ0dcdEFBQUFBRUVFRUVFRUVFNjYvL0VFQUUvRUU2RUVFRTxFRUU2RTY2RUVFNi9FRTZFNkU2RUVFNkVFRUVBRUVBRUVFRS9FNkVFRUVFL1x0QVM6aTotMTFcdFpTOmk6LTExXHRYTjppOjBcdFhNOmk6Mlx0WE86aTowXHRYRzppOjBcdE5NOmk6Mlx0TUQ6WjoyMkE4QTQwXHRZVDpaOlVQXHRSRzpaOlNSUjY0ODEwODZcdE5IOmk6M1xuU1JSNjQ4MTA4Ni4xMFx0MzI5XHRjaHIyMVx0ODIxNDkzN1x0MFx0M1M3Mk1cdD1cdDgyMTQ5MzdcdDBcdEdHQ0NUQ0NUQ0dUR0dHR0dHR0NDR0dHQ0NDQ0NDQ1RDQ0NDQ0dHQ0dDR0FDQ0dDVENUQ0NDQUNDQ0NUQ0NUQ0NDQ0dDR0NDQ0NDR1x0QUFBQUFFRUVFRUVFRUU2Ni8vRUVBRS9FRTZFRUVFPEVFRTZFNjZFRUU2L0VFNkU2RTZFRUU2RUVFRUFFRUFFRUVFL0U2RUVFRUUvXHRBUzppOi0xMVx0WlM6aTotMTFcdFhOOmk6MFx0WE06aToyXHRYTzppOjBcdFhHOmk6MFx0Tk06aToyXHRNRDpaOjIyQThBNDBcdFlUOlo6VVBcdFJHOlo6U1JSNjQ4MTA4Nlx0Tkg6aTozXG5TUlI2NDgxMDg2LjEwXHQxMzNcdGNocjIxXHQ4MjU5MTY2XHQwXHQqXHQ9XHQ4MjU5MTY2XHQwXHRHR0dHQ0dHR0FHR0dBQ0dDQ0dDQ0dUQ0dDQ0dDQ0dDQ0NDQ0dBR0NHQ0FDR0NUQ0NHQ0NHVENDQ0NDQUNBQUNHR0dHR0NDR0NHQ0dcdEFBQS9BRUVFL0VBQUEvRUVFQUVFQUVFQUVFRUVBRS9FRUFBRUFFRUUvLy9FQUVBRUFBRUVBQUFBQUEvQS8vQUEvQS9BQUFBL0FFQVx0WVQ6WjpVUFx0Ukc6WjpTUlI2NDgxMDg2XG4ifQ== -->
+<pre><code>SRR6481086.10   73  chr21   8259166 0   3S72M   =   8259166 0   GGCCTCCTCGTGGGGGGGCCGGGCCCCCCCTCCCCCGGCGCGACCGCTCTCCCACCCCTCCTCCCCGCGCCCCCG AAAAAEEEEEEEEE66//EEAE/EE6EEEE&lt;EEE6E66EEE6/EE6E6E6EEE6EEEEAEEAEEEE/E6EEEEE/ AS:i:-11    ZS:i:-11    XN:i:0  XM:i:2  XO:i:0  XG:i:0  NM:i:2  MD:Z:22A8A40    YT:Z:UP RG:Z:SRR6481086 NH:i:3
+SRR6481086.10   329 chr21   8442201 0   3S72M   =   8442201 0   GGCCTCCTCGTGGGGGGGCCGGGCCCCCCCTCCCCCGGCGCGACCGCTCTCCCACCCCTCCTCCCCGCGCCCCCG AAAAAEEEEEEEEE66//EEAE/EE6EEEE&lt;EEE6E66EEE6/EE6E6E6EEE6EEEEAEEAEEEE/E6EEEEE/ AS:i:-11    ZS:i:-11    XN:i:0  XM:i:2  XO:i:0  XG:i:0  NM:i:2  MD:Z:22A8A40    YT:Z:UP RG:Z:SRR6481086 NH:i:3
+SRR6481086.10   329 chr21   8214937 0   3S72M   =   8214937 0   GGCCTCCTCGTGGGGGGGCCGGGCCCCCCCTCCCCCGGCGCGACCGCTCTCCCACCCCTCCTCCCCGCGCCCCCG AAAAAEEEEEEEEE66//EEAE/EE6EEEE&lt;EEE6E66EEE6/EE6E6E6EEE6EEEEAEEAEEEE/E6EEEEE/ AS:i:-11    ZS:i:-11    XN:i:0  XM:i:2  XO:i:0  XG:i:0  NM:i:2  MD:Z:22A8A40    YT:Z:UP RG:Z:SRR6481086 NH:i:3
+SRR6481086.10   133 chr21   8259166 0   *   =   8259166 0   GGGGCGGGAGGGACGCCGCCGTCGCCGCCGCCCCCGAGCGCACGCTCCGCCGTCCCCCACAACGGGGGCCGCGCG AAA/AEEE/EAAA/EEEAEEAEEAEEEEAE/EEAAEAEEE///EAEAEAAEEAAAAAA/A//AA/A/AAAA/AEA YT:Z:UP RG:Z:SRR6481086</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -849,9 +1186,12 @@ hisat2 <span class="op">-</span>x <span class="op">/</span>home<span class="op">
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuc2FtdG9vbHMgdmlldyAtRiAyNTYgLWMgU1JSNjQ4MTA4Ni5iYW1cbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoic2FtdG9vbHMgdmlldyAtRiAyNTYgLWMgU1JSNjQ4MTA4Ni5iYW0ifQ== -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -F 256 -c SRR6481086.bam</code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiMjAwMFxuIn0= -->
+<pre><code>2000</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -859,9 +1199,12 @@ hisat2 <span class="op">-</span>x <span class="op">/</span>home<span class="op">
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuc2FtdG9vbHMgdmlldyAtZjEgLUYgMHg0IC1jIFNSUjY0ODEwODYuYmFtIFxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoic2FtdG9vbHMgdmlldyAtZjEgLUYgMHg0IC1jIFNSUjY0ODEwODYuYmFtICJ9 -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -f1 -F 0x4 -c SRR6481086.bam </code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiNDMzXG4ifQ== -->
+<pre><code>433</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -869,9 +1212,12 @@ hisat2 <span class="op">-</span>x <span class="op">/</span>home<span class="op">
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuc2FtdG9vbHMgdmlldyAtZiAweDQxIC1jIFNSUjY0ODEwODYuYmFtIFxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoic2FtdG9vbHMgdmlldyAtZiAweDQxIC1jIFNSUjY0ODEwODYuYmFtICJ9 -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -f 0x41 -c SRR6481086.bam </code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiMTI0MlxuIn0= -->
+<pre><code>1242</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -879,9 +1225,12 @@ hisat2 <span class="op">-</span>x <span class="op">/</span>home<span class="op">
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuc2FtdG9vbHMgdmlldyAtZiAweDgxIC1jIFNSUjY0ODEwODYuYmFtIFxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoic2FtdG9vbHMgdmlldyAtZiAweDgxIC1jIFNSUjY0ODEwODYuYmFtICJ9 -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -f 0x81 -c SRR6481086.bam </code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiMTAwMVxuIn0= -->
+<pre><code>1001</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -890,9 +1239,12 @@ hisat2 <span class="op">-</span>x <span class="op">/</span>home<span class="op">
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuc2FtdG9vbHMgdmlldyAtZiAzIC1GIDB4NCAtYyBTUlI2NDgxMDg2LmJhbSBcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoic2FtdG9vbHMgdmlldyAtZiAzIC1GIDB4NCAtYyBTUlI2NDgxMDg2LmJhbSAifQ== -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -f 3 -F 0x4 -c SRR6481086.bam </code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiMFxuIn0= -->
+<pre><code>0</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -901,26 +1253,51 @@ hisat2 <span class="op">-</span>x <span class="op">/</span>home<span class="op">
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuc2FtdG9vbHMgdmlldyAtZiAxIC1GIDEyIC1jIFNSUjY0ODEwODYuYmFtIFxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoic2FtdG9vbHMgdmlldyAtZiAxIC1GIDEyIC1jIFNSUjY0ODEwODYuYmFtICJ9 -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -f 1 -F 12 -c SRR6481086.bam </code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiMlxuIn0= -->
+<pre><code>2</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
 <div id="bed" class="section level3">
 <h3>BED</h3>
 <ul>
-<li><a href="https://genome.ucsc.edu/FAQ/FAQformat#format1" class="uri">https://genome.ucsc.edu/FAQ/FAQformat#format1</a></li>
-<li>Convert BAM format to BED format (using <a href="https://bedtools.readthedocs.io/" target="_blank">bedtools</a>)</li>
+<li><p><a href="https://genome.ucsc.edu/FAQ/FAQformat#format1" class="uri">https://genome.ucsc.edu/FAQ/FAQformat#format1</a></p></li>
+<li><p>Let’s convert BAM format to BED format (using <a href="https://bedtools.readthedocs.io/" target="_blank">bedtools</a>)</p></li>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBJIGFzc3VtZSBiZWR0b29scyBpcyBleHBvcnRlZCB0byB5b3VyICRQQVRIXG5iZWR0b29scyBiYW10b2JlZCAtaSBTUlI2NDgxMDg2LmJhbSB8IGhlYWRcbiMgdGhpcyBpcyBlcXVpdmFsZW50IHdpdGggdGhlIGZvbGx3b2luZyBjb21tYW5kXG5iYW1Ub0JlZCAtaSBTUlI2NDgxMDg2LmJhbSB8IGhlYWRcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiIyBJIGFzc3VtZSBiZWR0b29scyBpcyBleHBvcnRlZCB0byB5b3VyICRQQVRIXG5iZWR0b29scyBiYW10b2JlZCAtaSBTUlI2NDgxMDg2LmJhbSB8IGhlYWRcbiMgdGhpcyBpcyBlcXVpdmFsZW50IHdpdGggdGhlIGZvbGx3b2luZyBjb21tYW5kXG5iYW1Ub0JlZCAtaSBTUlI2NDgxMDg2LmJhbSB8IGhlYWQifQ== -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># I assume bedtools is exported to your $PATH</span>
 <span class="ex">bedtools</span> bamtobed -i SRR6481086.bam <span class="kw">|</span> <span class="fu">head</span>
 <span class="co"># this is equivalent with the follwoing command</span>
 <span class="ex">bamToBed</span> -i SRR6481086.bam <span class="kw">|</span> <span class="fu">head</span></code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiY2hyMjFcdDgyNTkxNjVcdDgyNTkyMzdcdFNSUjY0ODEwODYuMTAvMVx0MFx0K1xuY2hyMjFcdDg0NDIyMDBcdDg0NDIyNzJcdFNSUjY0ODEwODYuMTAvMVx0MFx0K1xuY2hyMjFcdDgyMTQ5MzZcdDgyMTUwMDhcdFNSUjY0ODEwODYuMTAvMVx0MFx0K1xuY2hyMTFcdDYxOTY3NTU5XHQ2MTk2NzYzMVx0U1JSNjQ4MTA4Ni4xMS8xXHQ2MFx0LVxuY2hyMlx0MzI5MTYyNDdcdDMyOTE2MzIyXHRTUlI2NDgxMDg2LjE4LzJcdDYwXHQrXG5jaHJNVFx0MjgyNFx0Mjg5Nlx0U1JSNjQ4MTA4Ni4yNC8xXHQ2MFx0K1xuY2hyMjFcdDg0NDI1NTVcdDg0NDI2MjNcdFNSUjY0ODEwODYuMjcvMVx0MFx0K1xuY2hyMjFcdDgyMTUyOTJcdDgyMTUzNjBcdFNSUjY0ODEwODYuMjcvMVx0MFx0K1xuY2hyMjFcdDgzOTgzMjZcdDgzOTgzOTRcdFNSUjY0ODEwODYuMjcvMVx0MFx0K1xuY2hyMjFcdDgyNTk1MjFcdDgyNTk1ODlcdFNSUjY0ODEwODYuMjcvMVx0MFx0K1xuY2hyMjFcdDgyNTkxNjVcdDgyNTkyMzdcdFNSUjY0ODEwODYuMTAvMVx0MFx0K1xuY2hyMjFcdDg0NDIyMDBcdDg0NDIyNzJcdFNSUjY0ODEwODYuMTAvMVx0MFx0K1xuY2hyMjFcdDgyMTQ5MzZcdDgyMTUwMDhcdFNSUjY0ODEwODYuMTAvMVx0MFx0K1xuY2hyMTFcdDYxOTY3NTU5XHQ2MTk2NzYzMVx0U1JSNjQ4MTA4Ni4xMS8xXHQ2MFx0LVxuY2hyMlx0MzI5MTYyNDdcdDMyOTE2MzIyXHRTUlI2NDgxMDg2LjE4LzJcdDYwXHQrXG5jaHJNVFx0MjgyNFx0Mjg5Nlx0U1JSNjQ4MTA4Ni4yNC8xXHQ2MFx0K1xuY2hyMjFcdDg0NDI1NTVcdDg0NDI2MjNcdFNSUjY0ODEwODYuMjcvMVx0MFx0K1xuY2hyMjFcdDgyMTUyOTJcdDgyMTUzNjBcdFNSUjY0ODEwODYuMjcvMVx0MFx0K1xuY2hyMjFcdDgzOTgzMjZcdDgzOTgzOTRcdFNSUjY0ODEwODYuMjcvMVx0MFx0K1xuY2hyMjFcdDgyNTk1MjFcdDgyNTk1ODlcdFNSUjY0ODEwODYuMjcvMVx0MFx0K1xuIn0= -->
+<pre><code>chr21   8259165 8259237 SRR6481086.10/1 0   +
+chr21   8442200 8442272 SRR6481086.10/1 0   +
+chr21   8214936 8215008 SRR6481086.10/1 0   +
+chr11   61967559    61967631    SRR6481086.11/1 60  -
+chr2    32916247    32916322    SRR6481086.18/2 60  +
+chrMT   2824    2896    SRR6481086.24/1 60  +
+chr21   8442555 8442623 SRR6481086.27/1 0   +
+chr21   8215292 8215360 SRR6481086.27/1 0   +
+chr21   8398326 8398394 SRR6481086.27/1 0   +
+chr21   8259521 8259589 SRR6481086.27/1 0   +
+chr21   8259165 8259237 SRR6481086.10/1 0   +
+chr21   8442200 8442272 SRR6481086.10/1 0   +
+chr21   8214936 8215008 SRR6481086.10/1 0   +
+chr11   61967559    61967631    SRR6481086.11/1 60  -
+chr2    32916247    32916322    SRR6481086.18/2 60  +
+chrMT   2824    2896    SRR6481086.24/1 60  +
+chr21   8442555 8442623 SRR6481086.27/1 0   +
+chr21   8215292 8215360 SRR6481086.27/1 0   +
+chr21   8398326 8398394 SRR6481086.27/1 0   +
+chr21   8259521 8259589 SRR6481086.27/1 0   +</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -928,10 +1305,14 @@ hisat2 <span class="op">-</span>x <span class="op">/</span>home<span class="op">
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuYmFtVG9CZWQgLWkgU1JSNjQ4MTA4Ni5iYW0gfCB3YyAtbFxuc2FtdG9vbHMgdmlldyAtZiAxIC1GIDQgU1JSNjQ4MTA4Ni5iYW0gIHwgd2MgLWxcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYmFtVG9CZWQgLWkgU1JSNjQ4MTA4Ni5iYW0gfCB3YyAtbFxuc2FtdG9vbHMgdmlldyAtZiAxIC1GIDQgU1JSNjQ4MTA4Ni5iYW0gIHwgd2MgLWwifQ== -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">bamToBed</span> -i SRR6481086.bam <span class="kw">|</span> <span class="fu">wc</span> -l
 <span class="ex">samtools</span> view -f 1 -F 4 SRR6481086.bam  <span class="kw">|</span> <span class="fu">wc</span> -l</code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiNDMzXG40MzNcbiJ9 -->
+<pre><code>433
+433</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -939,9 +1320,21 @@ hisat2 <span class="op">-</span>x <span class="op">/</span>home<span class="op">
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuc2FtdG9vbHMgdmlldyAtZiAxIC1GIDQgU1JSNjQ4MTA4Ni5iYW0gIHwgaGVhZCB8IGN1dCAtZjEtNCBcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoic2FtdG9vbHMgdmlldyAtZiAxIC1GIDQgU1JSNjQ4MTA4Ni5iYW0gIHwgaGVhZCB8IGN1dCAtZjEtNCAifQ== -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -f 1 -F 4 SRR6481086.bam  <span class="kw">|</span> <span class="fu">head</span> <span class="kw">|</span> <span class="fu">cut</span> -f1-4 </code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiU1JSNjQ4MTA4Ni4xMFx0NzNcdGNocjIxXHQ4MjU5MTY2XG5TUlI2NDgxMDg2LjEwXHQzMjlcdGNocjIxXHQ4NDQyMjAxXG5TUlI2NDgxMDg2LjEwXHQzMjlcdGNocjIxXHQ4MjE0OTM3XG5TUlI2NDgxMDg2LjExXHQ4OVx0Y2hyMTFcdDYxOTY3NTYwXG5TUlI2NDgxMDg2LjE4XHQxMzdcdGNocjJcdDMyOTE2MjQ4XG5TUlI2NDgxMDg2LjI0XHQ3M1x0Y2hyTVRcdDI4MjVcblNSUjY0ODEwODYuMjdcdDczXHRjaHIyMVx0ODQ0MjU1NlxuU1JSNjQ4MTA4Ni4yN1x0MzI5XHRjaHIyMVx0ODIxNTI5M1xuU1JSNjQ4MTA4Ni4yN1x0MzI5XHRjaHIyMVx0ODM5ODMyN1xuU1JSNjQ4MTA4Ni4yN1x0MzI5XHRjaHIyMVx0ODI1OTUyMlxuIn0= -->
+<pre><code>SRR6481086.10   73  chr21   8259166
+SRR6481086.10   329 chr21   8442201
+SRR6481086.10   329 chr21   8214937
+SRR6481086.11   89  chr11   61967560
+SRR6481086.18   137 chr2    32916248
+SRR6481086.24   73  chrMT   2825
+SRR6481086.27   73  chr21   8442556
+SRR6481086.27   329 chr21   8215293
+SRR6481086.27   329 chr21   8398327
+SRR6481086.27   329 chr21   8259522</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -949,9 +1342,20 @@ hisat2 <span class="op">-</span>x <span class="op">/</span>home<span class="op">
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuYmFtVG9CZWQgLWkgU1JSNjQ4MTA4Ni5iYW0gfCBhd2sgJyQzLSQyPjc1e3ByaW50ICQwfSdcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYmFtVG9CZWQgLWkgU1JSNjQ4MTA4Ni5iYW0gfCBhd2sgJyQzLSQyPjc1e3ByaW50ICQwfScifQ== -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">bamToBed</span> -i SRR6481086.bam <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'$3-$2&gt;75{print $0}'</span></code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiY2hyN1x0MzI0ODkzMzBcdDMyNDkwMzc0XHRTUlI2NDgxMDg2LjcyLzFcdDYwXHQtXG5jaHIxXHQxODM2Mjc1NDBcdDE4MzYzMDQ3OFx0U1JSNjQ4MTA4Ni43OC8xXHQ2MFx0LVxuY2hyMTlcdDQ5NDk3OTc5XHQ0OTQ5OTUxOVx0U1JSNjQ4MTA4Ni45OC8xXHQ2MFx0LVxuY2hyMTJcdDU2NzEzMTMwXHQ1NjcxMzU0OFx0U1JSNjQ4MTA4Ni4xNzMvMVx0NjBcdC1cbmNocjIwXHQzMDI0NTkyXHQzMDI2NzMwXHRTUlI2NDgxMDg2LjM4OS8xXHQ2MFx0K1xuY2hyMVx0MjUyMjkwOTZcdDI1MjMyMTQ4XHRTUlI2NDgxMDg2LjQ5My8xXHQ2MFx0LVxuY2hyMTZcdDgxNjk2NjQzXHQ4MTY5OTczMlx0U1JSNjQ4MTA4Ni41OTEvMVx0NjBcdCtcbmNocjE3XHQ2ODUyNDkzMlx0Njg1MjU3OTlcdFNSUjY0ODEwODYuODQ2LzFcdDYwXHQrXG5jaHIyMlx0MzkzMTg1NTBcdDM5MzE5NjIzXHRTUlI2NDgxMDg2Ljg2Ny8xXHQ2MFx0LVxuIn0= -->
+<pre><code>chr7    32489330    32490374    SRR6481086.72/1 60  -
+chr1    183627540   183630478   SRR6481086.78/1 60  -
+chr19   49497979    49499519    SRR6481086.98/1 60  -
+chr12   56713130    56713548    SRR6481086.173/1    60  -
+chr20   3024592 3026730 SRR6481086.389/1    60  +
+chr1    25229096    25232148    SRR6481086.493/1    60  -
+chr16   81696643    81699732    SRR6481086.591/1    60  +
+chr17   68524932    68525799    SRR6481086.846/1    60  +
+chr22   39318550    39319623    SRR6481086.867/1    60  -</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -959,9 +1363,14 @@ hisat2 <span class="op">-</span>x <span class="op">/</span>home<span class="op">
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuc2FtdG9vbHMgdmlldyAtZiAxIC1GIDQgU1JSNjQ4MTA4Ni5iYW0gIHwgYXdrICckMT09XCJTUlI2NDgxMDg2LjcyXCIgfHwgJDE9PVwiU1JSNjQ4MTA4Ni43OFwiIHx8ICQxPT1cIlNSUjY0ODEwODYuOThcIntwcmludCAkMH0nXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoic2FtdG9vbHMgdmlldyAtZiAxIC1GIDQgU1JSNjQ4MTA4Ni5iYW0gIHwgYXdrICckMT09XCJTUlI2NDgxMDg2LjcyXCIgfHwgJDE9PVwiU1JSNjQ4MTA4Ni43OFwiIHx8ICQxPT1cIlNSUjY0ODEwODYuOThcIntwcmludCAkMH0nIn0= -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">samtools</span> view -f 1 -F 4 SRR6481086.bam  <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'$1==&quot;SRR6481086.72&quot; || $1==&quot;SRR6481086.78&quot; || $1==&quot;SRR6481086.98&quot;{print $0}'</span></code></pre></div>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiU1JSNjQ4MTA4Ni43Mlx0ODlcdGNocjdcdDMyNDg5MzMxXHQ2MFx0MTRNOTc1TjU1TTZTXHQ9XHQzMjQ4OTMzMVx0MFx0VFRUR1RDQ0FDQUFHQ1RDVEFBR0dHQ0FHQ0FHQ1RHQ0dBQ0dHR1RUR0dUQUdUQUdDR1RUQUdDQ0dDQ0FUR0dDVEFDR0NDQ1RDQ0dDXHRFRUVFQUVFRUVFRUVFQUVFRUVFRUVFRUVFRUVFNkVBRUVFRUVFLzZFRTZFRTZFRUVFRS9BRUVFNkVBRS9FRUUvQTxcLy8vLzZBQUFBXHRBUzppOi02XHRYTjppOjBcdFhNOmk6MFx0WE86aTowXHRYRzppOjBcdE5NOmk6MFx0TUQ6Wjo2OVx0WVQ6WjpVUFx0Ukc6WjpTUlI2NDgxMDg2XHRYUzpBOi1cdE5IOmk6MVxuU1JSNjQ4MTA4Ni43OFx0ODlcdGNocjFcdDE4MzYyNzU0MVx0NjBcdDU0TTI4NjZOMThNM1NcdD1cdDE4MzYyNzU0MVx0MFx0VFRUVENUVEdDQUdUQ0FBR0FDQUNHQUFDQUFUR0dBQ0NDVEFDVENDVENDQUdDQUdDQUFHVEdDQ1RUVFRDQVRHQ0NBVFRHQ0FHR0NDXHRFRUVFL0VFQS8vL0UvRTZBNjZFLy82NjZFRUVBL0U2NjZFLzZFNjZFNjY2LzY2QTY2NkVFNjY2RUVFRTY2NkUvL0VFRS8vQUFBQUFcdEFTOmk6LTNcdFhOOmk6MFx0WE06aTowXHRYTzppOjBcdFhHOmk6MFx0Tk06aTowXHRNRDpaOjcyXHRZVDpaOlVQXHRSRzpaOlNSUjY0ODEwODZcdFhTOkE6LVx0Tkg6aToxXG5TUlI2NDgxMDg2Ljk4XHQ4OVx0Y2hyMTlcdDQ5NDk3OTgwXHQ2MFx0NjdNMTQ2NU44TVx0PVx0NDk0OTc5ODBcdDBcdFRDQ0dDQUFHVEFDQUFDQ0dDVFRDR0FHQUFHQ0dDQ0FDQUFHQUFDQVRHVENUR1RBQ0FDQ1RHVENDQ0NDVEdDVFRDQUdHR0FDR1RDQ1x0RUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUUvRS9FRUVFRUVFRUU2RUVFRUVFRUU2NkVFRTZFRUFBQUFBXHRBUzppOjBcdFhOOmk6MFx0WE06aTowXHRYTzppOjBcdFhHOmk6MFx0Tk06aTowXHRNRDpaOjc1XHRZVDpaOlVQXHRSRzpaOlNSUjY0ODEwODZcdFhTOkE6K1x0Tkg6aToxXG4ifQ== -->
+<pre><code>SRR6481086.72   89  chr7    32489331    60  14M975N55M6S    =   32489331    0   TTTGTCCACAAGCTCTAAGGGCAGCAGCTGCGACGGGTTGGTAGTAGCGTTAGCCGCCATGGCTACGCCCTCCGC EEEEAEEEEEEEEAEEEEEEEEEEEEEE6EAEEEEEE/6EE6EE6EEEEE/AEEE6EAE/EEE/A&lt;////6AAAA AS:i:-6 XN:i:0  XM:i:0  XO:i:0  XG:i:0  NM:i:0  MD:Z:69 YT:Z:UP RG:Z:SRR6481086 XS:A:-  NH:i:1
+SRR6481086.78   89  chr1    183627541   60  54M2866N18M3S   =   183627541   0   TTTTCTTGCAGTCAAGACACGAACAATGGACCCTACTCCTCCAGCAGCAAGTGCCTTTTCATGCCATTGCAGGCC EEEE/EEA///E/E6A66E//666EEEA/E666E/6E66E666/66A666EE666EEEE666E//EEE//AAAAA AS:i:-3 XN:i:0  XM:i:0  XO:i:0  XG:i:0  NM:i:0  MD:Z:72 YT:Z:UP RG:Z:SRR6481086 XS:A:-  NH:i:1
+SRR6481086.98   89  chr19   49497980    60  67M1465N8M  =   49497980    0   TCCGCAAGTACAACCGCTTCGAGAAGCGCCACAAGAACATGTCTGTACACCTGTCCCCCTGCTTCAGGGACGTCC EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE/E/EEEEEEEEE6EEEEEEEE66EEE6EEAAAAA AS:i:0  XN:i:0  XM:i:0  XO:i:0  XG:i:0  NM:i:0  MD:Z:75 YT:Z:UP RG:Z:SRR6481086 XS:A:+  NH:i:1</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -972,7 +1381,7 @@ hisat2 <span class="op">-</span>x <span class="op">/</span>home<span class="op">
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuYmFtVG9CZWQgLXNwbGl0IC1pIFNSUjY0ODEwODYuYmFtIHwgYXdrICckMy0kMj43NXtwcmludCAkMH0nXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYmFtVG9CZWQgLXNwbGl0IC1pIFNSUjY0ODEwODYuYmFtIHwgYXdrICckMy0kMj43NXtwcmludCAkMH0nIn0= -->
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">bamToBed</span> -split -i SRR6481086.bam <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'$3-$2&gt;75{print $0}'</span></code></pre></div>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
@@ -980,11 +1389,24 @@ hisat2 <span class="op">-</span>x <span class="op">/</span>home<span class="op">
 <ul>
 <li>Check out how the use of ‘-split’ option affects reporting <a href="https://bedtools.readthedocs.io/en/latest/content/tools/intersect.html#split-reporting-overlaps-with-spliced-alignments-or-blocked-bed-features" target="_blank">overlap with the genome</a></li>
 </ul>
+</div>
+</div>
+<div id="concluding-remarks" class="section level2">
+<h2>Concluding Remarks</h2>
+<ul>
+<li>There is more than one way to do it. (<a href="https://en.wikipedia.org/wiki/There%27s_more_than_one_way_to_do_it">TMTOWTDI</a>)</li>
+<li>You are not alone.
+<ul>
+<li><a href="http://seqanswers.com/" class="uri">http://seqanswers.com/</a></li>
+<li><a href="https://www.biostars.org/" class="uri">https://www.biostars.org/</a></li>
+</ul></li>
+<li>It takes time.</li>
+<li>Good luck!</li>
+</ul>
 <!-- rnb-text-end -->
 </div>
-</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUk5BLVNlcSBGaWxlIEZvcm1hdCBQcmFjdGljYWxzIgpzdWJ0aXRsZTogIkEgcHJpbWVyIHRvIHRoZSBkaWZmZXJlbnQgdHlwZXMgb2YgUk5BLVNlcSBkYXRhIGZpbGVzIgphdXRob3I6IHwKICB8IFtTdW5nc2FtIEdvbmddKGh0dHBzOi8vd3d3Lm9iZ3luLmNhbS5hYy51ay9zdGFmZi9yZXNlYXJjaC1zdGFmZi9zdW5nLWdvbmcvKXt0YXJnZXQ9Il9ibGFuayJ9CiAgfCBTZW5pb3IgUmVzZWFyY2ggQXNzb2NpYXRlCiAgfCBEZXBhcnRtZW50IG9mIE9ic3RldHJpY3MgJiBHeW5hZWNvbG9neQogIHwgVW5pdmVyc2l0eSBvZiBDYW1icmlkZ2UKZGF0ZTogIjI2IE1hcmNoIDIwMTkiCmluc3RpdHV0ZTogfAogIHwgU2VuaW9yIFJlc2VhcmNoIEFzc29jaWF0ZQogIHwgRGVwYXJ0bWVudCBvZiBPYnN0ZXRyaWNzICYgR3luYWVjb2xvZ3kKICB8IFVuaXZlcnNpdHkgb2YgQ2FtYnJpZGdlCm91dHB1dDogCiAgI2h0bWxfZG9jdW1lbnQ6CiAgaHRtbF9ub3RlYm9vazoKICAgIGhpZ2hsaWdodDogcHlnbWVudHMKICAgIHRvY19mbG9hdDogdHJ1ZQogICAgdG9jOiB0cnVlCiAgICB0b2NfZGVwdGg6IDMKICAgICNudW1iZXJfc2VjdGlvbjogdHJ1ZQogICNwcmV0dHlkb2M6Omh0bWxfcHJldHR5OgogICAgI3RoZW1lOiBsZW9uaWRzCiAgICAjaGlnaGxpZ2h0OiBnaXRodWIKICAjdXNsaWRlczo6dXNsaWRlc19wZGY6CiAgI2JlYW1lcl9wcmVzZW50YXRpb246CiAgICAjc2xpZGVfbGV2ZWw6IDIKICAgICN0aGVtZTogIkFubkFyYm9yIgogICAgI3RoZW1lOiAiUGFsb0FsdG8iCi0tLQoKYGBge3Igc2V0dXAsIGluY2x1ZGU9RkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSkKYGBgCgojIyBCZWZvcmUgeW91IHN0YXJ0CjEuIENoZWNrIHRoZSBbZ2l0aHViIHBhZ2VdKGh0dHBzOi8vZ2l0aHViLmNvbS9zdW5nL1JOQS1TZXFfZmlsZV9mb3JtYXRfcHJhdGljYWxzXzIwMTkpIGZvciB0aGlzIGRvY3VtZW50LgoyLiBJZiB5b3Ugd291bGQgbGlrZSB0byBmb2xsb3cgdGhpcyBwcmFjdGljYWwgZnJvbSB5b3VyIG93biBtYWNoaW5lLCB5b3UgbWF5IG5lZWQgdG8gaW5zdGFsbCBzb21lIG9mIHRoZSBzb2Z0d2FyZSB0b29scyAoZm9sbG93IHJlbGV2YW50IGxpbmtzKSBvciBsaW51eCBjb21tYW5kcy4KMy4gSWYgMiBpcyB0cnVlLCB5b3UgbWF5IGFsc28gbmVlZCB0byBzZXQgdXAgeW91ciBbJFBBVEggZW52aXJvbm1lbnQgdmFyaWFibGVdKGh0dHBzOi8vd3d3LmN5YmVyY2l0aS5iaXovZmFxL3VuaXgtbGludXgtYWRkaW5nLXBhdGgvKXt0YXJnZXQ9Il9ibGFuayJ9CgojIyBBaW1zCjEuIFRvIHByZXBhcmUgb3RoZXIgY2xhc3NlcyBhaGVhZAoyLiBUbyBnYWluIGNvbmZpZGVuY2UKIC0gb2YgcHJvY2Vzc2luZyBSTkEtU2VxIGRhdGEgZmlsZXMKIC0gb3IgbGludXggKG9yIHVuaXgpIGNvbW1hbmQgbGluZXMKCiMjIFlvdSB3aWxsIGxlYXJuCjEuIFZhcmlvdXMgZmlsZSBmb3JtYXRzCiAtIFtGQVNUQV0oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRkFTVEFfZm9ybWF0KXt0YXJnZXQ9Il9ibGFuayJ9IGFuZCBbRkFTVFFdKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0ZBU1RRX2Zvcm1hdCl7dGFyZ2V0PSJfYmxhbmsifQogLSBbR1RGXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9HZW5lX3RyYW5zZmVyX2Zvcm1hdCl7dGFyZ2V0PSJfYmxhbmsifSBhbmQgb3IgW0dGRl0oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvR2VuZXJhbF9mZWF0dXJlX2Zvcm1hdCl7dGFyZ2V0PSJfYmxhbmsifQogLSBbU0FNXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9TQU1fKGZpbGVfZm9ybWF0KSl7dGFyZ2V0PSJfYmxhbmsifSBhbmQgW0JBTV0oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQmluYXJ5X0FsaWdubWVudF9NYXApe3RhcmdldD0iX2JsYW5rIn0KIC0gW0JFRF0oaHR0cHM6Ly9nZW5vbWUudWNzYy5lZHUvRkFRL0ZBUWZvcm1hdC5odG1sI2Zvcm1hdDEpe3RhcmdldD0iX2JsYW5rIn0KMi4gQWNjZXNzaW5nIHB1YmxpYyBvciBwdWJsaXNoZWQgZGF0YSAKIC0gW0Vuc2VtYmxdKGh0dHA6Ly93d3cuZW5zZW1ibC5vcmcpe3RhcmdldD0iX2JsYW5rIn0KIC0gW05DQkkgU1JBXShodHRwczovL3d3dy5uY2JpLm5sbS5uaWguZ292L3NyYSl7dGFyZ2V0PSJfYmxhbmsifQozLiBBbmQgcmVsYXRlZCBsaW51eCBjb21tYW5kcyBhbmQgc29mdHdhcmUgdG9vbHMKIC0gW2F3a10oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQVdLKXt0YXJnZXQ9Il9ibGFuayJ9CiAtIFtzb3J0XShodHRwOi8vbWFuNy5vcmcvbGludXgvbWFuLXBhZ2VzL21hbjEvc29ydC4xLmh0bWwpe3RhcmdldD0iX2JsYW5rIn0KIC0gW3pjYXRdKGh0dHBzOi8vbGludXguZGllLm5ldC9tYW4vMS96Y2F0KXt0YXJnZXQ9Il9ibGFuayJ9IG9yIFt6bGVzc10oaHR0cHM6Ly9saW51eC5kaWUubmV0L21hbi8xL3psZXNzKXt0YXJnZXQ9Il9ibGFuayJ9CiAtIFtzYW10b29sc10oaHR0cDovL3d3dy5odHNsaWIub3JnLyl7dGFyZ2V0PSJfYmxhbmsifQogLSBbYmVkdG9vbHNdKGh0dHBzOi8vYmVkdG9vbHMucmVhZHRoZWRvY3MuaW8vKXt0YXJnZXQ9Il9ibGFuayJ9CiAtIFtzcmEgdG9vbGtpdHNdKGh0dHBzOi8vd3d3Lm5jYmkubmxtLm5paC5nb3Yvc3JhL2RvY3MvdG9vbGtpdHNvZnQvKXt0YXJnZXQ9Il9ibGFuayJ9CgojIyBZb3Ugd2lsbCAqKk5PVCoqIGxlYXJuIChmcm9tIG1lKQoxLiBWYXJpb3VzIFJOQS1TZXEgZGF0YSBwcm9jZXNzaW5nIGFuZCBhbmFseXNpcywgc3VjaCBhcwogICsgUXVhbGl0eSBjb250cm9scyBvZiBzZXF1ZW5jZWQgcmVhZHMKICArIEFkYXB0b3IgKGFuZC9vciBwb29yIHF1YWxpdHkgcmVhZCkgdHJpbW1pbmcKICArIEFsaWdubWVudCAobWFwcGluZykgb2YgcmVhZHMKICArIFF1YW50aWZpY2F0aW9uIG9mIHRyYW5zY3JpcHQtbGV2ZWwgKG9yIGdlbmUtbGV2ZWwpIGFidW5kYW5jZQogICsgRGlmZmVyZW50aWFsbHkgZXhwcmVzc2VkIGdlbmUvdHJhbnNjcmlwdC9leG9uIGFuYWx5c2lzCiAgKiBUcmFuc2NyaXB0b21lIHJlY29uc3RydWN0aW9uIChvciBhc3NlbWJseSkKCjIuIERldGFpbGVkIHVzZSBvZiBzb2Z0d2FyZSB0b29scyByZWxhdGVkIHdpdGggYWJvdmUKICogW2Zhc3RxY10oaHR0cHM6Ly93d3cuYmlvaW5mb3JtYXRpY3MuYmFicmFoYW0uYWMudWsvcHJvamVjdHMvZmFzdHFjLyl7dGFyZ2V0PSJfYmxhbmsifQogKiBbY3V0YWRhcHRdKGh0dHBzOi8vY3V0YWRhcHQucmVhZHRoZWRvY3MuaW8vZW4vc3RhYmxlL2luZGV4Lmh0bWwpe3RhcmdldD0iX2JsYW5rIn0KICogW1RvcEhhdDJdKGh0dHBzOi8vY2NiLmpodS5lZHUvc29mdHdhcmUvdG9waGF0L2luZGV4LnNodG1sKXt0YXJnZXQ9Il9ibGFuayJ9IGFuZCBbSGlTYXQyXShodHRwczovL2NjYi5qaHUuZWR1L3NvZnR3YXJlL2hpc2F0Mi8pe3RhcmdldD0iX2JsYW5rIn0KICogW2ZlYXR1cmVDb3VudHNdKGh0dHA6Ly9zdWJyZWFkLnNvdXJjZWZvcmdlLm5ldC8pe3RhcmdldD0iX2JsYW5rIn0sIFtTYWxtb25dKGh0dHBzOi8vY29tYmluZS1sYWIuZ2l0aHViLmlvL3NhbG1vbi8pe3RhcmdldD0iX2JsYW5rIn0gW0thbGxpc3RvXShodHRwczovL3BhY2h0ZXJsYWIuZ2l0aHViLmlvL2thbGxpc3RvLyl7dGFyZ2V0PSJfYmxhbmsifQogKiBbREVTZXEyXShodHRwczovL2Jpb2NvbmR1Y3Rvci5vcmcvcGFja2FnZXMvcmVsZWFzZS9iaW9jL2h0bWwvREVTZXEyLmh0bWwpe3RhcmdldD0iX2JsYW5rIn0sIFtERVhTZXFdKGh0dHBzOi8vYmlvY29uZHVjdG9yLm9yZy9wYWNrYWdlcy9yZWxlYXNlL2Jpb2MvaHRtbC9ERVhTZXEuaHRtbCl7dGFyZ2V0PSJfYmxhbmsifSwgYW5kIFtlZGdlUl0oaHR0cHM6Ly9iaW9jb25kdWN0b3Iub3JnL3BhY2thZ2VzL3JlbGVhc2UvYmlvYy9odG1sL2VkZ2VSLmh0bWwpe3RhcmdldD0iX2JsYW5rIn0KICogW1N0cmluZ1RpZV0oaHR0cHM6Ly9jY2Iuamh1LmVkdS9zb2Z0d2FyZS9zdHJpbmd0aWUvKXt0YXJnZXQ9Il9ibGFuayJ9IGFuZCBbVEFDT10oaHR0cHM6Ly90YWNvcm5hLmdpdGh1Yi5pby8pe3RhcmdldD0iX2JsYW5rIn0KCiMjIEZpbGUgRm9ybWF0cyB7LnRhYnNldH0KaHR0cHM6Ly9nZW5vbWUudWNzYy5lZHUvRkFRL0ZBUWZvcm1hdAoKIyMjIEZBU1RBCi0gaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRkFTVEFfZm9ybWF0Ci0gVGhlIGxldHRlcnMgc2hvdWxkIGZvbGxvdyB0aGUgW0lVUEFDIGNvZGVzXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9GQVNUQV9mb3JtYXQjU2VxdWVuY2VfcmVwcmVzZW50YXRpb24pe3RhcmdldD0iX2JsYW5rIn0KLSBUYXNrIDE6IGRvd25sb2FkIHRoZSBGQVNUQSBmaWxlIG9mIGh1bWFuIGNocjIyIChmcm9tIFtoZXJlXShodHRwczovL3d3dy5lbnNlbWJsLm9yZy9pbmZvL2RhdGEvZnRwL2luZGV4Lmh0bWwpe3RhcmdldD0iX2JsYW5rIn0pIGFuZCBjYWxjdWxhdGUgdGhlIHNpemUgKGkuZS4gbGVuZ3RoKSBvZiB0aGUgY2hyb21vc29tZSAgCgpgYGB7ciwgZWNobz1GfQprbml0cjo6aW5jbHVkZV91cmwoImh0dHBzOi8vd3d3LmVuc2VtYmwub3JnL2luZm8vZGF0YS9mdHAvaW5kZXguaHRtbCIpCmBgYAoKPCEtLWBgYHtyLCBlbmdpbmU9J2Jhc2gnLCByZXN1bHRzPUZ9LS0+CmBgYHtyLCBlbmdpbmU9J2Jhc2gnLCBldmFsPUZ9CndnZXQgZnRwOi8vZnRwLmVuc2VtYmwub3JnL3B1Yi9yZWxlYXNlLTk1L2Zhc3RhL2hvbW9fc2FwaWVucy9kbmEvSG9tb19zYXBpZW5zLkdSQ2gzOC5kbmEuY2hyb21vc29tZS4yMi5mYS5negpgYGAKCmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQp6bGVzcyBIb21vX3NhcGllbnMuR1JDaDM4LmRuYS5jaHJvbW9zb21lLjIyLmZhLmd6IHwgaGVhZCAtbjUKYGBgCgpgYGB7ciwgZW5naW5lPSdiYXNoJ30KemNhdCBIb21vX3NhcGllbnMuR1JDaDM4LmRuYS5jaHJvbW9zb21lLjIyLmZhLmd6IHwgYXdrICchL14+L3tMRU4rPWxlbmd0aCgkMCl9RU5Ee3ByaW50IExFTn0nIApgYGAKCi0gVGFzayAyOiBnZXQgdGhlIHNlcXVlbmNlIGZyb20gWzQwMDAwMDAxIHRvIDQwMDAwMzAwIG9mIGNocjIyXShodHRwOi8vd3d3LmVuc2VtYmwub3JnL0hvbW9fc2FwaWVucy9Mb2NhdGlvbi9WaWV3P3I9MjIlM0E0MDAwMDAwMS00MDAwMDMwMCl7dGFyZ2V0PSJfYmxhbmsifQpgYGB7ciwgZW5naW5lPSdiYXNoJ30KemNhdCBIb21vX3NhcGllbnMuR1JDaDM4LmRuYS5jaHJvbW9zb21lLjIyLmZhLmd6IHwgYXdrICdCRUdJTnttaW49NTA4MTg0Njg7bWF4PTA7c3RhcnQ9NDAwMDAwMDE7ZW5kPTQwMDAwMzAwfSEvXj4ve0xFTis9bGVuZ3RoKCQwKTsgaWYoTEVOPj1zdGFydCAmJiBMRU4tbGVuZ3RoKCQwKSsxPD1lbmQpe21pbj0obWluPkxFTi1sZW5ndGgoJDApKzEpP0xFTi1sZW5ndGgoJDApKzE6bWluOyBtYXg9KG1heD5MRU4pP21heDpMRU47IFNFUT1TRVEkMDsgcHJpbnQgTEVOLWxlbmd0aCgkMCkrMSxMRU4sJDAsbGVuZ3RoKCQwKX0gfUVORHtwcmludCBzdWJzdHIoU0VRLHN0YXJ0LW1pbisxLGVuZC1zdGFydCsxKX0nCmBgYAoKLSBDb21wYXJlIHRoZSByZXN1bHQgYWJvdmUgYW5kIHRoZSBmb2xsb3dpbmcgbWV0aG9kICh1c2luZyBbdGhlIGVuc2VtYmwgcmVzdCBhcGldKGh0dHBzOi8vcmVzdC5lbnNlbWJsLm9yZy9kb2N1bWVudGF0aW9uL2luZm8vc2VxdWVuY2VfcmVnaW9uKXt0YXJnZXQ9Il9ibGFuayJ9KQpgYGB7ciwgZW5naW5lPSdiYXNoJ30KY3VybCBodHRwczovL3Jlc3QuZW5zZW1ibC5vcmcvc2VxdWVuY2UvcmVnaW9uL2h1bWFuLzIyOjQwMDAwMDAxLi40MDAwMDMwMDoxP2NvbnRlbnQtdHlwZT10ZXh0L3BsYWluCmBgYAoKLSBUYXNrIDM6IHdoYXQgaXMgdGhlIHNlcXVlbmNlIG9mIDQwMDAwMDAxIHRvIDQwMDAwMTAwIG9mICoqY2hyMjEqKiAodXNpbmcgYm90aCBhd2sgYW5kIGN1cmwpPwpgYGB7ciwgZW5naW5lPSdiYXNoJ30KY3VybCBodHRwczovL3Jlc3QuZW5zZW1ibC5vcmcvc2VxdWVuY2UvcmVnaW9uL2h1bWFuLzIxOjQwMDAwMDAxLi40MDAwMDEwMDoxP2NvbnRlbnQtdHlwZT10ZXh0L3BsYWluCmBgYAoKIyMjIEZBU1RRCi0gaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRkFTVFFfZm9ybWF0Ci0gRXhhbXBsZXMgZnJvbSBbR29uZyAqZXQgYWwuKiBKQ0ktSSAyMDE4XShodHRwczovL2luc2lnaHQuamNpLm9yZy9hcnRpY2xlcy92aWV3LzEyMDcyMyl7dGFyZ2V0PSJfYmxhbmsifQotIERvd25sb2FkIG9uZSBvZiBkb3duLXNhbXBsZWQgKHRvIDFLKSBGQVNUUSBhdmFpbGFibGUgZnJvbSBiZWxvdwpgYGB7ciwgZW5naW5lPSdiYXNoJywgZXZhbD1GfQp3Z2V0IGh0dHBzOi8vd3d3LmRyb3Bib3guY29tL3MvaDJsenpuOTRvOXpwdjI2L1NMWC05MTY4LkQ3MDFfRDUwMV8xSy5DNkgzVUFOWFguc18xLnJfMS5mcS5negpgYGAKLSBRdWVzdGlvbjogaG93IG1hbnkgZW50cmllcyAoaXQncyBhYnZpb3VzKQpgYGB7ciwgZW5naW5lPSdiYXNoJ30KemNhdCAgU0xYLTkxNjguRDcwMV9ENTAxXzFLLkM2SDNVQU5YWC5zXzEucl8xLmZxLmd6IHwgZWNobyAkKChgd2MgLWxgLzQpKQpgYGAKCi0gTGV0J3MgbG9vayBhdCB0aGUgZmlyc3QgZW50cnkgKGkuZS4gdGhlIGZpcnN0IDQgbGluZXMpIGFuZCBjaGVjayB0aGUgbWV0YSBpbmZvcm1hdGlvbgpgYGB7ciwgZW5naW5lPSdiYXNoJ30KemNhdCBTTFgtOTE2OC5ENzAxX0Q1MDFfMUsuQzZIM1VBTlhYLnNfMS5yXzEuZnEuZ3ogfCBoZWFkIC1uNApgYGAKCi0gUXVlc3Rpb246IHNlcXVlbmNpbmcgbGVuZ3RoPwpgYGB7ciwgZW5naW5lPSdiYXNoJ30Kemxlc3MgU0xYLTkxNjguRDcwMV9ENTAxXzFLLkM2SDNVQU5YWC5zXzEucl8xLmZxLmd6IHwgaGVhZCAtbiA0IHwgYXdrICdOUiU0PT0ye3ByaW50IGxlbmd0aCgkMCl9JwpgYGAKIAotIENoZWNrIHRoZSBiYXNlIHF1YWxpdHkgdXNpbmcgW2Zhc3RxY10oaHR0cHM6Ly93d3cuYmlvaW5mb3JtYXRpY3MuYmFicmFoYW0uYWMudWsvcHJvamVjdHMvZmFzdHFjLyl7dGFyZ2V0PSJfYmxhbmsifQpgYGB7ciwgZW5naW5lPSdiYXNoJywgZXZhbD1GfQpmYXN0cWMgU0xYLTkxNjguRDcwMV9ENTAxXzFLLkM2SDNVQU5YWC5zXzEucl8xLmZxLmd6CmBgYAoKYGBge3IsIGVjaG89Rn0Ka25pdHI6OmluY2x1ZGVfdXJsKCIuL1NMWC05MTY4LkQ3MDFfRDUwMV8xSy5DNkgzVUFOWFguc18xLnJfMV9mYXN0cWMuaHRtbCIpCmBgYAoKCi0gQW5vdGhlciBleGFtcGxlIFtOZ28gX2V0IGFsLl8gU2NpZW5jZSAyMDE4XShodHRwOi8vc2NpZW5jZS5zY2llbmNlbWFnLm9yZy9jb250ZW50LzM2MC82MzkzLzExMzMpe3RhcmdldD0iX2JsYW5rIn0gKFtTUFIxMzAxNDldKGh0dHBzOi8vd3d3Lm5jYmkubmxtLm5paC5nb3Yvc3JhLz90ZXJtPVNSUDEzMDE0OSl7dGFyZ2V0PSJfYmxhbmsifSkKYGBge3IsIGVjaG89Rn0Ka25pdHI6OmluY2x1ZGVfdXJsKCJodHRwOi8vc2NpZW5jZS5zY2llbmNlbWFnLm9yZy9jb250ZW50LzM2MC82MzkzLzExMzMiKQpgYGAKLSBEb3dubGFvZCB0aGUgZmlyc3QgMUsgc3BvdHMgZnJvbSB0aGUgc21hbGxlc3QgUk5BLVNlcSBmYXN0cSBmaWxlcyBmcm9tIFtTUlI2NDgxMDg2XShodHRwczovL3RyYWNlLm5jYmkubmxtLm5paC5nb3YvVHJhY2VzL3NyYS8/cnVuPVNSUjY0ODEwODYpe3RhcmdldD0iX2JsYW5rIn0gKHlvdSBtYXkgbmVlZCB0byBpbnN0YWxsIHRoZSBbc3JhIHRvb2xraXRdKGh0dHBzOi8vd3d3Lm5jYmkubmxtLm5paC5nb3Yvc3JhL2RvY3MvdG9vbGtpdHNvZnQvKXt0YXJnZXQ9Il9ibGFuayJ9KQoKYGBge3IsIGVjaG89Rn0Ka25pdHI6OmluY2x1ZGVfdXJsKCJodHRwczovL3d3dy5uY2JpLm5sbS5uaWguZ292L3NyYS8/dGVybT1TUlAxMzAxNDkiKQpgYGAKCmBgYHtyLCBlbmdpbmU9J2Jhc2gnLCBldmFsPUZ9CmZhc3RxLWR1bXAgLVggMTAwMCAtLXNwbGl0LWZpbGVzIC0tcmVhZC1maWx0ZXIgcGFzcyAtLW91dGRpciAuLyAtLWd6aXAgU1JSNjQ4MTA4NiAKYGBgCmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQp6Y2F0IFNSUjY0ODEwODZfcGFzc18xLmZhc3RxLmd6IHwgZWNobyAkKChgd2MgLWxgLzQpKQp6Y2F0IFNSUjY0ODEwODZfcGFzc18yLmZhc3RxLmd6IHwgZWNobyAkKChgd2MgLWxgLzQpKQpgYGAKCi0gTGV0J3MgbG9vayBhdCB0aGUgZmlzdCA4IGxpbmVzCmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQp6Y2F0IFNSUjY0ODEwODZfcGFzc18xLmZhc3RxLmd6IHwgaGVhZCAtbjgKYGBgCmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQp6Y2F0IFNSUjY0ODEwODZfcGFzc18yLmZhc3RxLmd6IHwgaGVhZCAtbjgKYGBgCgotIENoZWNrIHRoZSBiYXNlIHF1YWxpdHkgdXNpbmcgW2Zhc3RxY10oaHR0cHM6Ly93d3cuYmlvaW5mb3JtYXRpY3MuYmFicmFoYW0uYWMudWsvcHJvamVjdHMvZmFzdHFjLyl7dGFyZ2V0PSJfYmxhbmsifQpgYGB7ciwgZW5naW5lPSdiYXNoJywgZXZhbD1GfQpmYXN0cWMgU1JSNjQ4MTA4Nl9wYXNzXzEuZmFzdHEuZ3ogU1JSNjQ4MTA4Nl9wYXNzXzIuZmFzdHEuZ3oKYGBgCgpgYGB7ciwgZWNobz1GfQprbml0cjo6aW5jbHVkZV91cmwoIi4vU1JSNjQ4MTA4Nl9wYXNzXzFfZmFzdHFjLmh0bWwiLCBoZWlnaHQ9IjYwMHB4IikKYGBgCgpgYGB7ciwgZWNobz1GfQprbml0cjo6aW5jbHVkZV91cmwoIi4vU1JSNjQ4MTA4Nl9wYXNzXzJfZmFzdHFjLmh0bWwiLCBoZWlnaHQ9IjYwMHB4IikKYGBgCgojIyMgR1RGIChHRkYpCi0gaHR0cHM6Ly9nZW5vbWUudWNzYy5lZHUvRkFRL0ZBUWZvcm1hdCNmb3JtYXQzCi0gaHR0cHM6Ly93d3cuZW5zZW1ibC5vcmcvaW5mby93ZWJzaXRlL3VwbG9hZC9nZmYuaHRtbAotIExldCdzIGRvd25sb2FkIHRoZSBFbnNlbWJsIHRyYW5zY3JpcHQgYW5ub3RhdGlvbiBmaWxlCmBgYHtyLCBlbmdpbmU9J2Jhc2gnLCBldmFsPUZ9CndnZXQgZnRwOi8vZnRwLmVuc2VtYmwub3JnL3B1Yi9yZWxlYXNlLTk1L2d0Zi9ob21vX3NhcGllbnMvSG9tb19zYXBpZW5zLkdSQ2gzOC45NS5ndGYuZ3oKYGBgCgotIEhvdyBtYW55IGdlbmVzIGFuZCB0cmFuc2NyaXB0cz8KYGBge2Jhc2h9CnpjYXQgSG9tb19zYXBpZW5zLkdSQ2gzOC45NS5ndGYuZ3ogfCBhd2sgJyQzPT0iZ2VuZSJ7R0VORSsrfSQzPT0idHJhbnNjcmlwdCJ7VFJBTlMrK30kMz09ImV4b24ie0VYT04rK31FTkR7cHJpbnQgR0VORSxUUkFOUyxFWE9OfScKYGBgCi0gV2hhdCBlbHNlIGluIHRoZSBmaWxlPwpgYGB7YmFzaH0KemNhdCBIb21vX3NhcGllbnMuR1JDaDM4Ljk1Lmd0Zi5neiB8IGF3ayAnIS9eIy97cHJpbnQgJDN9JyB8IHNvcnQgfCB1bmlxIC1jIHwgc29ydCAtazEsMW4KYGBgCgotIFJlYWQgdGhlIGZpcnN0IDEwIGxpbmVzIChleGNsdWRpbmcgY29tbWVudHMgKGkuZS4gJyMnKSkgdXNpbmcgQmlvY29uZHVjdG9yIFtydHJhY2tsYXllciBwYWNrYWdlXShodHRwOi8vYmlvY29uZHVjdG9yLm9yZy9wYWNrYWdlcy9yZWxlYXNlL2Jpb2MvaHRtbC9ydHJhY2tsYXllci5odG1sKXt0YXJnZXQ9Il9ibGFuayJ9CmBgYHtyfQojIHN0YXJ0IHlvdXIgUiBzZXNzaW9uIHVzaW5nICdSJyBjb21tYW5kIGZyb20gdGhlIHRlcm1pbmFsCnJ0cmFja2xheWVyOjppbXBvcnQoZm9ybWF0PSJndGYiLCB0ZXh0PXN5c3RlbSgiemNhdCBIb21vX3NhcGllbnMuR1JDaDM4Ljk1Lmd0Zi5neiB8IGdyZXAgLXYgXiMgfCBoZWFkIC1uIDEwIiwgaW50ZXJuPVQpKQpgYGAKCi0gQW5vdGhlciB0YXNrOiByZWFkIHRoZSBMRVAgKFtMZXB0aW5dKGh0dHBzOi8vd3d3LmVuc2VtYmwub3JnL0hvbW9fc2FwaWVucy9HZW5lL1N1bW1hcnk/ZGI9Y29yZTtnPUVOU0cwMDAwMDE3NDY5NztyPTc6MTI4MjQxMjg0LTEyODI1NzYyODt0PUVOU1QwMDAwMDMwODg2OCl7dGFyZ2V0PSJfYmxhbmsifSkgdHJhbnNjcmlwdApgYGB7cn0KIyBzdGFydCB5b3VyIFIgc2Vzc2lvbiB1c2luZyAnUicgY29tbWFuZCBmcm9tIHRoZSB0ZXJtaW5hbAojIApydHJhY2tsYXllcjo6aW1wb3J0KGZvcm1hdD0iZ3RmIiwgdGV4dD1zeXN0ZW0oInpjYXQgSG9tb19zYXBpZW5zLkdSQ2gzOC45NS5ndGYuZ3ogfCBncmVwIC1QICdnZW5lX25hbWUgXCJMRVBcIicgIiwgaW50ZXJuPVQpKQpgYGAKCi0gWW91IGNhbiwgb2YgY291cnNlLCByZWFkIGFsbCBvZiB0aGVtIHRoZW0KYGBge3IsIGV2YWw9Rn0KIyBJVCBXSUxMIFRBS0UgTE9ORwpmb288LXJ0cmFja2xheWVyOjppbXBvcnQoIkhvbW9fc2FwaWVucy5HUkNoMzguOTUuZ3RmLmd6IikKYGBgCgojIyMgU0FNIChCQU0pCi0gaHR0cDovL3NhbXRvb2xzLmdpdGh1Yi5pby9odHMtc3BlY3MvU0FNdjEucGRmIAotIGh0dHA6Ly93d3cuaHRzbGliLm9yZy9kb2Mvc2FtdG9vbHMuaHRtbAotIGh0dHA6Ly93d3cuaHRzbGliLm9yZy9kb2Mvc2FtLmh0bWwKLSBZb3UgY2FuIGNoZWNrIHlvdXIgYml0d2lzZSBGTEFHIGludGVyYWN0aXZlbHkgZnJvbSBbaGVyZV0oaHR0cHM6Ly9icm9hZGluc3RpdHV0ZS5naXRodWIuaW8vcGljYXJkL2V4cGxhaW4tZmxhZ3MuaHRtbCl7dGFyZ2V0PSJfYmxhbmsifQoKLSBMZXQncyBnZXQgdGhlIEJBTSBmaWxlIGZvciBbU1JSNjQ4MTA4Nl0oaHR0cHM6Ly90cmFjZS5uY2JpLm5sbS5uaWguZ292L1RyYWNlcy9zcmEvP3J1bj1TUlI2NDgxMDg2KXt0YXJnZXQ9Il9ibGFuayJ9ICh5b3UgbWF5IG5lZWQgdG8gaW5zdGFsbCB0aGUgW3NyYSB0b29sa2l0XShodHRwczovL3d3dy5uY2JpLm5sbS5uaWguZ292L3NyYS9kb2NzL3Rvb2xraXRzb2Z0Lyl7dGFyZ2V0PSJfYmxhbmsifSkKYGBge3IsIGVuZ2luZT0nYmFzaCd9CnNhbS1kdW1wIFNSUjY0ODEwODYgfCBoZWFkIC1uIDEwCmBgYAoKLSBIb3dldmVyLCB0aGV5IHR1cm5lZCBvdXQgdG8gYmUgdW5hbGlnbmVkCmBgYHtyLCBlbmdpbmU9J2Jhc2gnLCBldmFsPUZ9CiMgRE8gTk9UIFJVTiAodGFrZXMgYSB3aGlsZSkKc2FtLWR1bXAgU1JSNjQ4MTA4NiB8IGF3ayAne3ByaW50ICQzfScgfCBzb3J0IHwgdW5pcSAtYwpgYGAKCi0gU28sIDFLIHJlYWRzIG9mIFNSUjY0ODEwODYgd2VyZSBhbGlnbmVkIHRvIEdSQ2gzOCB1c2luZyBbSGlTYXQyXShodHRwczovL2NjYi5qaHUuZWR1L3NvZnR3YXJlL2hpc2F0Mi8pe3RhcmdldD0iX2JsYW5rIn0gKHlvdSBhcmUgKipOT1QqKiBleHBlY3RlZCB0byBydW4gdGhpcyBjb21tYW5kKQoKYGBge3IsIGVuZ2luZT0nYmFzaCcsIGV2YWw9Rn0KIyB0aGlzIGlzIGZvciB5b3VyIGluZm9ybWF0aW9uIG9ubHkKIyB0aGUgcGF0aCB0byB0aGUgaW5kZXggc2hvdWxkIGJlIGNoYW5nZWQgKGJ1dCBJIGFtIG5vdCBjb3ZlcmluZyB0aGlzKQpoaXNhdDIgLXggL2hvbWUvc3NnMjkvZGF0YS9nZW5vbWUvSG9tb19zYXBpZW5zL0Vuc2VtYmwvR1JDaDM4L1NlcXVlbmNlL0hpU2F0MkluZGV4L2dlbm9tZSAtLWFkZC1jaHJuYW1lIC0tcmctaWQgU1JSNjQ4MTA4NiAtLXJnIFNSUjY0ODEwODYgLTEgU1JSNjQ4MTA4Nl9wYXNzXzEuZmFzdHEuZ3ogLTIgU1JSNjQ4MTA4Nl9wYXNzXzIuZmFzdHEuZ3ogfCBzYW10b29scyB2aWV3IC1iUyAtID4gU1JSNjQ4MTA4Ni5iYW0KYGBgCgotIFRoZSBCQU0gZmlsZSBpcyBhdmFpYWJsZToKYGBge3IsIGVuZ2luZT0nYmFzaCcsIGV2YWw9Rn0Kd2dldCBodHRwczovL3d3dy5kcm9wYm94LmNvbS9zLzZvdXZsaWlibXdobmJldC9TUlI2NDgxMDg2LmJhbQpgYGAKCi0gTGV0J3Mgc2VlIHRoZSBoZWFkZXIgb2YgdGhlIEJBTSBmaWxlIHVzaW5nIFtzYW10b29sc10oaHR0cDovL3d3dy5odHNsaWIub3JnLyl7dGFyZ2V0PSJfYmxhbmsifQpgYGB7ciwgZW5naW5lPSdiYXNoJ30KIyBJIGFzc3VtZSBzYW10b29scyBhbHJlYWR5IGluc3RhbGxlZCAKIyBhbmQgdGhlIGJpbmFyeSBpcyBhdmFpYWxibGUgZnJvbSB5b3VyICRQQVRIIGVudmlyb25tZW50CnNhbXRvb2xzIHZpZXcgLUggU1JSNjQ4MTA4Ni5iYW0KYGBgCgotIFJ1biBzYW10b29scyB3aXRoICdmbGFnc3RhdCcgCmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQpzYW10b29scyBmbGFnc3RhdCBTUlI2NDgxMDg2LmJhbQpgYGAKCi0gMjI0MyAqKlFDLXBhc3NlZCByZWFkcyoqPwpgYGB7ciwgZW5naW5lPSdiYXNoJ30Kc2FtdG9vbHMgdmlldyAtRiAweDIwMCAtYyBTUlI2NDgxMDg2LmJhbQpgYGAKLSAwICoqUUMtZmFpbGVkIHJlYWRzKio/CmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQpzYW10b29scyB2aWV3IC1mIDB4MjAwIC1jIFNSUjY0ODEwODYuYmFtCmBgYAotIFdoeSAqKj4xMDAwXCoyIHJlYWRzKio/IChpbnB1dCB3YXMgMkspCiAgKyBIaW50OiBzZWNvbmRhcnkgYWxpZ25tZW50CmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQpzYW10b29scyB2aWV3IC1mIDI1NiAtYyBTUlI2NDgxMDg2LmJhbQpgYGAKICArIEZvciBleGFtcGxlOgpgYGB7ciwgZW5naW5lPSdiYXNoJ30Kc2FtdG9vbHMgdmlldyBTUlI2NDgxMDg2LmJhbSAgfCBhd2sgJyQxPT0iU1JSNjQ4MTA4Ni4xMCJ7cHJpbnQgJDB9JwpgYGAKICArIE5vbi1zZWNvbmRhcnkgYWxpZ25tZW50CmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQpzYW10b29scyB2aWV3IC1GIDI1NiAtYyBTUlI2NDgxMDg2LmJhbQpgYGAKCi0gNDQzICoqbWFwcGVkIHJlYWRzKio/CmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQpzYW10b29scyB2aWV3IC1mMSAtRiAweDQgLWMgU1JSNjQ4MTA4Ni5iYW0gCmBgYAoKLSAxMjQyICoqcmVhZDEqKiAoZnJvbSB0aGUgMjI0MyBwYWlyZWQgaW4gc2VxdWVuY2luZyk/CmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQpzYW10b29scyB2aWV3IC1mIDB4NDEgLWMgU1JSNjQ4MTA4Ni5iYW0gCmBgYAotIDEwMDEgKipyZWFkMioqIChmcm9tIHRoZSAyMjQzIHBhaXJlZCBpbiBzZXF1ZW5jaW5nKT8KYGBge3IsIGVuZ2luZT0nYmFzaCd9CnNhbXRvb2xzIHZpZXcgLWYgMHg4MSAtYyBTUlI2NDgxMDg2LmJhbSAKYGBgCgotIDAgKipwcm9wZXJseSBwYWlyZWQqKj8KICArIEhpbnQ6IGJvdGggMHgxIGFuZCAweDIgYml0cyBzZXQgYW5kIDB4NCBiaXQgbm90IHNldApgYGB7ciwgZW5naW5lPSdiYXNoJ30Kc2FtdG9vbHMgdmlldyAtZiAzIC1GIDB4NCAtYyBTUlI2NDgxMDg2LmJhbSAKYGBgCgotIDIgKip3aXRoIGl0c2VsZiBhbmQgbWF0ZSBtYXBwZWQqKgogICsgSGludDogZXhjbHVkZSBzZWdtZW50IHVubWFwcGVkICgweDQpICoqQU5EKiogbmV4dCBzZWdtZW50IGluIHRoZSB0ZW1wbGF0ZSB1bm1hcHBlZCAoMHg4KQpgYGB7ciwgZW5naW5lPSdiYXNoJ30Kc2FtdG9vbHMgdmlldyAtZiAxIC1GIDEyIC1jIFNSUjY0ODEwODYuYmFtIApgYGAKCiMjIyBCRUQKLSBodHRwczovL2dlbm9tZS51Y3NjLmVkdS9GQVEvRkFRZm9ybWF0I2Zvcm1hdDEKLSBDb252ZXJ0IEJBTSBmb3JtYXQgdG8gQkVEIGZvcm1hdCAodXNpbmcgW2JlZHRvb2xzXShodHRwczovL2JlZHRvb2xzLnJlYWR0aGVkb2NzLmlvLyl7dGFyZ2V0PSJfYmxhbmsifSkKYGBge3IsIGVuZ2luZT0nYmFzaCd9CiMgSSBhc3N1bWUgYmVkdG9vbHMgaXMgZXhwb3J0ZWQgdG8geW91ciAkUEFUSApiZWR0b29scyBiYW10b2JlZCAtaSBTUlI2NDgxMDg2LmJhbSB8IGhlYWQKIyB0aGlzIGlzIGVxdWl2YWxlbnQgd2l0aCB0aGUgZm9sbHdvaW5nIGNvbW1hbmQKYmFtVG9CZWQgLWkgU1JSNjQ4MTA4Ni5iYW0gfCBoZWFkCmBgYAoKLSBDb3VudCB0aGUgbWFwcGVkIHJlYWRzIChpbiBkaWZmZXJlbnQgd2F5cykKYGBge3IsIGVuZ2luZT0nYmFzaCd9CmJhbVRvQmVkIC1pIFNSUjY0ODEwODYuYmFtIHwgd2MgLWwKc2FtdG9vbHMgdmlldyAtZiAxIC1GIDQgU1JSNjQ4MTA4Ni5iYW0gIHwgd2MgLWwKYGBgCgotIENvbXBhcmUgdGhlIDAtYmFzZWQgKGUuZy4gQkVEKSBhbmQgMS1iYXNlZCAoZS5nLiBTQU0pIGNvb3JkaWF0ZXMKYGBge3IsIGVuZ2luZT0nYmFzaCd9CnNhbXRvb2xzIHZpZXcgLWYgMSAtRiA0IFNSUjY0ODEwODYuYmFtICB8IGhlYWQgfCBjdXQgLWYxLTQgCmBgYAoKLSBJbiB0aGVvcnksIHRoZSBhbGlnbmVkIHJlZ2lvbiBjYW4gbm90IGdvIGJleW9uZCA+IDc1IGZvciBTUlI2NDgxMDg2IChQRTc1KSwgYnV0IHRoZXJlIGFyZToKYGBge3IsIGVuZ2luZT0nYmFzaCd9CmJhbVRvQmVkIC1pIFNSUjY0ODEwODYuYmFtIHwgYXdrICckMy0kMj43NXtwcmludCAkMH0nCmBgYAoKLSBMZXQnIGxvb2sgYXQgdGhlIEJBTSBmaWxlIGZvciB0aG9zZSBjYXNlcyBhYm92ZQpgYGB7ciwgZW5naW5lPSdiYXNoJ30Kc2FtdG9vbHMgdmlldyAtZiAxIC1GIDQgU1JSNjQ4MTA4Ni5iYW0gIHwgYXdrICckMT09IlNSUjY0ODEwODYuNzIiIHx8ICQxPT0iU1JSNjQ4MTA4Ni43OCIgfHwgJDE9PSJTUlI2NDgxMDg2Ljk4IntwcmludCAkMH0nCmBgYAoKLSBZb3UgbWF5IHNlZSAnTicgaW4gQ0lHQVIgbGluZSwgd2hpY2ggbWVhbiAnc2tpcHBlZCByZWdpb24gZnJvbSB0aGUgcmVmZXJlbmNlJwotIFRoaXMgbWVhbiAnaW50cm9uLXNwYW5uaW5nJyByZWFkcyBpbiBSTkEtU2VxIChpLmUuIHJlYWRzIGNvbnRhaW5pbmcgZXhvbi1pbnRyb24ganVuY3Rpb25zKQotIFNlZSBbdGhlIEdBVEsgYmVzdCBwcmFjdGljZV0oaHR0cHM6Ly9nYXRrZm9ydW1zLmJyb2FkaW5zdGl0dXRlLm9yZy9nYXRrL2Rpc2N1c3Npb24vMzg5Mi90aGUtZ2F0ay1iZXN0LXByYWN0aWNlcy1mb3ItdmFyaWFudC1jYWxsaW5nLW9uLXJuYXNlcS1pbi1mdWxsLWRldGFpbCl7dGFyZ2V0PSJfYmxhbmsifSB3aXRoIHJlZ2FyZCB0byB0aGlzIGlzc3VlCi0gWW91IGNhbiAnc3BsaXQnIHRob3NlIE4tY29udGFpbmluZyBDSUdBUiBsaW5lcyB1c2luZyBiZWR0b29scwpgYGB7ciwgZW5naW5lPSdiYXNoJ30KYmFtVG9CZWQgLXNwbGl0IC1pIFNSUjY0ODEwODYuYmFtIHwgYXdrICckMy0kMj43NXtwcmludCAkMH0nCmBgYAotIENoZWNrIG91dCBob3cgdGhlIHVzZSBvZiAnLXNwbGl0JyBvcHRpb24gYWZmZWN0cyByZXBvcnRpbmcgW292ZXJsYXAgd2l0aCB0aGUgZ2Vub21lXShodHRwczovL2JlZHRvb2xzLnJlYWR0aGVkb2NzLmlvL2VuL2xhdGVzdC9jb250ZW50L3Rvb2xzL2ludGVyc2VjdC5odG1sI3NwbGl0LXJlcG9ydGluZy1vdmVybGFwcy13aXRoLXNwbGljZWQtYWxpZ25tZW50cy1vci1ibG9ja2VkLWJlZC1mZWF0dXJlcyl7dGFyZ2V0PSJfYmxhbmsifQo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUk5BLVNlcSBGaWxlIEZvcm1hdCBQcmFjdGljYWxzIgpzdWJ0aXRsZTogIkEgcHJpbWVyIHRvIHRoZSBkaWZmZXJlbnQgdHlwZXMgb2YgUk5BLVNlcSBkYXRhIGZpbGVzIgphdXRob3I6IHwKICB8IFtTdW5nc2FtIEdvbmddKGh0dHBzOi8vd3d3Lm9iZ3luLmNhbS5hYy51ay9zdGFmZi9yZXNlYXJjaC1zdGFmZi9zdW5nLWdvbmcvKXt0YXJnZXQ9Il9ibGFuayJ9CiAgfCBTZW5pb3IgUmVzZWFyY2ggQXNzb2NpYXRlCiAgfCBEZXBhcnRtZW50IG9mIE9ic3RldHJpY3MgJiBHeW5hZWNvbG9neQogIHwgVW5pdmVyc2l0eSBvZiBDYW1icmlkZ2UKZGF0ZTogIjI2IE1hcmNoIDIwMTkiCmluc3RpdHV0ZTogfAogIHwgU2VuaW9yIFJlc2VhcmNoIEFzc29jaWF0ZQogIHwgRGVwYXJ0bWVudCBvZiBPYnN0ZXRyaWNzICYgR3luYWVjb2xvZ3kKICB8IFVuaXZlcnNpdHkgb2YgQ2FtYnJpZGdlCm91dHB1dDogCiAgI2h0bWxfZG9jdW1lbnQ6CiAgaHRtbF9ub3RlYm9vazoKICAgIGhpZ2hsaWdodDogcHlnbWVudHMKICAgIHRvY19mbG9hdDogdHJ1ZQogICAgdG9jOiB0cnVlCiAgICB0b2NfZGVwdGg6IDMKICAgICNudW1iZXJfc2VjdGlvbjogdHJ1ZQogICNwcmV0dHlkb2M6Omh0bWxfcHJldHR5OgogICAgI3RoZW1lOiBsZW9uaWRzCiAgICAjaGlnaGxpZ2h0OiBnaXRodWIKICAjdXNsaWRlczo6dXNsaWRlc19wZGY6CiAgI2JlYW1lcl9wcmVzZW50YXRpb246CiAgICAjc2xpZGVfbGV2ZWw6IDIKICAgICN0aGVtZTogIkFubkFyYm9yIgogICAgI3RoZW1lOiAiUGFsb0FsdG8iCi0tLQoKYGBge3Igc2V0dXAsIGluY2x1ZGU9RkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSkKYGBgCgojIyBCZWZvcmUgeW91IHN0YXJ0CjEuIENoZWNrIHRoZSBbZ2l0aHViIHBhZ2VdKGh0dHBzOi8vZ2l0aHViLmNvbS9zdW5nL1JOQS1TZXFfZmlsZV9mb3JtYXRfcHJhdGljYWxzXzIwMTkpIGZvciB0aGlzIGRvY3VtZW50LgoyLiBJZiB5b3Ugd291bGQgbGlrZSB0byBmb2xsb3cgdGhpcyBwcmFjdGljYWwgZnJvbSB5b3VyIG93biBtYWNoaW5lLCB5b3UgbWF5IG5lZWQgdG8gaW5zdGFsbCBzb21lIG9mIHRoZSBzb2Z0d2FyZSB0b29scyAoZm9sbG93IHJlbGV2YW50IGxpbmtzKSBvciBsaW51eCBjb21tYW5kcy4KMy4gSWYgMiBpcyB0cnVlLCB5b3UgbWF5IGFsc28gbmVlZCB0byBzZXQgdXAgeW91ciBbJFBBVEggZW52aXJvbm1lbnQgdmFyaWFibGVdKGh0dHBzOi8vd3d3LmN5YmVyY2l0aS5iaXovZmFxL3VuaXgtbGludXgtYWRkaW5nLXBhdGgvKXt0YXJnZXQ9Il9ibGFuayJ9CgojIyBBaW1zCjEuIFRvIHByZXBhcmUgb3RoZXIgY2xhc3NlcyBhaGVhZAoyLiBUbyBnYWluIGNvbmZpZGVuY2UKIC0gb2YgcHJvY2Vzc2luZyBSTkEtU2VxIGRhdGEgZmlsZXMKIC0gb3IgbGludXggKG9yIHVuaXgpIGNvbW1hbmQgbGluZXMKCiMjIFlvdSB3aWxsIGxlYXJuCjEuIFZhcmlvdXMgZmlsZSBmb3JtYXRzCiAtIFtGQVNUQV0oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRkFTVEFfZm9ybWF0KXt0YXJnZXQ9Il9ibGFuayJ9IGFuZCBbRkFTVFFdKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0ZBU1RRX2Zvcm1hdCl7dGFyZ2V0PSJfYmxhbmsifQogLSBbR1RGXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9HZW5lX3RyYW5zZmVyX2Zvcm1hdCl7dGFyZ2V0PSJfYmxhbmsifSBhbmQgb3IgW0dGRl0oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvR2VuZXJhbF9mZWF0dXJlX2Zvcm1hdCl7dGFyZ2V0PSJfYmxhbmsifQogLSBbU0FNXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9TQU1fKGZpbGVfZm9ybWF0KSl7dGFyZ2V0PSJfYmxhbmsifSBhbmQgW0JBTV0oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQmluYXJ5X0FsaWdubWVudF9NYXApe3RhcmdldD0iX2JsYW5rIn0KIC0gW0JFRF0oaHR0cHM6Ly9nZW5vbWUudWNzYy5lZHUvRkFRL0ZBUWZvcm1hdC5odG1sI2Zvcm1hdDEpe3RhcmdldD0iX2JsYW5rIn0KMi4gQWNjZXNzaW5nIHB1YmxpYyBvciBwdWJsaXNoZWQgZGF0YSAKIC0gW0Vuc2VtYmxdKGh0dHA6Ly93d3cuZW5zZW1ibC5vcmcpe3RhcmdldD0iX2JsYW5rIn0KIC0gW05DQkkgU1JBXShodHRwczovL3d3dy5uY2JpLm5sbS5uaWguZ292L3NyYSl7dGFyZ2V0PSJfYmxhbmsifQozLiBBbmQgcmVsYXRlZCBsaW51eCBjb21tYW5kcyBhbmQgc29mdHdhcmUgdG9vbHMKIC0gW2F3a10oaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQVdLKXt0YXJnZXQ9Il9ibGFuayJ9CiAtIFtzb3J0XShodHRwOi8vbWFuNy5vcmcvbGludXgvbWFuLXBhZ2VzL21hbjEvc29ydC4xLmh0bWwpe3RhcmdldD0iX2JsYW5rIn0KIC0gW3pjYXRdKGh0dHBzOi8vbGludXguZGllLm5ldC9tYW4vMS96Y2F0KXt0YXJnZXQ9Il9ibGFuayJ9IG9yIFt6bGVzc10oaHR0cHM6Ly9saW51eC5kaWUubmV0L21hbi8xL3psZXNzKXt0YXJnZXQ9Il9ibGFuayJ9CiAtIFtzYW10b29sc10oaHR0cDovL3d3dy5odHNsaWIub3JnLyl7dGFyZ2V0PSJfYmxhbmsifQogLSBbYmVkdG9vbHNdKGh0dHBzOi8vYmVkdG9vbHMucmVhZHRoZWRvY3MuaW8vKXt0YXJnZXQ9Il9ibGFuayJ9CiAtIFtzcmEgdG9vbGtpdHNdKGh0dHBzOi8vd3d3Lm5jYmkubmxtLm5paC5nb3Yvc3JhL2RvY3MvdG9vbGtpdHNvZnQvKXt0YXJnZXQ9Il9ibGFuayJ9CgojIyBZb3Ugd2lsbCAqKk5PVCoqIGxlYXJuIChmcm9tIG1lKQoxLiBWYXJpb3VzIFJOQS1TZXEgZGF0YSBwcm9jZXNzaW5nIGFuZCBhbmFseXNpcywgc3VjaCBhcwogICsgUXVhbGl0eSBjb250cm9scyBvZiBzZXF1ZW5jZWQgcmVhZHMKICArIEFkYXB0b3IgKGFuZC9vciBwb29yIHF1YWxpdHkgcmVhZCkgdHJpbW1pbmcKICArIEFsaWdubWVudCAobWFwcGluZykgb2YgcmVhZHMKICArIFF1YW50aWZpY2F0aW9uIG9mIHRyYW5zY3JpcHQtbGV2ZWwgKG9yIGdlbmUtbGV2ZWwpIGFidW5kYW5jZQogICsgRGlmZmVyZW50aWFsbHkgZXhwcmVzc2VkIGdlbmUvdHJhbnNjcmlwdC9leG9uIGFuYWx5c2lzCiAgKiBUcmFuc2NyaXB0b21lIHJlY29uc3RydWN0aW9uIChvciBhc3NlbWJseSkKCjIuIERldGFpbGVkIHVzZSBvZiBzb2Z0d2FyZSB0b29scyByZWxhdGVkIHdpdGggYWJvdmUKICogW2Zhc3RxY10oaHR0cHM6Ly93d3cuYmlvaW5mb3JtYXRpY3MuYmFicmFoYW0uYWMudWsvcHJvamVjdHMvZmFzdHFjLyl7dGFyZ2V0PSJfYmxhbmsifQogKiBbY3V0YWRhcHRdKGh0dHBzOi8vY3V0YWRhcHQucmVhZHRoZWRvY3MuaW8vZW4vc3RhYmxlL2luZGV4Lmh0bWwpe3RhcmdldD0iX2JsYW5rIn0KICogW1RvcEhhdDJdKGh0dHBzOi8vY2NiLmpodS5lZHUvc29mdHdhcmUvdG9waGF0L2luZGV4LnNodG1sKXt0YXJnZXQ9Il9ibGFuayJ9IGFuZCBbSGlTYXQyXShodHRwczovL2NjYi5qaHUuZWR1L3NvZnR3YXJlL2hpc2F0Mi8pe3RhcmdldD0iX2JsYW5rIn0KICogW2ZlYXR1cmVDb3VudHNdKGh0dHA6Ly9zdWJyZWFkLnNvdXJjZWZvcmdlLm5ldC8pe3RhcmdldD0iX2JsYW5rIn0sIFtTYWxtb25dKGh0dHBzOi8vY29tYmluZS1sYWIuZ2l0aHViLmlvL3NhbG1vbi8pe3RhcmdldD0iX2JsYW5rIn0gW0thbGxpc3RvXShodHRwczovL3BhY2h0ZXJsYWIuZ2l0aHViLmlvL2thbGxpc3RvLyl7dGFyZ2V0PSJfYmxhbmsifQogKiBbREVTZXEyXShodHRwczovL2Jpb2NvbmR1Y3Rvci5vcmcvcGFja2FnZXMvcmVsZWFzZS9iaW9jL2h0bWwvREVTZXEyLmh0bWwpe3RhcmdldD0iX2JsYW5rIn0sIFtERVhTZXFdKGh0dHBzOi8vYmlvY29uZHVjdG9yLm9yZy9wYWNrYWdlcy9yZWxlYXNlL2Jpb2MvaHRtbC9ERVhTZXEuaHRtbCl7dGFyZ2V0PSJfYmxhbmsifSwgYW5kIFtlZGdlUl0oaHR0cHM6Ly9iaW9jb25kdWN0b3Iub3JnL3BhY2thZ2VzL3JlbGVhc2UvYmlvYy9odG1sL2VkZ2VSLmh0bWwpe3RhcmdldD0iX2JsYW5rIn0KICogW1N0cmluZ1RpZV0oaHR0cHM6Ly9jY2Iuamh1LmVkdS9zb2Z0d2FyZS9zdHJpbmd0aWUvKXt0YXJnZXQ9Il9ibGFuayJ9IGFuZCBbVEFDT10oaHR0cHM6Ly90YWNvcm5hLmdpdGh1Yi5pby8pe3RhcmdldD0iX2JsYW5rIn0KCiMjIEZpbGUgRm9ybWF0cyB7LnRhYnNldH0KaHR0cHM6Ly9nZW5vbWUudWNzYy5lZHUvRkFRL0ZBUWZvcm1hdAoKIyMjIEZBU1RBCi0gaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRkFTVEFfZm9ybWF0Ci0gVGhlIGxldHRlcnMgc2hvdWxkIGZvbGxvdyB0aGUgW0lVUEFDIGNvZGVzXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9GQVNUQV9mb3JtYXQjU2VxdWVuY2VfcmVwcmVzZW50YXRpb24pe3RhcmdldD0iX2JsYW5rIn0KCi0gVGFzayAxOiBkb3dubG9hZCB0aGUgRkFTVEEgZmlsZSBvZiBodW1hbiBjaHIyMiAoZnJvbSBbaGVyZV0oaHR0cHM6Ly93d3cuZW5zZW1ibC5vcmcvaW5mby9kYXRhL2Z0cC9pbmRleC5odG1sKXt0YXJnZXQ9Il9ibGFuayJ9KSBhbmQgY2FsY3VsYXRlIHRoZSBzaXplIChpLmUuIGxlbmd0aCkgb2YgdGhlIGNocm9tb3NvbWUgIAoKYGBge3IsIGVjaG89Rn0Ka25pdHI6OmluY2x1ZGVfdXJsKCJodHRwczovL3d3dy5lbnNlbWJsLm9yZy9pbmZvL2RhdGEvZnRwL2luZGV4Lmh0bWwiKQpgYGAKCjwhLS1gYGB7ciwgZW5naW5lPSdiYXNoJywgcmVzdWx0cz1GfS0tPgpgYGB7ciwgZW5naW5lPSdiYXNoJywgZXZhbD1GfQp3Z2V0IGZ0cDovL2Z0cC5lbnNlbWJsLm9yZy9wdWIvcmVsZWFzZS05NS9mYXN0YS9ob21vX3NhcGllbnMvZG5hL0hvbW9fc2FwaWVucy5HUkNoMzguZG5hLmNocm9tb3NvbWUuMjIuZmEuZ3oKYGBgCgpgYGB7ciwgZW5naW5lPSdiYXNoJ30Kemxlc3MgSG9tb19zYXBpZW5zLkdSQ2gzOC5kbmEuY2hyb21vc29tZS4yMi5mYS5neiB8IGhlYWQgLW41CmBgYAoKYGBge3IsIGVuZ2luZT0nYmFzaCd9CnpjYXQgSG9tb19zYXBpZW5zLkdSQ2gzOC5kbmEuY2hyb21vc29tZS4yMi5mYS5neiB8IGF3ayAnIS9ePi97TEVOKz1sZW5ndGgoJDApfUVORHtwcmludCBMRU59JyAKYGBgCgotIFRhc2sgMjogZ2V0IHRoZSBzZXF1ZW5jZSBmcm9tIFs0MDAwMDAwMSB0byA0MDAwMDMwMCBvZiBjaHIyMl0oaHR0cDovL3d3dy5lbnNlbWJsLm9yZy9Ib21vX3NhcGllbnMvTG9jYXRpb24vVmlldz9yPTIyJTNBNDAwMDAwMDEtNDAwMDAzMDApe3RhcmdldD0iX2JsYW5rIn0KYGBge3IsIGVuZ2luZT0nYmFzaCd9CnpjYXQgSG9tb19zYXBpZW5zLkdSQ2gzOC5kbmEuY2hyb21vc29tZS4yMi5mYS5neiB8IGF3ayAnQkVHSU57bWluPTUwODE4NDY4O21heD0wO3N0YXJ0PTQwMDAwMDAxO2VuZD00MDAwMDMwMH0hL14+L3tMRU4rPWxlbmd0aCgkMCk7IGlmKExFTj49c3RhcnQgJiYgTEVOLWxlbmd0aCgkMCkrMTw9ZW5kKXttaW49KG1pbj5MRU4tbGVuZ3RoKCQwKSsxKT9MRU4tbGVuZ3RoKCQwKSsxOm1pbjsgbWF4PShtYXg+TEVOKT9tYXg6TEVOOyBTRVE9U0VRJDA7IHByaW50IExFTi1sZW5ndGgoJDApKzEsTEVOLCQwLGxlbmd0aCgkMCl9IH1FTkR7cHJpbnQgc3Vic3RyKFNFUSxzdGFydC1taW4rMSxlbmQtc3RhcnQrMSl9JwpgYGAKCi0gQ29tcGFyZSB0aGUgcmVzdWx0IGFib3ZlIGFuZCB0aGUgZm9sbG93aW5nIG1ldGhvZCAodXNpbmcgW3RoZSBlbnNlbWJsIHJlc3QgYXBpXShodHRwczovL3Jlc3QuZW5zZW1ibC5vcmcvZG9jdW1lbnRhdGlvbi9pbmZvL3NlcXVlbmNlX3JlZ2lvbil7dGFyZ2V0PSJfYmxhbmsifSkKYGBge3IsIGVuZ2luZT0nYmFzaCd9CmN1cmwgaHR0cHM6Ly9yZXN0LmVuc2VtYmwub3JnL3NlcXVlbmNlL3JlZ2lvbi9odW1hbi8yMjo0MDAwMDAwMS4uNDAwMDAzMDA6MT9jb250ZW50LXR5cGU9dGV4dC9wbGFpbgpgYGAKCi0gVGFzayAzOiB3aGF0IGlzIHRoZSBzZXF1ZW5jZSBvZiA0MDAwMDAwMSB0byA0MDAwMDEwMCBvZiAqKmNocjIxKiogKHVzaW5nIGJvdGggYXdrIGFuZCBjdXJsKT8KYGBge3IsIGVuZ2luZT0nYmFzaCd9CmN1cmwgaHR0cHM6Ly9yZXN0LmVuc2VtYmwub3JnL3NlcXVlbmNlL3JlZ2lvbi9odW1hbi8yMTo0MDAwMDAwMS4uNDAwMDAxMDA6MT9jb250ZW50LXR5cGU9dGV4dC9wbGFpbgpgYGAKCiMjIyBGQVNUUQotIGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0ZBU1RRX2Zvcm1hdAoKLSBFeGFtcGxlcyBmcm9tIFtHb25nICpldCBhbC4qIEpDSS1JIDIwMThdKGh0dHBzOi8vaW5zaWdodC5qY2kub3JnL2FydGljbGVzL3ZpZXcvMTIwNzIzKXt0YXJnZXQ9Il9ibGFuayJ9Ci0gRG93bmxvYWQgb25lIG9mIGRvd24tc2FtcGxlZCAodG8gMUspIEZBU1RRIGF2YWlsYWJsZSBmcm9tIGJlbG93CmBgYHtyLCBlbmdpbmU9J2Jhc2gnLCBldmFsPUZ9CndnZXQgaHR0cHM6Ly93d3cuZHJvcGJveC5jb20vcy9oMmx6em45NG85enB2MjYvU0xYLTkxNjguRDcwMV9ENTAxXzFLLkM2SDNVQU5YWC5zXzEucl8xLmZxLmd6CmBgYAotIFF1ZXN0aW9uOiBob3cgbWFueSBlbnRyaWVzIChpdCdzIGFidmlvdXMpCmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQp6Y2F0ICBTTFgtOTE2OC5ENzAxX0Q1MDFfMUsuQzZIM1VBTlhYLnNfMS5yXzEuZnEuZ3ogfCBlY2hvICQoKGB3YyAtbGAvNCkpCmBgYAoKLSBMZXQncyBsb29rIGF0IHRoZSBmaXJzdCBlbnRyeSAoaS5lLiB0aGUgZmlyc3QgNCBsaW5lcykgYW5kIGNoZWNrIHRoZSBtZXRhIGluZm9ybWF0aW9uCmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQp6Y2F0IFNMWC05MTY4LkQ3MDFfRDUwMV8xSy5DNkgzVUFOWFguc18xLnJfMS5mcS5neiB8IGhlYWQgLW40CmBgYAoKLSBRdWVzdGlvbjogc2VxdWVuY2luZyBsZW50aD8KYGBge3IsIGVuZ2luZT0nYmFzaCd9CnpsZXNzIFNMWC05MTY4LkQ3MDFfRDUwMV8xSy5DNkgzVUFOWFguc18xLnJfMS5mcS5neiB8IGhlYWQgLW4gNCB8IGF3ayAnTlIlND09MntwcmludCBsZW5ndGgoJDApfScKYGBgCiAKLSBDaGVjayB0aGUgYmFzZSBxdWFsaXR5IG9mIHRoZSByZWFkIGFib3ZlIGZyb20gdGhlIFtzYW1mb3JtYXQuaW5mb10oaHR0cHM6Ly93d3cuc2FtZm9ybWF0LmluZm8vYmFzZS1xdWFsaXRpZXMpCgotIENoZWNrIHRoZSBiYXNlIHF1YWxpdHkgdXNpbmcgW2Zhc3RxY10oaHR0cHM6Ly93d3cuYmlvaW5mb3JtYXRpY3MuYmFicmFoYW0uYWMudWsvcHJvamVjdHMvZmFzdHFjLyl7dGFyZ2V0PSJfYmxhbmsifQpgYGB7ciwgZW5naW5lPSdiYXNoJywgZXZhbD1GfQpmYXN0cWMgU0xYLTkxNjguRDcwMV9ENTAxXzFLLkM2SDNVQU5YWC5zXzEucl8xLmZxLmd6CmBgYAoKYGBge3IsIGVjaG89Rn0Ka25pdHI6OmluY2x1ZGVfdXJsKCIuL1NMWC05MTY4LkQ3MDFfRDUwMV8xSy5DNkgzVUFOWFguc18xLnJfMV9mYXN0cWMuaHRtbCIpCmBgYAoKCi0gQW5vdGhlciBleGFtcGxlIFtOZ28gX2V0IGFsLl8gU2NpZW5jZSAyMDE4XShodHRwOi8vc2NpZW5jZS5zY2llbmNlbWFnLm9yZy9jb250ZW50LzM2MC82MzkzLzExMzMpe3RhcmdldD0iX2JsYW5rIn0gKFtTUFIxMzAxNDldKGh0dHBzOi8vd3d3Lm5jYmkubmxtLm5paC5nb3Yvc3JhLz90ZXJtPVNSUDEzMDE0OSl7dGFyZ2V0PSJfYmxhbmsifSkKYGBge3IsIGVjaG89Rn0Ka25pdHI6OmluY2x1ZGVfdXJsKCJodHRwOi8vc2NpZW5jZS5zY2llbmNlbWFnLm9yZy9jb250ZW50LzM2MC82MzkzLzExMzMiKQpgYGAKLSBEb3dubGFvZCB0aGUgZmlyc3QgMUsgc3BvdHMgZnJvbSB0aGUgc21hbGxlc3QgUk5BLVNlcSBmYXN0cSBmaWxlcyBmcm9tIFtTUlI2NDgxMDg2XShodHRwczovL3RyYWNlLm5jYmkubmxtLm5paC5nb3YvVHJhY2VzL3NyYS8/cnVuPVNSUjY0ODEwODYpe3RhcmdldD0iX2JsYW5rIn0gKHlvdSBtYXkgbmVlZCB0byBpbnN0YWxsIHRoZSBbc3JhIHRvb2xraXRdKGh0dHBzOi8vd3d3Lm5jYmkubmxtLm5paC5nb3Yvc3JhL2RvY3MvdG9vbGtpdHNvZnQvKXt0YXJnZXQ9Il9ibGFuayJ9KQoKYGBge3IsIGVjaG89Rn0Ka25pdHI6OmluY2x1ZGVfdXJsKCJodHRwczovL3d3dy5uY2JpLm5sbS5uaWguZ292L3NyYS8/dGVybT1TUlAxMzAxNDkiKQpgYGAKCmBgYHtyLCBlbmdpbmU9J2Jhc2gnLCBldmFsPUZ9CmZhc3RxLWR1bXAgLVggMTAwMCAtLXNwbGl0LWZpbGVzIC0tcmVhZC1maWx0ZXIgcGFzcyAtLW91dGRpciAuLyAtLWd6aXAgU1JSNjQ4MTA4NiAKYGBgCmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQp6Y2F0IFNSUjY0ODEwODZfcGFzc18xLmZhc3RxLmd6IHwgZWNobyAkKChgd2MgLWxgLzQpKQp6Y2F0IFNSUjY0ODEwODZfcGFzc18yLmZhc3RxLmd6IHwgZWNobyAkKChgd2MgLWxgLzQpKQpgYGAKCi0gTGV0J3MgbG9vayBhdCB0aGUgZmlzdCA4IGxpbmVzCmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQp6Y2F0IFNSUjY0ODEwODZfcGFzc18xLmZhc3RxLmd6IHwgaGVhZCAtbjgKYGBgCmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQp6Y2F0IFNSUjY0ODEwODZfcGFzc18yLmZhc3RxLmd6IHwgaGVhZCAtbjgKYGBgCgotIENoZWNrIHRoZSBiYXNlIHF1YWxpdHkgZnJvbSB0aGUgW3NhbWZvcm1hdC5pbmZvXShodHRwczovL3d3dy5zYW1mb3JtYXQuaW5mby9iYXNlLXF1YWxpdGllcykKCi0gQ2hlY2sgdGhlIGJhc2UgcXVhbGl0eSB1c2luZyBbZmFzdHFjXShodHRwczovL3d3dy5iaW9pbmZvcm1hdGljcy5iYWJyYWhhbS5hYy51ay9wcm9qZWN0cy9mYXN0cWMvKXt0YXJnZXQ9Il9ibGFuayJ9CmBgYHtyLCBlbmdpbmU9J2Jhc2gnLCBldmFsPUZ9CmZhc3RxYyBTUlI2NDgxMDg2X3Bhc3NfMS5mYXN0cS5neiBTUlI2NDgxMDg2X3Bhc3NfMi5mYXN0cS5negpgYGAKCmBgYHtyLCBlY2hvPUZ9CmtuaXRyOjppbmNsdWRlX3VybCgiLi9TUlI2NDgxMDg2X3Bhc3NfMV9mYXN0cWMuaHRtbCIsIGhlaWdodD0iNjAwcHgiKQpgYGAKCmBgYHtyLCBlY2hvPUZ9CmtuaXRyOjppbmNsdWRlX3VybCgiLi9TUlI2NDgxMDg2X3Bhc3NfMl9mYXN0cWMuaHRtbCIsIGhlaWdodD0iNjAwcHgiKQpgYGAKCiMjIyBHVEYgKEdGRikKLSBodHRwczovL2dlbm9tZS51Y3NjLmVkdS9GQVEvRkFRZm9ybWF0I2Zvcm1hdDMKLSBodHRwczovL3d3dy5lbnNlbWJsLm9yZy9pbmZvL3dlYnNpdGUvdXBsb2FkL2dmZi5odG1sCgotIExldCdzIGRvd25sb2FkIHRoZSBFbnNlbWJsIHRyYW5zY3JpcHQgYW5ub3RhdGlvbiBmaWxlCmBgYHtyLCBlbmdpbmU9J2Jhc2gnLCBldmFsPUZ9CndnZXQgZnRwOi8vZnRwLmVuc2VtYmwub3JnL3B1Yi9yZWxlYXNlLTk1L2d0Zi9ob21vX3NhcGllbnMvSG9tb19zYXBpZW5zLkdSQ2gzOC45NS5ndGYuZ3oKYGBgCgotIEhvdyBtYW55IGdlbmVzIGFuZCB0cmFuc2NyaXB0cz8KYGBge2Jhc2h9CnpjYXQgSG9tb19zYXBpZW5zLkdSQ2gzOC45NS5ndGYuZ3ogfCBhd2sgJyQzPT0iZ2VuZSJ7R0VORSsrfSQzPT0idHJhbnNjcmlwdCJ7VFJBTlMrK30kMz09ImV4b24ie0VYT04rK31FTkR7cHJpbnQgR0VORSxUUkFOUyxFWE9OfScKYGBgCi0gV2hhdCBlbHNlIGluIHRoZSBmaWxlPwpgYGB7YmFzaH0KemNhdCBIb21vX3NhcGllbnMuR1JDaDM4Ljk1Lmd0Zi5neiB8IGF3ayAnIS9eIy97cHJpbnQgJDN9JyB8IHNvcnQgfCB1bmlxIC1jIHwgc29ydCAtazEsMW4KYGBgCgotIFJlYWQgdGhlIGZpcnN0IDEwIGxpbmVzIChleGNsdWRpbmcgY29tbWVudHMgKGkuZS4gJyMnKSkgdXNpbmcgQmlvY29uZHVjdG9yIFtydHJhY2tsYXllciBwYWNrYWdlXShodHRwOi8vYmlvY29uZHVjdG9yLm9yZy9wYWNrYWdlcy9yZWxlYXNlL2Jpb2MvaHRtbC9ydHJhY2tsYXllci5odG1sKXt0YXJnZXQ9Il9ibGFuayJ9CmBgYHtyfQojIHN0YXJ0IHlvdXIgUiBzZXNzaW9uIHVzaW5nICdSJyBjb21tYW5kIGZyb20gdGhlIHRlcm1pbmFsCnJ0cmFja2xheWVyOjppbXBvcnQoZm9ybWF0PSJndGYiLCB0ZXh0PXN5c3RlbSgiemNhdCBIb21vX3NhcGllbnMuR1JDaDM4Ljk1Lmd0Zi5neiB8IGdyZXAgLXYgXiMgfCBoZWFkIC1uIDEwIiwgaW50ZXJuPVQpKQpgYGAKCi0gQW5vdGhlciB0YXNrOiByZWFkIHRoZSBMRVAgKFtMZXB0aW5dKGh0dHBzOi8vd3d3LmVuc2VtYmwub3JnL0hvbW9fc2FwaWVucy9HZW5lL1N1bW1hcnk/ZGI9Y29yZTtnPUVOU0cwMDAwMDE3NDY5NztyPTc6MTI4MjQxMjg0LTEyODI1NzYyODt0PUVOU1QwMDAwMDMwODg2OCl7dGFyZ2V0PSJfYmxhbmsifSkgdHJhbnNjcmlwdApgYGB7cn0KIyBzdGFydCB5b3VyIFIgc2Vzc2lvbiB1c2luZyAnUicgY29tbWFuZCBmcm9tIHRoZSB0ZXJtaW5hbAojIApydHJhY2tsYXllcjo6aW1wb3J0KGZvcm1hdD0iZ3RmIiwgdGV4dD1zeXN0ZW0oInpjYXQgSG9tb19zYXBpZW5zLkdSQ2gzOC45NS5ndGYuZ3ogfCBncmVwIC1QICdnZW5lX25hbWUgXCJMRVBcIicgIiwgaW50ZXJuPVQpKQpgYGAKCi0gWW91IGNhbiwgb2YgY291cnNlLCByZWFkIGFsbCBvZiB0aGVtIHRoZW0KYGBge3IsIGV2YWw9Rn0KIyBJVCBXSUxMIFRBS0UgTE9ORwpmb288LXJ0cmFja2xheWVyOjppbXBvcnQoIkhvbW9fc2FwaWVucy5HUkNoMzguOTUuZ3RmLmd6IikKYGBgCgojIyMgU0FNIChCQU0pCi0gaHR0cDovL3NhbXRvb2xzLmdpdGh1Yi5pby9odHMtc3BlY3MvU0FNdjEucGRmIAotIGh0dHA6Ly93d3cuaHRzbGliLm9yZy9kb2Mvc2FtLmh0bWwKLSBZb3UgY2FuIGNoZWNrIHlvdXIgYml0d2lzZSBGTEFHIGludGVyYWN0aXZlbHkgZnJvbSBbaGVyZV0oaHR0cHM6Ly9icm9hZGluc3RpdHV0ZS5naXRodWIuaW8vcGljYXJkL2V4cGxhaW4tZmxhZ3MuaHRtbCl7dGFyZ2V0PSJfYmxhbmsifSBvciBbaGVyZV0oaHR0cHM6Ly93d3cuc2FtZm9ybWF0LmluZm8vc2FtLWZvcm1hdC1mbGFnLXNpbmdsZSl7dGFyZ2V0PSJfYmxhbmsifQoKLSBMZXQncyBnZXQgdGhlIEJBTSBmaWxlIGZvciBbU1JSNjQ4MTA4Nl0oaHR0cHM6Ly90cmFjZS5uY2JpLm5sbS5uaWguZ292L1RyYWNlcy9zcmEvP3J1bj1TUlI2NDgxMDg2KXt0YXJnZXQ9Il9ibGFuayJ9ICh5b3UgbWF5IG5lZWQgdG8gaW5zdGFsbCB0aGUgW3NyYSB0b29sa2l0XShodHRwczovL3d3dy5uY2JpLm5sbS5uaWguZ292L3NyYS9kb2NzL3Rvb2xraXRzb2Z0Lyl7dGFyZ2V0PSJfYmxhbmsifSkKYGBge3IsIGVuZ2luZT0nYmFzaCd9CnNhbS1kdW1wIFNSUjY0ODEwODYgfCBoZWFkIC1uIDEwCmBgYAoKLSBIb3dldmVyLCB0aGV5IHR1cm5lZCBvdXQgdG8gYmUgdW5hbGlnbmVkCmBgYHtyLCBlbmdpbmU9J2Jhc2gnLCBldmFsPUZ9CiMgRE8gTk9UIFJVTiAodGFrZXMgYSB3aGlsZSkKc2FtLWR1bXAgU1JSNjQ4MTA4NiB8IGF3ayAne3ByaW50ICQzfScgfCBzb3J0IHwgdW5pcSAtYwpgYGAKCi0gU28sIDFLIHJlYWRzIG9mIFNSUjY0ODEwODYgd2VyZSBhbGlnbmVkIHRvIEdSQ2gzOCB1c2luZyBbSGlTYXQyXShodHRwczovL2NjYi5qaHUuZWR1L3NvZnR3YXJlL2hpc2F0Mi8pe3RhcmdldD0iX2JsYW5rIn0gKHlvdSBhcmUgKipOT1QqKiBleHBlY3RlZCB0byBydW4gdGhpcyBjb21tYW5kKQoKYGBge3IsIGVuZ2luZT0nYmFzaCcsIGV2YWw9Rn0KIyB0aGlzIGlzIGZvciB5b3VyIGluZm9ybWF0aW9uIG9ubHkKIyB0aGUgcGF0aCB0byB0aGUgaW5kZXggc2hvdWxkIGJlIGNoYW5nZWQgKGJ1dCBJIGFtIG5vdCBjb3ZlcmluZyB0aGlzKQpoaXNhdDIgLXggL2hvbWUvc3NnMjkvZGF0YS9nZW5vbWUvSG9tb19zYXBpZW5zL0Vuc2VtYmwvR1JDaDM4L1NlcXVlbmNlL0hpU2F0MkluZGV4L2dlbm9tZSAtLWFkZC1jaHJuYW1lIC0tcmctaWQgU1JSNjQ4MTA4NiAtLXJnIFNSUjY0ODEwODYgLTEgU1JSNjQ4MTA4Nl9wYXNzXzEuZmFzdHEuZ3ogLTIgU1JSNjQ4MTA4Nl9wYXNzXzIuZmFzdHEuZ3ogfCBzYW10b29scyB2aWV3IC1iUyAtID4gU1JSNjQ4MTA4Ni5iYW0KYGBgCgotIFRoZSBCQU0gZmlsZSBpcyBhdmFpYWJsZToKYGBge3IsIGVuZ2luZT0nYmFzaCcsIGV2YWw9Rn0Kd2dldCBodHRwczovL3d3dy5kcm9wYm94LmNvbS9zLzZvdXZsaWlibXdobmJldC9TUlI2NDgxMDg2LmJhbQpgYGAKCi0gTGV0J3Mgc2VlIHRoZSBoZWFkZXIgb2YgdGhlIEJBTSBmaWxlIHVzaW5nIFtzYW10b29sc10oaHR0cDovL3d3dy5odHNsaWIub3JnLyl7dGFyZ2V0PSJfYmxhbmsifQpgYGB7ciwgZW5naW5lPSdiYXNoJ30KIyBJIGFzc3VtZSBzYW10b29scyBhbHJlYWR5IGluc3RhbGxlZCAKIyBhbmQgdGhlIGJpbmFyeSBpcyBhdmFpYWxibGUgZnJvbSB5b3VyICRQQVRIIGVudmlyb25tZW50CnNhbXRvb2xzIHZpZXcgLUggU1JSNjQ4MTA4Ni5iYW0KYGBgCgotIFJ1biBzYW10b29scyB3aXRoICdmbGFnc3RhdCcgCmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQpzYW10b29scyBmbGFnc3RhdCBTUlI2NDgxMDg2LmJhbQpgYGAKCi0gMjI0MyAqKlFDLXBhc3NlZCByZWFkcyoqPwpgYGB7ciwgZW5naW5lPSdiYXNoJ30Kc2FtdG9vbHMgdmlldyAtRiAweDIwMCAtYyBTUlI2NDgxMDg2LmJhbQpgYGAKLSAwICoqUUMtZmFpbGVkIHJlYWRzKio/CmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQpzYW10b29scyB2aWV3IC1mIDB4MjAwIC1jIFNSUjY0ODEwODYuYmFtCmBgYAotIFdoeSAqKj4xMDAwXCoyIHJlYWRzKio/IChpbnB1dCB3YXMgMkspCiAgKyBIaW50OiBzZWNvbmRhcnkgYWxpZ25tZW50CmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQpzYW10b29scyB2aWV3IC1mIDI1NiAtYyBTUlI2NDgxMDg2LmJhbQpgYGAKICArIEZvciBleGFtcGxlOgpgYGB7ciwgZW5naW5lPSdiYXNoJ30Kc2FtdG9vbHMgdmlldyBTUlI2NDgxMDg2LmJhbSAgfCBhd2sgJyQxPT0iU1JSNjQ4MTA4Ni4xMCJ7cHJpbnQgJDB9JwpgYGAKICArIE5vbi1zZWNvbmRhcnkgYWxpZ25tZW50CmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQpzYW10b29scyB2aWV3IC1GIDI1NiAtYyBTUlI2NDgxMDg2LmJhbQpgYGAKCi0gNDQzICoqbWFwcGVkIHJlYWRzKio/CmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQpzYW10b29scyB2aWV3IC1mMSAtRiAweDQgLWMgU1JSNjQ4MTA4Ni5iYW0gCmBgYAoKLSAxMjQyICoqcmVhZDEqKiAoZnJvbSB0aGUgMjI0MyBwYWlyZWQgaW4gc2VxdWVuY2luZyk/CmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQpzYW10b29scyB2aWV3IC1mIDB4NDEgLWMgU1JSNjQ4MTA4Ni5iYW0gCmBgYAotIDEwMDEgKipyZWFkMioqIChmcm9tIHRoZSAyMjQzIHBhaXJlZCBpbiBzZXF1ZW5jaW5nKT8KYGBge3IsIGVuZ2luZT0nYmFzaCd9CnNhbXRvb2xzIHZpZXcgLWYgMHg4MSAtYyBTUlI2NDgxMDg2LmJhbSAKYGBgCgotIDAgKipwcm9wZXJseSBwYWlyZWQqKj8KICArIEhpbnQ6IGJvdGggMHgxIGFuZCAweDIgYml0cyBzZXQgYW5kIDB4NCBiaXQgbm90IHNldApgYGB7ciwgZW5naW5lPSdiYXNoJ30Kc2FtdG9vbHMgdmlldyAtZiAzIC1GIDB4NCAtYyBTUlI2NDgxMDg2LmJhbSAKYGBgCgotIDIgKip3aXRoIGl0c2VsZiBhbmQgbWF0ZSBtYXBwZWQqKgogICsgSGludDogZXhjbHVkZSBzZWdtZW50IHVubWFwcGVkICgweDQpICoqQU5EKiogbmV4dCBzZWdtZW50IGluIHRoZSB0ZW1wbGF0ZSB1bm1hcHBlZCAoMHg4KQpgYGB7ciwgZW5naW5lPSdiYXNoJ30Kc2FtdG9vbHMgdmlldyAtZiAxIC1GIDEyIC1jIFNSUjY0ODEwODYuYmFtIApgYGAKCiMjIyBCRUQKLSBodHRwczovL2dlbm9tZS51Y3NjLmVkdS9GQVEvRkFRZm9ybWF0I2Zvcm1hdDEKCi0gTGV0J3MgY29udmVydCBCQU0gZm9ybWF0IHRvIEJFRCBmb3JtYXQgKHVzaW5nIFtiZWR0b29sc10oaHR0cHM6Ly9iZWR0b29scy5yZWFkdGhlZG9jcy5pby8pe3RhcmdldD0iX2JsYW5rIn0pCmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQojIEkgYXNzdW1lIGJlZHRvb2xzIGlzIGV4cG9ydGVkIHRvIHlvdXIgJFBBVEgKYmVkdG9vbHMgYmFtdG9iZWQgLWkgU1JSNjQ4MTA4Ni5iYW0gfCBoZWFkCiMgdGhpcyBpcyBlcXVpdmFsZW50IHdpdGggdGhlIGZvbGx3b2luZyBjb21tYW5kCmJhbVRvQmVkIC1pIFNSUjY0ODEwODYuYmFtIHwgaGVhZApgYGAKCi0gQ291bnQgdGhlIG1hcHBlZCByZWFkcyAoaW4gZGlmZmVyZW50IHdheXMpCmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQpiYW1Ub0JlZCAtaSBTUlI2NDgxMDg2LmJhbSB8IHdjIC1sCnNhbXRvb2xzIHZpZXcgLWYgMSAtRiA0IFNSUjY0ODEwODYuYmFtICB8IHdjIC1sCmBgYAoKLSBDb21wYXJlIHRoZSAwLWJhc2VkIChlLmcuIEJFRCkgYW5kIDEtYmFzZWQgKGUuZy4gU0FNKSBjb29yZGlhdGVzCmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQpzYW10b29scyB2aWV3IC1mIDEgLUYgNCBTUlI2NDgxMDg2LmJhbSAgfCBoZWFkIHwgY3V0IC1mMS00IApgYGAKCi0gSW4gdGhlb3J5LCB0aGUgYWxpZ25lZCByZWdpb24gY2FuIG5vdCBnbyBiZXlvbmQgPiA3NSBmb3IgU1JSNjQ4MTA4NiAoUEU3NSksIGJ1dCB0aGVyZSBhcmU6CmBgYHtyLCBlbmdpbmU9J2Jhc2gnfQpiYW1Ub0JlZCAtaSBTUlI2NDgxMDg2LmJhbSB8IGF3ayAnJDMtJDI+NzV7cHJpbnQgJDB9JwpgYGAKCi0gTGV0JyBsb29rIGF0IHRoZSBCQU0gZmlsZSBmb3IgdGhvc2UgY2FzZXMgYWJvdmUKYGBge3IsIGVuZ2luZT0nYmFzaCd9CnNhbXRvb2xzIHZpZXcgLWYgMSAtRiA0IFNSUjY0ODEwODYuYmFtICB8IGF3ayAnJDE9PSJTUlI2NDgxMDg2LjcyIiB8fCAkMT09IlNSUjY0ODEwODYuNzgiIHx8ICQxPT0iU1JSNjQ4MTA4Ni45OCJ7cHJpbnQgJDB9JwpgYGAKCi0gWW91IG1heSBzZWUgJ04nIGluIENJR0FSIGxpbmUsIHdoaWNoIG1lYW4gJ3NraXBwZWQgcmVnaW9uIGZyb20gdGhlIHJlZmVyZW5jZScKLSBUaGlzIG1lYW4gJ2ludHJvbi1zcGFubmluZycgcmVhZHMgaW4gUk5BLVNlcSAoaS5lLiByZWFkcyBjb250YWluaW5nIGV4b24taW50cm9uIGp1bmN0aW9ucykKLSBTZWUgW3RoZSBHQVRLIGJlc3QgcHJhY3RpY2VdKGh0dHBzOi8vZ2F0a2ZvcnVtcy5icm9hZGluc3RpdHV0ZS5vcmcvZ2F0ay9kaXNjdXNzaW9uLzM4OTIvdGhlLWdhdGstYmVzdC1wcmFjdGljZXMtZm9yLXZhcmlhbnQtY2FsbGluZy1vbi1ybmFzZXEtaW4tZnVsbC1kZXRhaWwpe3RhcmdldD0iX2JsYW5rIn0gd2l0aCByZWdhcmQgdG8gdGhpcyBpc3N1ZQotIFlvdSBjYW4gJ3NwbGl0JyB0aG9zZSBOLWNvbnRhaW5pbmcgQ0lHQVIgbGluZXMgdXNpbmcgYmVkdG9vbHMKYGBge3IsIGVuZ2luZT0nYmFzaCd9CmJhbVRvQmVkIC1zcGxpdCAtaSBTUlI2NDgxMDg2LmJhbSB8IGF3ayAnJDMtJDI+NzV7cHJpbnQgJDB9JwpgYGAKLSBDaGVjayBvdXQgaG93IHRoZSB1c2Ugb2YgJy1zcGxpdCcgb3B0aW9uIGFmZmVjdHMgcmVwb3J0aW5nIFtvdmVybGFwIHdpdGggdGhlIGdlbm9tZV0oaHR0cHM6Ly9iZWR0b29scy5yZWFkdGhlZG9jcy5pby9lbi9sYXRlc3QvY29udGVudC90b29scy9pbnRlcnNlY3QuaHRtbCNzcGxpdC1yZXBvcnRpbmctb3ZlcmxhcHMtd2l0aC1zcGxpY2VkLWFsaWdubWVudHMtb3ItYmxvY2tlZC1iZWQtZmVhdHVyZXMpe3RhcmdldD0iX2JsYW5rIn0KCiMjIENvbmNsdWRpbmcgUmVtYXJrcwoqIFRoZXJlIGlzIG1vcmUgdGhhbiBvbmUgd2F5IHRvIGRvIGl0LiAoW1RNVE9XVERJXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9UaGVyZSUyN3NfbW9yZV90aGFuX29uZV93YXlfdG9fZG9faXQpKQoqIFlvdSBhcmUgbm90IGFsb25lLgogICAgKyBodHRwOi8vc2VxYW5zd2Vycy5jb20vCiAgICArIGh0dHBzOi8vd3d3LmJpb3N0YXJzLm9yZy8KKiBJdCB0YWtlcyB0aW1lLgoqIEdvb2QgbHVjayE=</div>
 
 
 </div>
