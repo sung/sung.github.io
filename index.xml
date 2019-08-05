@@ -6,10 +6,29 @@
     <description>Recent content on Sung Sam Gong, PhD</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Mar 2018 12:13:38 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 05 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CV</title>
+      <link>/cv/</link>
+      <pubDate>Mon, 05 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/cv/</guid>
+      <description>Employment Apr, 2014 – Current: Senior Research Associate in Bioinformatics, Department of Obstetrics &amp;amp; Gynaecology, University of Cambridge, UK Feb, 2015 – Aug, 2017: Visiting Researcher, Wellcome Trust Sanger Institute, Hinxton, UK Sep, 2010 – Mar, 2014: Lead Bioinformatician, Cardiovascular Genetics and Genomics, NIHR Cardiovascular Biomedical Research Unit, Royal Brompton and Harefield NHS Foundation Trust and Imperial College, London, UK Mar, 2011 – Mar, 2013: Honorary Research Associate in Heart Science, National Heart and Lung Institute, London, UK Sep, 2010 – Sep, 2012: Visiting Scientist, MRC Clinical Science Centre, Hammersmith, London, UK Sep, 2005 – Sep, 2006: Research Scientist, KOBIC (Korean Bioinformation Centre), KRIBB (Korea Research Institute of Bioscience and Biotechnology), Daejeon, Korea   Education Oct, 2006 – Aug, 2010: PhD, Department of Biochemistry, University of Cambridge, Cambridge, UK (supervisor: Professor Sir Tom Blundell) Thesis title: Structural and Functional Analysis of Single Amino Acid Replacement in Proteins: Insights from Protein Evolution into the Disease Aetiology [download] Sep, 2003 – Aug, 2005: MSc, Department of BioSystems, KAIST (Korea Advanced Institute of Science and Technology), Daejeon, Korea (supervisor: Dr.</description>
+    </item>
+    
+    <item>
+      <title>How this site was made</title>
+      <link>/about/</link>
+      <pubDate>Mon, 05 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>In case you&amp;rsquo;re curious, I used blogdown which uses Hugo internally. This theme is based on ezhil (with some modification). I like RStudio, but prefer Nvim-R which is great if you like Vim &amp;amp; terminal.
+The source code (of blogdown &amp;amp; hugo bits) is avaible here and the static contents are deployed on GitHub. You may find this useful, if you&amp;rsquo;d like to make your github page as a submodle of your Hugo codes.</description>
+    </item>
     
     <item>
       <title>Typography</title>
@@ -74,24 +93,6 @@ How do you keep up with it all? How do you find focus and peace and get stuff ac
       <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
 summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
-    </item>
-    
-    <item>
-      <title>CV</title>
-      <link>/cv/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/cv/</guid>
-      <description>Education Oct, 2006 – Aug, 2010: PhD, Department of Biochemistry, University of Cambridge, Cambridge, UK (supervisor: Professor Sir Tom Blundell) Thesis title: Structural and Functional Analysis of Single Amino Acid Replacement in Proteins: Insights from Protein Evolution into the Disease Aetiology [download] Sep, 2003 – Aug, 2005: MSc, Department of BioSystems, KAIST (Korea Advanced Institute of Science and Technology), Daejeon, Korea (supervisor: Dr. Jong Bhak &amp;amp; Dr. Kwang-Hyung Lee) Thesis title: PSIbase and interpare : systems for studying protein structural interactomics Mar, 2002 – Aug, 2003: BSc, Department of Computer Science, Korea University, Seoul, Korea.</description>
-    </item>
-    
-    <item>
-      <title>How I was made</title>
-      <link>/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>:)</description>
     </item>
     
     <item>
